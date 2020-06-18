@@ -1,0 +1,15 @@
+{
+  "package-id": "hl7.fhir.militaryserviceandstatus",
+  "title": "HL7 FHIR Implementation Guide: Profile Military Service ",
+  "canonical": "http://hl7.org/fhir/militaryserviceandstatus",
+  "introduction": "Military Service",
+  "list": [
+    {
+      "version": "current",
+      "desc": "Continuous Integration Build (latest in version control)",
+      "path": "http://build.fhir.org/ig/HL7/fhir-militaryserviceandstatus-ig/",
+      "status": "ci-build",
+      "current": true
+    }
+  ]
+}
