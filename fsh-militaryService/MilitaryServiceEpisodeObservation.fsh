@@ -35,6 +35,16 @@ Description:   "Military Service Episode Observation : A patient/Veteran may hav
 * code = LNC#87511-2 
 * effective[x] only Period
 * category.coding = http://terminology.hl7.org/CodeSystem/observation-category#social-history
+
+* hasMember ^slicing.discriminator.type = #profile // #pattern
+* hasMember ^slicing.discriminator.path =  "$this.resolve()" // "$this.resolve().code"
+* hasMember ^slicing.rules = #open
+* hasMember contains 
+    CombatEpisodeObservation 0..1 
+* hasMember[CombatEpisodeObservation] only Reference(CombatEpisodeObservation)
+
+
+
 * component ^slicing.discriminator.type = #pattern
 * component ^slicing.discriminator.path = "code"
 * component ^slicing.rules = #open

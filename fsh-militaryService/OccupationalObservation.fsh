@@ -1,3 +1,5 @@
+Alias: USCorePatient = http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
+
 Profile:  OccupationalObservation
 Parent:   Observation
 Id:       occupationalObservation
@@ -13,8 +15,8 @@ Description:   "Base observations for occupational experiences"
 * specimen 0..0
 * device 0..0
 * referenceRange 0..0
-* hasMember 0..0
 * interpretation 0..1
+* subject only Reference(USCorePatient)
 * component ^slicing.discriminator.type = #pattern
 * component ^slicing.discriminator.path = "code"
 * component ^slicing.rules = #open
