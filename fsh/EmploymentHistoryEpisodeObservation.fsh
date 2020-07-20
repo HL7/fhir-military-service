@@ -1,22 +1,35 @@
 Alias: USCorePatient = http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
 
-Profile:  OccupationalObservation
+Profile:  EmploymentHistoryEpisode
 Parent:   Observation
-Id:       occupationalObservation
-Title:    "Occupational Observation"
-Description:   "Base observations for occupational experiences"
+Id:       employmentHistoryEpisode
+Title:    "Employment History Episode"
+Description:   "Employment history consists of a   series Employment Episodes. In the past these episodes have been represented as Z-segments and added to    various transactions to    support social history determination, benefit, etc. This profile is   intended to    represent employment history for International use, and it may be localized by HL7, IHE, and other profile developers.The Employment Episode profile of is   the base profile for Military Service Episode profile and ODH Past or Present Jobprofile and other profiles intended to    describe specific types of employment. MultiplicityNotes
+"
 
 
 
 * category.coding = http://terminology.hl7.org/CodeSystem/observation-category#social-history
-* status, code, subject, effective[x], valueCodeableConcept MS
+* status and code and subject and effective[x] and valueCodeableConcept MS
 * effective[x] only Period
+* effectivePeriod.start 0..1 
+* effectivePeriod.end 0..1
+* basedOn 0..0
+* partOf 0..0
+* focus 0..0
+* encounter 0..0
+* issued 0..0
+* performer 0..0
+* dataAbsentReason 0..0
+* interpretation 0..0
 * bodySite 0..0
+* method 0..0
 * specimen 0..0
 * device 0..0
 * referenceRange 0..0
-* interpretation 0..1
-* subject only Reference(USCorePatient)
+* derivedFrom 0..0
+* subject only Reference(Patient)
+* subject 1..1
 * component ^slicing.discriminator.type = #pattern
 * component ^slicing.discriminator.path = "code"
 * component ^slicing.rules = #open
