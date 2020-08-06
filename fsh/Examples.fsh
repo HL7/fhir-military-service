@@ -25,10 +25,10 @@ Description: "Meghan joined the Navy after graduating high school in the summer 
 * communication.language.text = "English"
 
 
-Instance: MeghanVeteranCombatEpisodeObservation
-InstanceOf: CombatEpisodeObservation
+Instance: MeghanVeteranCombatEpisode
+InstanceOf: CombatEpisode
 Description: " She deployed to Afghanistan as an individual augmentee with the Combined Forces Command Afghanistan. "
-* id = "MeghanVeteranCombatEpisodeObservation"
+* id = "MeghanVeteranCombatEpisode"
 * status = #final "final"
 * subject = Reference(MeghanVeteranPersona)
 * effectivePeriod.start = "2002-09-15" 
@@ -39,18 +39,18 @@ Description: " She deployed to Afghanistan as an individual augmentee with the C
 
 
 
-Instance: MeghanVeteranMilitaryServiceEpisodeObservation
-InstanceOf: MilitaryServiceEpisodeObservation
-Description: "Military Service Episode Observation"
-* id = "MilitaryServiceEpisodeObservationExample"
+Instance: MeghanVeteranMilitaryServiceEpisode
+InstanceOf: MilitaryServiceEpisode
+Description: "Military Service Episode"
+* id = "MilitaryServiceEpisodeExample"
 * status = #final "final"
 * subject = Reference(MeghanVeteranPersona)
 * effectivePeriod.start = "2002-06-01" 
 * effectivePeriod.end = "2012-06-01" 
-* hasMember[CombatEpisodeObservation] = Reference(MeghanVeteranCombatEpisodeObservation)
-* component[mseo-Industry].valueCodeableConcept  = OccupationalDataforHealthCodeSystem#928110.01143 "Navy National Security"
+* hasMember[CombatEpisode] = Reference(MeghanVeteranCombatEpisode)
+* component[mseo-Industry].valueCodeableConcept  = PHOccupationalDataForHealthODH#928110.01143 "Navy National Security"
 * component[mseo-DischargeStatus].valueCodeableConcept  = SCT#99999999 "Honorable"
-* component[mseo-SupervisoryLevel].valueCodeableConcept  = OccupationalDataforHealthCodeSystem#E-3	"US Military Enlisted paygrade E-3"
+* component[mseo-SupervisoryLevel].valueCodeableConcept  = PHOccupationalDataForHealthODH#E-3	"US Military Enlisted paygrade E-3"
 * component[mseo-SeparationReason].valueCodeableConcept  = SeparationReasonCodeSystem#035 "COMPLETION OF REQUIRED ACTIVE SERVICE "
 * component[odh-IsCurrentJob].valueBoolean = false
 

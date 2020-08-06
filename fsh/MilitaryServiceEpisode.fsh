@@ -23,13 +23,13 @@ Alias:   ObsInt = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpreta
 Alias:   DiagnosticService = http://terminology.hl7.org/CodeSystem/v2-0074
 Alias:   OmbRaceCat = urn:oid:2.16.840.1.113883.6.238
 Alias:   ISO = urn:iso:std:iso:3166
+Alias:   PHOccupationalDataForHealthODH = http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH
 
-
-Profile:  MilitaryServiceEpisodeObservation
+Profile:  MilitaryServiceEpisode
 Parent:   EmploymentHistoryEpisode
-Id:       militaryserviceepisode-observation
-Title:    "Military Service Episode Observation"
-Description:   "Military Service Episode Observation : A patient/Veteran may have zero or more military service episodes. The contents of this profile is based on the HL7 Version 2 ZMH segment and the ServiceHistoryEpisode schema specified in the current Veteran Verification API and it allows this API to migrate to FHIR and to be consistent with the prior work done by Center for Disease Control (CDC) National Institute for Occupational Safety and Health (NIOSH).  A service history episode may reference zero or more Combat episodes. This profile is based on the default FHIR Observation profile but may reuse ODD Past or Present Job profile ( http://hl.org/fhir/us/odh/StructureDefinition-odh-PastOrPresentJob.html)."
+Id:       militaryserviceepisode
+Title:    "Military Service Episode"
+Description:   "Military Service Episode: A patient/Veteran may have zero or more military service episodes. The contents of this profile is based on the HL7 Version 2 ZMH segment and the ServiceHistoryEpisode schema specified in the current Veteran Verification API and it allows this API to migrate to FHIR and to be consistent with the prior work done by Center for Disease Control (CDC) National Institute for Occupational Safety and Health (NIOSH).  A service history episode may reference zero or more Combat episodes. This profile is based on the default FHIR Observation profile but may reuse ODD Past or Present Job profile ( http://hl.org/fhir/us/odh/StructureDefinition-odh-PastOrPresentJob.html)."
 * status and code and subject and effectivePeriod and component MS
 * id 1..1 
 * identifier 0..1 
@@ -46,8 +46,8 @@ Description:   "Military Service Episode Observation : A patient/Veteran may hav
 * hasMember ^slicing.discriminator.path =  "$this.resolve()" // "$this.resolve().code"
 * hasMember ^slicing.rules = #open
 * hasMember contains 
-    CombatEpisodeObservation 0..*
-* hasMember[CombatEpisodeObservation] only Reference(CombatEpisodeObservation)
+    CombatEpisode 0..*
+* hasMember[CombatEpisode] only Reference(CombatEpisode)
 
 
 
@@ -81,11 +81,30 @@ Description:   "Military Service Episode Observation : A patient/Veteran may hav
 * component[mseo-SeparationReason].valueCodeableConcept 1..1
 * component[mseo-SeparationReason].valueCodeableConcept from https://phinvads.cdc.gov/2.16.840.1.114222.4.11.7187
 
-Profile:  VeteranStatusObservation
+
+
+CodeSystem: VeteranStatusCodeSystem
+Id: msh-VeteranStatusCodeSystem
+Title: "Veteran Status Code System"
+Description: "Veteran Status Code System"
+* #NO "NO"
+* #YES "YES"
+* #NMI "Need More Information"
+
+ValueSet:    VeteranStatusValueSet
+Id: msh-veteranstatus-vs
+Title: "Veteran Status Value Set"
+Description: "Veteran Status Value Set" 
+* VeteranStatusCodeSystem#NO	"NO"
+* VeteranStatusCodeSystem#YES	"YES"
+* VeteranStatusCodeSystem#NMI	"Need More Information"
+
+
+Profile:  VeteranStatus
 Parent:   Observation
-Id:       veteranStatus-Observation
-Title:    "Veteran Status Observation"
-Description:  "Veteran Status Observation true/false"
+Id:       veteranStatus
+Title:    "Veteran Status"
+Description:  "Veteran Status true/false"
 * effectivePeriod 0..0
 * basedOn 0..0
 * partOf 0..0
@@ -103,13 +122,14 @@ Description:  "Veteran Status Observation true/false"
 * derivedFrom 0..0
 * subject only Reference(Patient)
 * subject 1..1
-* valueBoolean 1..1
+* valueCodeableConcept 1..1
+* valueCodeableConcept from VeteranStatusValueSet
 
 
 
 Instance: VeteranStatusQuery
 InstanceOf: OperationDefinition
-Title: "Veteran Status - Return status of veteran"
+Title: "Veteran Status"
 Usage: #definition
 * name = "VeteranStatus"
 * description = "Query to return the status of a veteran"
@@ -121,14 +141,29 @@ Usage: #definition
 * instance = false
 * parameter[0].name = #veteranId "veteranId"
 * parameter[0].use = #in "in"
-* parameter[0].min = 1
+* parameter[0].min = 0
 * parameter[0].max = "1"
-* parameter[0].type = #string "string"
-* parameter[1].name = #VeteranStatusObservation "VeteranStatusObservation"
-* parameter[1].use = #out "out"
-* parameter[1].min = 1
+* parameter[0].type = #Identifier "Identifier"
+* parameter[1].name = #veteranName "veteranName"
+* parameter[1].use = #in "in"
+* parameter[1].min = 0
 * parameter[1].max = "1"
-* parameter[1].type = #Observation "Observation"
+* parameter[1].type = #HumanName "HumanName"
+* parameter[2].name = #veteranSSN "veteranSSN"
+* parameter[2].use = #in "in"
+* parameter[2].min = 0
+* parameter[2].max = "1"
+* parameter[2].type = #Identifier "Identifier"
+* parameter[3].name = #veteranAddress "veteranAddress"
+* parameter[3].use = #in "in"
+* parameter[3].min = 0
+* parameter[3].max = "1"
+* parameter[3].type = #Address "Address"
+* parameter[4].name = #VeteranStatus "VeteranStatus"
+* parameter[4].use = #out "out"
+* parameter[4].min = 1
+* parameter[4].max = "1"
+* parameter[4].type = #Observation "Observation" Profile:=VeteranStatus
 
 
 

@@ -1,12 +1,12 @@
-Profile:  CombatEpisodeObservation
+Profile:  CombatEpisode
 Parent:   Observation
-Id:       combatepisode-observation
-Title:    "Combat Episode Observation"
-Description:   "Combat Episode Observation: This profile definition extends Combat Zone Period profile (url: http://hl7.org/fhir/us/odh/StructureDefinition/odh-CombatZonePeriod )  and includes the requirements specified in ZMH and Deployment Schema. The base profile is: http://hl7.org/fhir/us/odh/StructureDefinition/odh-CombatZonePeriod"
+Id:       combatepisode
+Title:    "Combat Episode"
+Description:   "Combat Episode: This profile definition extends Combat Zone Period profile (url: http://hl7.org/fhir/us/odh/StructureDefinition/odh-CombatZonePeriod )  and includes the requirements specified in ZMH and Deployment Schema. The base profile is: http://hl7.org/fhir/us/odh/StructureDefinition/odh-CombatZonePeriod"
 
 * status and code and subject and effectivePeriod and component MS
 * code 1..1
-* code  = LNC#99999-9 "Combat Episode Observation"
+* code  = LNC#99999-9 "Combat Episode"
 * subject only Reference(Patient)
 * subject 1..1
 * basedOn 0..0
