@@ -100,6 +100,8 @@ Description: "Veteran Status Value Set"
 * VeteranStatusCodeSystem#NMI	"Need More Information"
 
 
+
+
 Profile:  VeteranStatus
 Parent:   Observation
 Id:       veteranStatus
@@ -163,7 +165,8 @@ Usage: #definition
 * parameter[4].use = #out "out"
 * parameter[4].min = 1
 * parameter[4].max = "1"
-* parameter[4].type = #Observation "Observation" Profile:=VeteranStatus
+* parameter[4].type = #Observation "Observation"
+* parameter[4].targetProfile[0] = "VeteranStatus"
 
 
 

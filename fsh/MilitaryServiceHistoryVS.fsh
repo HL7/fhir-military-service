@@ -286,3 +286,19 @@ Description: "Separation Reason Value Set"
 *  SeparationReasonCodeSystem#110 "PERSONAL DRUG ABUSE "
 *  SeparationReasonCodeSystem#900 "NOT APPLICABLE "
 *  SeparationReasonCodeSystem#999 "UNKNOWN "
+
+CodeSystem: DischargeStatusCodeSystem
+Id: msh-DischargeStatusCodeSystem
+Title: "Discharge Status Code System"
+Description: "Discharge Status Code System"
+* #e37cd7384c954b9fa9226ecaec90c1bb "honorable"
+* #4605b06f09684f6f8a928547edc009cc "dishonorable"
+* #026b71e322804ff4ad61b33e24dd309c "dishonorable-for-va-purposes"
+
+ValueSet: DischargeStatusValueSet
+Id: msh-DischargeStatusValueSet
+Title: "Discharge Status Value Set"
+Description: "Discharge Status Value Set"
+* DischargeStatusCodeSystem#e37cd7384c954b9fa9226ecaec90c1bb "honorable"
+* DischargeStatusCodeSystem#4605b06f09684f6f8a928547edc009cc "dishonorable"
+* DischargeStatusCodeSystem#026b71e322804ff4ad61b33e24dd309c "dishonorable-for-va-purposes"
