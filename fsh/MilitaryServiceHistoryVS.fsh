@@ -302,3 +302,20 @@ Description: "Discharge Status Value Set"
 * DischargeStatusCodeSystem#e37cd7384c954b9fa9226ecaec90c1bb "honorable"
 * DischargeStatusCodeSystem#4605b06f09684f6f8a928547edc009cc "dishonorable"
 * DischargeStatusCodeSystem#026b71e322804ff4ad61b33e24dd309c "dishonorable-for-va-purposes"
+
+
+CodeSystem: CombatEpisodeMissionCodeSystem
+Id: msh-CombatEpisodeMissionCodeSystem
+Title: "Combat Episode Mission Code System"
+Description: "Combat Episode Mission Code System"
+* #CD1CAD19F5494F1981211F8634DD6AB1 "ANTIGUERRILLA OPERATIONS"
+* #469552D4E8AA4BBBBF075190F7ED430C "COMBAT PATROL"
+* #750988FBBD6148DCB85C062DEFC871E2  "Individual Augmentee"
+
+ValueSet: CombatEpisodeMissionValueSet
+Id: msh-CombatEpisodeMissionValueSet
+Title: "Combat Episode Mission Value Set"
+Description: "Combat Episode Mission Value Set"
+* CombatEpisodeMissionCodeSystem#CD1CAD19F5494F1981211F8634DD6AB1 "ANTIGUERRILLA OPERATIONS"
+* CombatEpisodeMissionCodeSystem#469552D4E8AA4BBBBF075190F7ED430C "COMBAT PATROL"
+* CombatEpisodeMissionCodeSystem#750988FBBD6148DCB85C062DEFC871E2 "Individual Augmentee"

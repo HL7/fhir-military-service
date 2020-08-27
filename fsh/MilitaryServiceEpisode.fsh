@@ -24,6 +24,8 @@ Alias:   DiagnosticService = http://terminology.hl7.org/CodeSystem/v2-0074
 Alias:   OmbRaceCat = urn:oid:2.16.840.1.113883.6.238
 Alias:   ISO = urn:iso:std:iso:3166
 Alias:   PHOccupationalDataForHealthODH = http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH
+Alias:   SOLOR = http://www.logicahealth.org/solutions/solor
+
 
 Profile:  MilitaryServiceEpisode
 Parent:   EmploymentHistoryEpisode
@@ -51,6 +53,7 @@ Description:   "Military Service Episode: A patient/Veteran may have zero or mor
 
 
 
+
 * component ^slicing.discriminator.type = #pattern
 * component ^slicing.discriminator.path = "code"
 * component ^slicing.rules = #open
@@ -65,10 +68,10 @@ Description:   "Military Service Episode: A patient/Veteran may have zero or mor
 * component[mseo-Industry].valueCodeableConcept 1..1
 * component[mseo-Industry].valueCodeableConcept from https://phinvads.cdc.gov/2.16.840.1.114222.4.11.7187
 
-* component[mseo-DischargeStatus].code =  http://loinc.org#99999-9 "Discharge Status"
+* component[mseo-DischargeStatus].code =  http://www.logicahealth.org/solutions/solor#9B7095A70B024CD789A36E48A3936592 "Discharge Status"
 * component[mseo-DischargeStatus].value[x] only CodeableConcept   
 * component[mseo-DischargeStatus].valueCodeableConcept 1..1
-* component[mseo-DischargeStatus].valueCodeableConcept from https://phinvads.cdc.gov/2.16.840.1.114222.4.11.7187
+* component[mseo-DischargeStatus].valueCodeableConcept from  DischargeStatusValueSet
 
 
 * component[mseo-SupervisoryLevel].code =  http://loinc.org#87707-6 "Job supervisory level or pay grade"
@@ -76,10 +79,10 @@ Description:   "Military Service Episode: A patient/Veteran may have zero or mor
 * component[mseo-SupervisoryLevel].valueCodeableConcept 1..1
 * component[mseo-SupervisoryLevel].valueCodeableConcept from   https://phinvads.cdc.gov/2.16.840.1.114222.4.11.7613
 
-* component[mseo-SeparationReason].code =  http://loinc.org#99999-9 "Separation Reason "
+* component[mseo-SeparationReason].code =  http://www.logicahealth.org/solutions/solor#9CEAD6537D6A4F198549F70598B8F8BF "Separation Reason "
 * component[mseo-SeparationReason].value[x] only CodeableConcept   
 * component[mseo-SeparationReason].valueCodeableConcept 1..1
-* component[mseo-SeparationReason].valueCodeableConcept from https://phinvads.cdc.gov/2.16.840.1.114222.4.11.7187
+* component[mseo-SeparationReason].valueCodeableConcept from  SeparationReasonValueSet
 
 
 
@@ -141,6 +144,7 @@ Usage: #definition
 * system = true
 * type = false
 * instance = false
+* resource = #Patient "Patient"
 * parameter[0].name = #veteranId "veteranId"
 * parameter[0].use = #in "in"
 * parameter[0].min = 0

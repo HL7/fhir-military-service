@@ -3,10 +3,9 @@ Parent:   Observation
 Id:       combatepisode
 Title:    "Combat Episode"
 Description:   "Combat Episode: This profile definition extends Combat Zone Period profile (url: http://hl7.org/fhir/us/odh/StructureDefinition/odh-CombatZonePeriod )  and includes the requirements specified in ZMH and Deployment Schema. The base profile is: http://hl7.org/fhir/us/odh/StructureDefinition/odh-CombatZonePeriod"
-
 * status and code and subject and effectivePeriod and component MS
 * code 1..1
-* code  = LNC#99999-9 "Combat Episode"
+* code  = SOLOR#3209820D5C9F4F4E855C5783E8F49228 "Combat Episode"
 * subject only Reference(Patient)
 * subject 1..1
 * basedOn 0..0
@@ -34,14 +33,14 @@ Description:   "Combat Episode: This profile definition extends Combat Zone Peri
 * component ^slicing.rules = #open
 * component ^slicing.description = "Slice based on the component.code pattern"
 * component contains 	mshs-CombatEpisodeCountryCode 1..1 and mshs-CombatEpisodeMissionCode 0..1
-* component[mshs-CombatEpisodeCountryCode].code =  http://loinc.org#99999-9 "Combat Episode Country Code"
+* component[mshs-CombatEpisodeCountryCode].code =  http://www.logicahealth.org/solutions/solor#7E33243654BB42F5BF3F3A59E0E6E6BD "Combat Episode Country Code"
 * component[mshs-CombatEpisodeCountryCode].value[x] only CodeableConcept
 * component[mshs-CombatEpisodeCountryCode].valueCodeableConcept 1..1
 * component[mshs-CombatEpisodeCountryCode].valueCodeableConcept from https://www.iso.org/iso-3166-country-codes (preferred)
-* component[mshs-CombatEpisodeMissionCode].code =  http://loinc.org#99999-9 "Combat Episode Mission Code"
+* component[mshs-CombatEpisodeMissionCode].code =  http://www.logicahealth.org/solutions/solor#BF3432CC716B4DC7AA0DF43C176F4F05 "Combat Episode Mission Code"
 * component[mshs-CombatEpisodeMissionCode].value[x] only CodeableConcept
 * component[mshs-CombatEpisodeMissionCode].valueCodeableConcept 1..1
-* component[mshs-CombatEpisodeMissionCode].valueCodeableConcept from https://snomedtbd
+* component[mshs-CombatEpisodeMissionCode].valueCodeableConcept from CombatEpisodeMissionValueSet
 * component[mshs-CombatEpisodeCountryCode].dataAbsentReason 0..0
 * component[mshs-CombatEpisodeCountryCode].interpretation 0..0
 * component[mshs-CombatEpisodeCountryCode].referenceRange 0..0

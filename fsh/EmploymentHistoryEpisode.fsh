@@ -71,6 +71,6 @@ Description:   "Employment history consists of a   series Employment Episodes. I
 * component[odh-DailyWorkHours].code =  http://loinc.org#87512-0 "Work hours per day"
 * component[odh-DailyWorkHours].value[x] only Quantity
 * component[odh-DailyWorkHours].valueQuantity 1..1
-* component[odh-IsCurrentJob].code =  http://loinc.org#999999 "IsCurrentJob: A flag indicating if this is the person's current job (at the time the resource was last updated)"
+* component[odh-IsCurrentJob].code =  http://www.logicahealth.org/solutions/solor#DEB09BA91D6544D489B1788F6E440E9E "IsCurrentJob"
 * component[odh-IsCurrentJob].value[x] only boolean
 * component[odh-IsCurrentJob].valueBoolean 1..1

@@ -53,7 +53,7 @@ Description: "Iraq"
 * effectivePeriod.end = "1989-12-05" 
 * note.text = "Iraq"
 * component[mshs-CombatEpisodeCountryCode].valueCodeableConcept  = ISO#3166-2:IQ "Iraq"
-* component[mshs-CombatEpisodeMissionCode].valueCodeableConcept  = SCT#99999999 "Individual Augmentee" 
+* component[mshs-CombatEpisodeMissionCode].valueCodeableConcept  = SOLOR#750988FBBD6148DCB85C062DEFC871E2 "Individual Augmentee" 
 
 
 
@@ -94,7 +94,7 @@ Description: " She deployed to Afghanistan as an individual augmentee with the C
 * effectivePeriod.end = "2003-01-17" 
 * note.text = "She deployed to Afghanistan as an individual augmentee with the Combined Forces Command Afghanistan. It was there that she suffered a head injury when the truck in front of hers in a convoy was struck by an RPG, the resulting explosion causing her truck to flip. "
 * component[mshs-CombatEpisodeCountryCode].valueCodeableConcept  = ISO#3166-2:AF "Afghanistan"
-* component[mshs-CombatEpisodeMissionCode].valueCodeableConcept  = SCT#99999999 "Individual Augmentee" 
+* component[mshs-CombatEpisodeMissionCode].valueCodeableConcept  = SOLOR#750988FBBD6148DCB85C062DEFC871E2 "Individual Augmentee" 
 
 
 
@@ -108,7 +108,7 @@ Description: "Military Service Episode"
 * effectivePeriod.end = "2012-06-01" 
 * hasMember[CombatEpisode] = Reference(MeghanVeteranCombatEpisode)
 * component[mseo-Industry].valueCodeableConcept  = PHOccupationalDataForHealthODH#928110.01143 "Navy National Security"
-* component[mseo-DischargeStatus].valueCodeableConcept  = SCT#99999999 "Honorable"
+* component[mseo-DischargeStatus].valueCodeableConcept  = SCT#e37cd7384c954b9fa9226ecaec90c1bb "Honorable"
 * component[mseo-SupervisoryLevel].valueCodeableConcept  = PHOccupationalDataForHealthODH#E-3	"US Military Enlisted paygrade E-3"
 * component[mseo-SeparationReason].valueCodeableConcept  = SeparationReasonCodeSystem#035 "COMPLETION OF REQUIRED ACTIVE SERVICE "
 * component[odh-IsCurrentJob].valueBoolean = false
