@@ -145,32 +145,28 @@ Usage: #definition
 * type = false
 * instance = false
 * resource = #Patient "Patient"
-* parameter[0].name = #veteranId "veteranId"
+* parameter[0].name = #veteranName "veteranName"
 * parameter[0].use = #in "in"
-* parameter[0].min = 0
+* parameter[0].min = 1
 * parameter[0].max = "1"
-* parameter[0].type = #Identifier "Identifier"
-* parameter[1].name = #veteranName "veteranName"
+* parameter[0].type = #HumanName "HumanName"
+* parameter[1].name = #veteranSSN "veteranSSN"
 * parameter[1].use = #in "in"
-* parameter[1].min = 0
+* parameter[1].min = 1
 * parameter[1].max = "1"
-* parameter[1].type = #HumanName "HumanName"
-* parameter[2].name = #veteranSSN "veteranSSN"
+* parameter[1].type = #Identifier "Identifier"
+* parameter[2].name = #veteranDOB "veteranDOB"
 * parameter[2].use = #in "in"
-* parameter[2].min = 0
+* parameter[2].min = 1
 * parameter[2].max = "1"
-* parameter[2].type = #Identifier "Identifier"
-* parameter[3].name = #veteranAddress "veteranAddress"
-* parameter[3].use = #in "in"
-* parameter[3].min = 0
+* parameter[2].type = #date "date"
+* parameter[3].name = #VeteranStatus "VeteranStatus"
+* parameter[3].use = #out "out"
+* parameter[3].min = 1
 * parameter[3].max = "1"
-* parameter[3].type = #Address "Address"
-* parameter[4].name = #VeteranStatus "VeteranStatus"
-* parameter[4].use = #out "out"
-* parameter[4].min = 1
-* parameter[4].max = "1"
-* parameter[4].type = #Observation "Observation"
-* parameter[4].targetProfile[0] = "VeteranStatus"
+* parameter[3].type = #Observation "Observation"
+* parameter[3].targetProfile[1] = "VeteranStatus"
+* parameter[1].targetProfile[1] = "VeteranStatus"
 
 
 
