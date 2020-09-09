@@ -32,18 +32,20 @@ Description:   "Combat Episode: This profile definition extends Combat Zone Peri
 * component ^slicing.discriminator.path = "code"
 * component ^slicing.rules = #open
 * component ^slicing.description = "Slice based on the component.code pattern"
-* component contains 	mshs-CombatEpisodeCountryCode 1..1 and mshs-CombatEpisodeMissionCode 0..1
+* component contains mshs-CombatEpisodeCountryCode 1..1 and 
+                     mshs-CombatEpisodeMissionCode 0..1
 * component[mshs-CombatEpisodeCountryCode].code =  http://www.logicahealth.org/solutions/solor#7E33243654BB42F5BF3F3A59E0E6E6BD "Combat Episode Country Code"
 * component[mshs-CombatEpisodeCountryCode].value[x] only CodeableConcept
 * component[mshs-CombatEpisodeCountryCode].valueCodeableConcept 1..1
 * component[mshs-CombatEpisodeCountryCode].valueCodeableConcept from https://www.iso.org/iso-3166-country-codes (preferred)
+* component[mshs-CombatEpisodeCountryCode].dataAbsentReason 0..0
+* component[mshs-CombatEpisodeCountryCode].interpretation 0..0
+* component[mshs-CombatEpisodeCountryCode].referenceRange 0..0
+
 * component[mshs-CombatEpisodeMissionCode].code =  http://www.logicahealth.org/solutions/solor#BF3432CC716B4DC7AA0DF43C176F4F05 "Combat Episode Mission Code"
 * component[mshs-CombatEpisodeMissionCode].value[x] only CodeableConcept
 * component[mshs-CombatEpisodeMissionCode].valueCodeableConcept 1..1
 * component[mshs-CombatEpisodeMissionCode].valueCodeableConcept from CombatEpisodeMissionValueSet
-* component[mshs-CombatEpisodeCountryCode].dataAbsentReason 0..0
-* component[mshs-CombatEpisodeCountryCode].interpretation 0..0
-* component[mshs-CombatEpisodeCountryCode].referenceRange 0..0
 * component[mshs-CombatEpisodeMissionCode].dataAbsentReason 0..0
 * component[mshs-CombatEpisodeMissionCode].interpretation 0..0
 * component[mshs-CombatEpisodeMissionCode].referenceRange 0..0

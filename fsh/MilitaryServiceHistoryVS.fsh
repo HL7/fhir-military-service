@@ -291,18 +291,31 @@ CodeSystem: DischargeStatusCodeSystem
 Id: msh-DischargeStatusCodeSystem
 Title: "Discharge Status Code System"
 Description: "Discharge Status Code System"
-* #e37cd7384c954b9fa9226ecaec90c1bb "honorable"
-* #4605b06f09684f6f8a928547edc009cc "dishonorable"
-* #026b71e322804ff4ad61b33e24dd309c "dishonorable-for-va-purposes"
+* #FF17F8246B4E4F80BEFB88BC7C257998 "Honorable"
+* #D09FB899943C49CC964A7C3242F3C7F1 "General"
+* #48F30689B48E42E8923E143F41312DFA "Bad Conduct"
+* #35469C8ABC62487AA00DD8167460F916 "Other Than Honorable"
+* #64AFA76E02E04DA4B86484B93D16CF3A "Dishonorable"
+* #5C2ACB630C7A41A594B0023CE10BE74C "Honorable absence of negative report"
+* #73D023B296EF455DA032A029AE6BB2FE "Honorable for VA purposes"
+* #E604FEE695D04D4B832B97B811973660 "Dishonorable for VA purposes"
+* #9E2C2C55E162447A8D091A76557AC058 "Uncharacterized"
+* #8EC41214293A4EA09C9D40072AFFE8CE "Unknown"
 
 ValueSet: DischargeStatusValueSet
 Id: msh-DischargeStatusValueSet
 Title: "Discharge Status Value Set"
 Description: "Discharge Status Value Set"
-* DischargeStatusCodeSystem#e37cd7384c954b9fa9226ecaec90c1bb "honorable"
-* DischargeStatusCodeSystem#4605b06f09684f6f8a928547edc009cc "dishonorable"
-* DischargeStatusCodeSystem#026b71e322804ff4ad61b33e24dd309c "dishonorable-for-va-purposes"
-
+* DischargeStatusCodeSystem#79A512F77CFC4E63B9969930FC8787DB "Honorable"
+* DischargeStatusCodeSystem#B5BA882B31574AB0BF82DFE43765F264 "General"
+* DischargeStatusCodeSystem#59B40AF3E8B44B0587743B08290C7AD1 "Bad Conduct"
+* DischargeStatusCodeSystem#599671FC8E3046DEA0AFCA3E8D2640D3 "Other Than Honorable"
+* DischargeStatusCodeSystem#42F13CAA1D894DFEB000908D0F467B76 "Dishonorable"
+* DischargeStatusCodeSystem#A557979943014BF990E056D7BF3FB940 "Honorable absence of negative report"
+* DischargeStatusCodeSystem#24B4895BFF3048BABB4B7708E8CFAADE "Honorable for VA purposes"
+* DischargeStatusCodeSystem#E963385389BC4541AB6DD77F3EF31EEA "Dishonorable for VA purposes"
+* DischargeStatusCodeSystem#8412EEBCB8354A06AAB445C9486CA268 "Uncharacterized"
+* DischargeStatusCodeSystem#7A3CBF5D942F41A9889C9406BB1D951F "Unknown"
 
 CodeSystem: CombatEpisodeMissionCodeSystem
 Id: msh-CombatEpisodeMissionCodeSystem

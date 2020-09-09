@@ -47,8 +47,7 @@ Description:   "Military Service Episode: A patient/Veteran may have zero or mor
 * hasMember ^slicing.discriminator.type = #profile // #pattern
 * hasMember ^slicing.discriminator.path =  "$this.resolve()" // "$this.resolve().code"
 * hasMember ^slicing.rules = #open
-* hasMember contains 
-    CombatEpisode 0..*
+* hasMember contains CombatEpisode 0..*
 * hasMember[CombatEpisode] only Reference(CombatEpisode)
 
 
@@ -66,7 +65,7 @@ Description:   "Military Service Episode: A patient/Veteran may have zero or mor
 * component[mseo-Industry].code =  http://loinc.org#86188-0 "History of Occupation industry"
 * component[mseo-Industry].value[x] only CodeableConcept   
 * component[mseo-Industry].valueCodeableConcept 1..1
-* component[mseo-Industry].valueCodeableConcept from https://phinvads.cdc.gov/2.16.840.1.114222.4.11.7187
+* component[mseo-Industry].valueCodeableConcept from MilitaryBranchCode
 
 * component[mseo-DischargeStatus].code =  http://www.logicahealth.org/solutions/solor#9B7095A70B024CD789A36E48A3936592 "Discharge Status"
 * component[mseo-DischargeStatus].value[x] only CodeableConcept   
