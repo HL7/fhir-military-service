@@ -92,12 +92,12 @@ Description:  "Veteran Status true/false"
 
 
 
-Instance: VeteranStatusQuery
+Instance: VeteranStatus
 InstanceOf: OperationDefinition
 Title: "Veteran Status"
 Usage: #definition
 * name = "VeteranStatus"
-* description = "Query to return the status of a veteran"
+* description = "Operation to return the status of a veteran"
 * status = #draft "draft"
 * kind = #query "query"
 * code = #veteranStatus "veteranStatus"
@@ -143,13 +143,11 @@ Usage: #definition
 
 
 
-* parameter[3].name = #VeterandateStatus "VeteranStatus"
-* parameter[3].use = #out "out"
-* parameter[3].min = 1
-* parameter[3].max = "1"
-* parameter[3].type = #Observation "Observation"
-* parameter[3].targetProfile[1] = "VeteranStatus"
-* parameter[1].targetProfile[1] = "VeteranStatus"
+* parameter[6].name = #VeterandateStatus "VeteranStatus"
+* parameter[6].use = #out "out"
+* parameter[6].min = 1
+* parameter[6].max = "1"
+* parameter[6].type = #string "string"
 
 
 
