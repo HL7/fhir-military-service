@@ -11,6 +11,7 @@ Description:   "Employment history consists of a   series Employment Episodes. I
 
 * category.coding = http://terminology.hl7.org/CodeSystem/observation-category#social-history
 * status and code and subject and effective[x] and valueCodeableConcept MS
+* valueCodeableConcept from  2.16.840.1.114222.4.11.7901  (preferred)
 * effective[x] only Period
 * effectivePeriod.start 0..1 
 * effectivePeriod.end 0..1
@@ -40,14 +41,10 @@ Description:   "Employment history consists of a   series Employment Episodes. I
 * component[ehe-Industry].code =  http://loinc.org#86188-0 "History of Occupation industry"
 * component[ehe-Industry].value[x] only CodeableConcept   
 * component[ehe-Industry].valueCodeableConcept 1..1
-* component[ehe-Industry].valueCodeableConcept from https://phinvads.cdc.gov/2.16.840.1.114222.4.11.7187
+* component[ehe-Industry].valueCodeableConcept from 2.16.840.1.114222.4.5.327 (preferred)
 
 * component[ehe-SupervisoryLevel].code =  http://loinc.org#87707-6 "Job supervisory level or pay grade"
 * component[ehe-SupervisoryLevel].value[x] only CodeableConcept
 * component[ehe-SupervisoryLevel].valueCodeableConcept 1..1
-* component[ehe-SupervisoryLevel].valueCodeableConcept from   https://phinvads.cdc.gov/2.16.840.1.114222.4.11.7613
+* component[ehe-SupervisoryLevel].valueCodeableConcept from  2.16.840.1.114222.4.11.7613 (preferred)
 
-* component[ehe-Occupation].code =  http://loinc.org#85658-3 "Occupation [Type]"
-* component[ehe-Occupation].value[x] only CodeableConcept
-* component[ehe-Occupation].valueCodeableConcept 1..1
-* component[ehe-Occupation].valueCodeableConcept from   https://phinvads.cdc.gov/vad/2.16.840.1.114222.4.5.327

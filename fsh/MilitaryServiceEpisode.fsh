@@ -1,30 +1,4 @@
 // Code Systems
-Alias:   LNC = http://loinc.org
-Alias:   SCT = http://snomed.info/sct
-Alias:   UCUM = http://unitsofmeasure.org
-Alias:   MTH = http://ncimeta.nci.nih.gov
-Alias:   ICD10CM = http://hl7.org/fhir/sid/icd-10-cm 
-Alias:   RXN = http://www.nlm.nih.gov/research/umls/rxnorm
-Alias:   CPT = http://www.ama-assn.org/go/cpt
-Alias:   ICD10PCS = http://www.nlm.nih.gov/research/umls/icd10pcs
-Alias:   AJCC = http://cancerstaging.org
-Alias:   GTR = http://www.ncbi.nlm.nih.gov/gtr
-Alias:   CLINVAR = http://www.ncbi.nlm.nih.gov/clinvar
-Alias:   IDTYPE = http://terminology.hl7.org/CodeSystem/v2-0203
-Alias:   HGNC = http://www.genenames.org/geneId
-Alias:   HGVS = http://varnomen.hgvs.org
-Alias:   SPTY = http://terminology.hl7.org/CodeSystem/v2-0487
-Alias:   ClinStatus = http://terminology.hl7.org/CodeSystem/condition-clinical
-Alias:   VerStatus = http://terminology.hl7.org/CodeSystem/condition-ver-status
-Alias:   MedStatus = http://hl7.org/fhir/CodeSystem/medication-statement-status
-Alias:   MedCat = http://terminology.hl7.org/CodeSystem/medication-statement-category
-Alias:   ObsCat = http://terminology.hl7.org/CodeSystem/observation-category
-Alias:   ObsInt = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation
-Alias:   DiagnosticService = http://terminology.hl7.org/CodeSystem/v2-0074
-Alias:   OmbRaceCat = urn:oid:2.16.840.1.113883.6.238
-Alias:   ISO = urn:iso:std:iso:3166
-Alias:   PHOccupationalDataForHealthODH = http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH
-Alias:   SOLOR = http://www.logicahealth.org/solutions/solor
 
 
 Profile:  MilitaryServiceEpisode
@@ -62,10 +36,12 @@ Description:   "Military Service Episode: A patient/Veteran may have zero or mor
 					 mseo-DischargeStatus 1..1 and
 					 mseo-SupervisoryLevel 1..1 and
 					 mseo-SeparationReason 1..1
+
 * component[mseo-Industry].code =  http://loinc.org#86188-0 "History of Occupation industry"
 * component[mseo-Industry].value[x] only CodeableConcept   
 * component[mseo-Industry].valueCodeableConcept 1..1
-* component[mseo-Industry].valueCodeableConcept from MilitaryBranchCode
+* component[mseo-Industry].valueCodeableConcept from MilitaryBranchCode (preferred)
+
 
 * component[mseo-DischargeStatus].code =  http://www.logicahealth.org/solutions/solor#9B7095A70B024CD789A36E48A3936592 "Discharge Status"
 * component[mseo-DischargeStatus].value[x] only CodeableConcept   
@@ -76,7 +52,7 @@ Description:   "Military Service Episode: A patient/Veteran may have zero or mor
 * component[mseo-SupervisoryLevel].code =  http://loinc.org#87707-6 "Job supervisory level or pay grade"
 * component[mseo-SupervisoryLevel].value[x] only CodeableConcept
 * component[mseo-SupervisoryLevel].valueCodeableConcept 1..1
-* component[mseo-SupervisoryLevel].valueCodeableConcept from   https://phinvads.cdc.gov/2.16.840.1.114222.4.11.7613
+* component[mseo-SupervisoryLevel].valueCodeableConcept from  PayGradeCode
 
 * component[mseo-SeparationReason].code =  http://www.logicahealth.org/solutions/solor#9CEAD6537D6A4F198549F70598B8F8BF "Separation Reason "
 * component[mseo-SeparationReason].value[x] only CodeableConcept   
@@ -85,21 +61,6 @@ Description:   "Military Service Episode: A patient/Veteran may have zero or mor
 
 
 
-CodeSystem: VeteranStatusCodeSystem
-Id: msh-VeteranStatusCodeSystem
-Title: "Veteran Status Code System"
-Description: "Veteran Status Code System"
-* #NO "NO"
-* #YES "YES"
-* #NMI "Need More Information"
-
-ValueSet:    VeteranStatusValueSet
-Id: msh-veteranstatus-vs
-Title: "Veteran Status Value Set"
-Description: "Veteran Status Value Set" 
-* VeteranStatusCodeSystem#NO	"NO"
-* VeteranStatusCodeSystem#YES	"YES"
-* VeteranStatusCodeSystem#NMI	"Need More Information"
 
 
 
@@ -126,8 +87,8 @@ Description:  "Veteran Status true/false"
 * derivedFrom 0..0
 * subject only Reference(Patient)
 * subject 1..1
-* valueCodeableConcept 1..1
-* valueCodeableConcept from VeteranStatusValueSet
+* valueBoolean 1..1
+
 
 
 
@@ -144,29 +105,51 @@ Usage: #definition
 * type = false
 * instance = false
 * resource = #Patient "Patient"
-* parameter[0].name = #veteranName "veteranName"
+* parameter[0].name = #firstName "firstName"
 * parameter[0].use = #in "in"
 * parameter[0].min = 1
 * parameter[0].max = "1"
-* parameter[0].type = #HumanName "HumanName"
-* parameter[1].name = #veteranSSN "veteranSSN"
+* parameter[0].type = #string "String"
+* parameter[1].name = #last "firstName"
 * parameter[1].use = #in "in"
 * parameter[1].min = 1
 * parameter[1].max = "1"
-* parameter[1].type = #Identifier "Identifier"
-* parameter[2].name = #veteranDOB "veteranDOB"
+* parameter[1].type = #string "String"
+* parameter[2].name = #middleName "middleName"
 * parameter[2].use = #in "in"
-* parameter[2].min = 1
+* parameter[2].min = 0
 * parameter[2].max = "1"
-* parameter[2].type = #date "date"
-* parameter[3].name = #VeteranStatus "VeteranStatus"
+* parameter[2].type = #string "String
+"
+
+* parameter[3].name = #veteranSSN "veteranSSN"
+* parameter[3].use = #in "in"
+* parameter[3].min = 1
+* parameter[3].max = "1"
+* parameter[3].type = #string "string"
+
+* parameter[4].name = #dateOfBirth "dateOfBirth"
+* parameter[4].use = #in "in"
+* parameter[4].min = 1
+* parameter[4].max = "1"
+* parameter[4].type = #date "date"
+
+* parameter[5].name = #gender "gender"
+* parameter[5].use = #in "in"
+* parameter[5].min = 0
+* parameter[5].max = "1"
+* parameter[5].type = #string "string"
+
+
+
+
+* parameter[3].name = #VeterandateStatus "VeteranStatus"
 * parameter[3].use = #out "out"
 * parameter[3].min = 1
 * parameter[3].max = "1"
 * parameter[3].type = #Observation "Observation"
 * parameter[3].targetProfile[1] = "VeteranStatus"
 * parameter[1].targetProfile[1] = "VeteranStatus"
-
 
 
 
