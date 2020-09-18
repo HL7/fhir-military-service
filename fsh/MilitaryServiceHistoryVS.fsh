@@ -241,6 +241,5 @@ ValueSet:    VeteranStatusValueSet
 Id: msh-veteranstatus-vs
 Title: "Veteran Status Value Set"
 Description: "Veteran Status Value Set" 
-* SCT#NO	"NO"
-* SCT#YES	"YES"
-* SCT#NMI	"Need More Information"
+* SCT#UNVERIFIED	"UNVERIFIED"
+* SCT#VERIFIED	"VERIFIED"
