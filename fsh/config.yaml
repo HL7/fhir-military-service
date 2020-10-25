@@ -10,17 +10,18 @@
 # │  supported properties, see:                                                                    │
 # │  http://build.fhir.org/ig/HL7/fhir-shorthand/branches/beta/sushi.html#ig-development           │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-id: hl7.fhir.militaryserviceandstatus
-canonical: http://hl7.org/fhir/militaryserviceandstatus
+
+id: hl7.fhir.us.msh
+canonical: http://hl7.org/fhir/us/msh
 version: 1.0.0
-name: HL7FHIRImplementationGuideMILITARYSERVICEHISTORYANDSTATUS
-title: "HL7 FHIR Implementation Guide: MILITARY SERVICE HISTORY AND STATUS"
+name: Military Service History
+title: "HL7 FHIR Implementation Guide: Military Service History"
 status: active
 publisher:
   name: HL7 Cross-Group Projects
   url: http://www.hl7.org/Special/committees/cgp
   email: cgp@lists.HL7.org
-description: "Military Service and Status Profile: This implementation guide design
+description: "Military Service History Profile: This implementation guide design
   document is intended to create a set of profiles and extensions to support
   Military Service History and Status reporting. It harmonizes the requirements
   of the U.S. Department of Veterans Affairs (VA) and the Centers for Disease
@@ -37,7 +38,8 @@ description: "Military Service and Status Profile: This implementation guide des
 license: CC0-1.0
 fhirVersion: 4.0.1
 dependencies:
-  hl7.fhir.us.core: 3.1.0
+  hl7.fhir.us.core: 3.1.0 
+  hl7.fhir.us.odh: 1.0.0 
 parameters:
   show-inherited-invariants: false
 copyrightYear: 2020+

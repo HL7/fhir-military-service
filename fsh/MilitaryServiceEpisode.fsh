@@ -2,8 +2,8 @@
 
 
 Profile:  MilitaryServiceEpisode
-Parent:   EmploymentHistoryEpisode
-Id:       militaryserviceepisode
+Parent:   Observation
+Id:       msh-militaryserviceepisode
 Title:    "Military Service Episode"
 Description:   "Military Service Episode: A patient/Veteran may have zero or more military service episodes. The contents of this profile is based on the HL7 Version 2 ZMH segment and the ServiceHistoryEpisode schema specified in the current Veteran Verification API and it allows this API to migrate to FHIR and to be consistent with the prior work done by Center for Disease Control (CDC) National Institute for Occupational Safety and Health (NIOSH).  A service history episode may reference zero or more Combat episodes. This profile is based on the default FHIR Observation profile but may reuse ODD Past or Present Job profile ( http://hl.org/fhir/us/odh/StructureDefinition-odh-PastOrPresentJob.html)."
 * status and code and subject and effectivePeriod and component MS
@@ -24,6 +24,15 @@ Description:   "Military Service Episode: A patient/Veteran may have zero or mor
 * hasMember contains CombatEpisode 0..*
 * hasMember[CombatEpisode] only Reference(CombatEpisode)
 
+* hasMember ^slicing.discriminator.type = #profile // #pattern
+* hasMember ^slicing.discriminator.path =  "$this.resolve()" // "$this.resolve().code"
+* hasMember ^slicing.rules = #open
+* hasMember contains MilitaryOccupation 0..*
+* hasMember[MilitaryOccupation] only Reference(MilitaryOccupation)
+
+
+// add new military occupatin based on past or present 
+
 
 
 
@@ -34,7 +43,6 @@ Description:   "Military Service Episode: A patient/Veteran may have zero or mor
 
 * component contains mseo-Industry 1..1 and
 					 mseo-DischargeStatus 1..1 and
-					 mseo-SupervisoryLevel 1..1 and
 					 mseo-SeparationReason 1..1
 
 * component[mseo-Industry].code =  http://loinc.org#86188-0 "History of Occupation industry"
@@ -49,10 +57,6 @@ Description:   "Military Service Episode: A patient/Veteran may have zero or mor
 * component[mseo-DischargeStatus].valueCodeableConcept from  DischargeStatusValueSet
 
 
-* component[mseo-SupervisoryLevel].code =  http://loinc.org#87707-6 "Job supervisory level or pay grade"
-* component[mseo-SupervisoryLevel].value[x] only CodeableConcept
-* component[mseo-SupervisoryLevel].valueCodeableConcept 1..1
-* component[mseo-SupervisoryLevel].valueCodeableConcept from  PayGradeCode
 
 * component[mseo-SeparationReason].code =  http://www.logicahealth.org/solutions/solor#9CEAD6537D6A4F198549F70598B8F8BF "Separation Reason "
 * component[mseo-SeparationReason].value[x] only CodeableConcept   
@@ -67,7 +71,7 @@ Description:   "Military Service Episode: A patient/Veteran may have zero or mor
 
 Profile:  VeteranStatus
 Parent:   Observation
-Id:       veteranStatus
+Id:       msh-veteranStatus
 Title:    "Veteran Status"
 Description:  "Veteran Status true/false"
 * effectivePeriod 0..0
@@ -83,7 +87,6 @@ Description:  "Veteran Status true/false"
 * method 0..0
 * specimen 0..0
 * device 0..0
-* referenceRange 0..0
 * derivedFrom 0..0
 * subject only Reference(Patient)
 * subject 1..1

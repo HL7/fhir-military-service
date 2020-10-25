@@ -8,7 +8,7 @@ Description: "Military Service Patient"
 
 
 Extension:  USVeteranStatus
-Id: us-veteran-status
+Id: msh-veteran-status
 Title: "us-veteran-status"
 Description: "us-veteran-status"
 * value[x] only code
