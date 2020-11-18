@@ -7,3 +7,9 @@ build/template/**
 **/.DS_Store
 **/thumbs.db
 build/input-cache/**
+/build/
+/fsh-generated/
+/input-cache/
+/output/
+/template/
+/temp/

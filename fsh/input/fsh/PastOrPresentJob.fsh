@@ -82,6 +82,6 @@ Description:   "Related data elements for a current or previous job, as reported
 * component[odh-DailyWorkHours].value[x] only Quantity
 * component[odh-DailyWorkHours].valueQuantity 1..1
 
-* component[odh-IsCurrentJob].code =  http://loinc.org#999999 "IsCurrentJob: A flag indicating if this is the person's current job (at the time the resource was last updated)"
+* component[odh-IsCurrentJob].code =  http://solor.org#97177B0CDE6B4B49AFECE9DACD63F12F "IsCurrentJob: A flag indicating if this is the person's current job (at the time the resource was last updated)"
 * component[odh-IsCurrentJob].value[x] only boolean
 * component[odh-IsCurrentJob].valueBoolean 1..1

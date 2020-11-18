@@ -10,7 +10,8 @@ Description:   "Military Service Episode: A patient/Veteran may have zero or mor
 * id 1..1 
 * identifier 0..1 
 * code = LNC#87511-2 
-* subject 1..1
+* subject 1..1 
+* subject only Reference(USVeteran)
 * effective[x] only Period
 * effectivePeriod 1..1
 * effectivePeriod.start 1..1
@@ -100,7 +101,7 @@ InstanceOf: OperationDefinition
 Title: "Veteran Status"
 Usage: #definition
 * name = "VeteranStatus"
-* description = "Operation to return the status of a veteran"
+* description = "The Veteran Status Operation returns VERIFIED or UNVERIFIED status of the patient.  The API should be used as part of use cases needing general veteran status and not neccesarily be used as part of eligibilty."
 * status = #draft "draft"
 * kind = #query "query"
 * code = #veteranStatus "veteranStatus"
@@ -129,7 +130,7 @@ Usage: #definition
 * parameter[3].use = #in "in"
 * parameter[3].min = 1
 * parameter[3].max = "1"
-* parameter[3].type = #string "string"
+* parameter[3].type = #Identifier "Identifier"
 
 * parameter[4].name = #dateOfBirth "dateOfBirth"
 * parameter[4].use = #in "in"
@@ -141,16 +142,16 @@ Usage: #definition
 * parameter[5].use = #in "in"
 * parameter[5].min = 0
 * parameter[5].max = "1"
-* parameter[5].type = #string "string"
+* parameter[5].type = #code "code"
 
 
 
 
-* parameter[6].name = #VeterandateStatus "VeteranStatus"
+* parameter[6].name = #veterandateStatus "veteranStatus"
 * parameter[6].use = #out "out"
 * parameter[6].min = 1
 * parameter[6].max = "1"
-* parameter[6].type = #string "string"
+* parameter[6].type = #boolean "boolean"
 
 
 
