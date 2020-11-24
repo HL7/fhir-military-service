@@ -1,25 +1,22 @@
 id: hl7.fhir.us.msh
 canonical: http://hl7.org/fhir/us/msh
-version: 1.0.1
-name: HL7FHIRImplementationGuideminimalCommonOncologyDataElementsmshRelease1USRealmSTU1
-title: "HL7 FHIR Implementation Guide: minimal Common Oncology Data Elements (msh)
-  Release 1 - US Realm | STU1"
+version: 1.0.0
+name: HL7FHIRImplementationGuidemMilitaryHistoryRelease1USRealmSTU1
+title: "HL7 FHIR Implementation Guide: US Military Service History and Status"
 status: active
 publisher:
   name: HL7 International Clinical Interoperability Council
   url: http://www.hl7.org/Special/committees/cic
   email: ciclist@lists.HL7.org
 jurisdiction: urn:iso:std:iso:3166#US "United States of America"
-description: msh™ (short for Minimal Common Oncology Data Elements) is an initiative
-  intended to assemble a core set of structured data elements for oncology
-  electronic health records.
+description: This implementation guide design document is intended to create a set of profiles and extensions to support Military Service History and Status reporting. 
 license: CC0-1.0
 fhirVersion: 4.0.1
 dependencies:
   hl7.fhir.us.core: 3.1.0
 parameters:
   show-inherited-invariants: false
-copyrightYear: 2019+
+copyrightYear: 2020+
 releaseLabel: STU1
 pages:
   index.md:
@@ -31,10 +28,4 @@ menu:
   History: http://hl7.org/fhir/us/msh/history.html
 groups:
 
-  # Profiles
-  USVeteran:
-    name: "Profiles: usveteran"
-    description: usveteran
-    resources:
-      - StructureDefinition/usveteran
    
