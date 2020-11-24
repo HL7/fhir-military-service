@@ -1,6 +1,6 @@
 Instance: SamShare	
 InstanceOf: USVeteran	
-Description: ""	
+Description: "SamShare Example"	
 * id = "sam-share-ssgt-veteran"	
 * meta.profile = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"	
 * identifier.use = #usual	
@@ -24,7 +24,7 @@ Description: ""
 * gender = #male	
 * active = true
 * birthDate = "1987-02-20"
-* extension[USVeteranStatus].valueCoding = SOLOR#91A4B033CC8C401AA46BD2B29E930BE9 "VERIFIED"
+* extension[USVeteranStatus].valueBoolean = true
 
 * extension[race].extension[ombCategory].valueCoding = OmbRaceCat#2106-3 "White"
 * extension[race].extension[detailed].valueCoding = OmbRaceCat#2036-2 "Filipino"

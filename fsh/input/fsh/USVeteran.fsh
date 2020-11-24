@@ -11,8 +11,8 @@ Extension:  USVeteranStatus
 Id: msh-veteran-status
 Title: "us-veteran-status"
 Description: "us-veteran-status"
-* value[x] only Coding
-* valueCoding from VeteranStatusValueSet
+* value[x] only boolean
+* valueBoolean 1..1 MS
 
 
  

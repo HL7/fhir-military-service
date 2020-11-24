@@ -52,14 +52,14 @@ Description:   "Military Service Episode: A patient/Veteran may have zero or mor
 * component[mseo-Industry].valueCodeableConcept from MilitaryBranchCode (preferred)
 
 
-* component[mseo-DischargeStatus].code =  http://www.logicahealth.org/solutions/solor#9B7095A70B024CD789A36E48A3936592 "Discharge Status"
+* component[mseo-DischargeStatus].code =  SOLOR#9B7095A70B024CD789A36E48A3936592 "Discharge Status"
 * component[mseo-DischargeStatus].value[x] only CodeableConcept   
 * component[mseo-DischargeStatus].valueCodeableConcept 1..1
 * component[mseo-DischargeStatus].valueCodeableConcept from  DischargeStatusValueSet
 
 
 
-* component[mseo-SeparationReason].code =  http://www.logicahealth.org/solutions/solor#9CEAD6537D6A4F198549F70598B8F8BF "Separation Reason "
+* component[mseo-SeparationReason].code =  SOLOR#9CEAD6537D6A4F198549F70598B8F8BF "Separation Reason"
 * component[mseo-SeparationReason].value[x] only CodeableConcept   
 * component[mseo-SeparationReason].valueCodeableConcept 1..1
 * component[mseo-SeparationReason].valueCodeableConcept from  SeparationReasonValueSet

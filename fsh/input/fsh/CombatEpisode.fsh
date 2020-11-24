@@ -34,7 +34,7 @@ Description:   "Combat Episode: This profile definition extends Combat Zone Peri
 * component ^slicing.description = "Slice based on the component.code pattern"
 * component contains mshs-CombatEpisodeCountryCode 1..1 and 
                      mshs-CombatEpisodeMissionCode 0..1
-* component[mshs-CombatEpisodeCountryCode].code =  http://www.logicahealth.org/solutions/solor#7E33243654BB42F5BF3F3A59E0E6E6BD "Combat Episode Country Code"
+* component[mshs-CombatEpisodeCountryCode].code =  SOLOR#7E33243654BB42F5BF3F3A59E0E6E6BD "Combat Episode Country Code"
 * component[mshs-CombatEpisodeCountryCode].value[x] only CodeableConcept
 * component[mshs-CombatEpisodeCountryCode].valueCodeableConcept 1..1
 * component[mshs-CombatEpisodeCountryCode].valueCodeableConcept from http://hl7.org/fhir/ValueSet/iso3166-1-3 (preferred)
@@ -42,7 +42,7 @@ Description:   "Combat Episode: This profile definition extends Combat Zone Peri
 * component[mshs-CombatEpisodeCountryCode].interpretation 0..0
 * component[mshs-CombatEpisodeCountryCode].referenceRange 0..0
 
-* component[mshs-CombatEpisodeMissionCode].code =  http://www.logicahealth.org/solutions/solor#BF3432CC716B4DC7AA0DF43C176F4F05 "Combat Episode Mission Code"
+* component[mshs-CombatEpisodeMissionCode].code =  SOLOR#BF3432CC716B4DC7AA0DF43C176F4F05 "Combat Episode Mission Code"
 * component[mshs-CombatEpisodeMissionCode].value[x] only CodeableConcept
 * component[mshs-CombatEpisodeMissionCode].valueCodeableConcept 1..1
 * component[mshs-CombatEpisodeMissionCode].valueCodeableConcept from CombatEpisodeMissionValueSet

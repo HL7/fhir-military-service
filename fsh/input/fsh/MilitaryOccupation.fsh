@@ -27,7 +27,7 @@ Description:   "Employment history consists of a   series Employment Episodes. I
 * component[odh-SupervisoryLevel].valueCodeableConcept from  PayGradeCode
 
 
-* component[mseo-Occupation].code =  http://www.logicahealth.org/solutions/solor#175ECB0F9DBC41708BC7ABD3468E7F53 "Military occupation"
+* component[mseo-Occupation].code =  SOLOR#175ECB0F9DBC41708BC7ABD3468E7F53 "Military occupation"
 * component[mseo-Occupation].value[x] only CodeableConcept
 * component[mseo-Occupation].valueCodeableConcept 1..1
 * component[mseo-Occupation].valueCodeableConcept from  MilitaryOccupationValueSet
