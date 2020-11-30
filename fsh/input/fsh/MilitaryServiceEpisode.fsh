@@ -13,9 +13,9 @@ Description:   "Military Service Episode: A patient/Veteran may have zero or mor
 * subject 1..1 
 * subject only Reference(USVeteran)
 * effective[x] only Period
-* effectivePeriod 1..1
-* effectivePeriod.start 1..1
-* effectivePeriod.end 1..1
+* effectivePeriod 1..1 MS
+* effectivePeriod.start 1..1 MS
+* effectivePeriod.end 0..1 MS "It may be omitted if the episode is still in progress"
 * category.coding = http://terminology.hl7.org/CodeSystem/observation-category#social-history
 
 

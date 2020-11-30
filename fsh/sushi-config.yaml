@@ -1,21 +1,22 @@
 id: hl7.fhir.us.msh
-canonical: http://hl7.org/fhir/us/msh
-version: 1.0.0
-name: HL7FHIRImplementationGuidemMilitaryHistoryRelease1USRealmSTU1
-title: "HL7 FHIR Implementation Guide: US Military Service History and Status"
+canonical: http://hl7.org/fhir/us/military-service
+version: 1.0.1
+name: military-service
+title: "HL7 FHIR Implementation Guide: Military Service History and Status
+  Release 1 - US Realm | STU1"
 status: active
 publisher:
-  name: HL7 International Clinical Interoperability Council
-  url: http://www.hl7.org/Special/committees/cic
-  email: ciclist@lists.HL7.org
+  name: HL7 Cross-Group Projects WG
+  url: https://confluence.hl7.org/display/CGP/Cross-Group+Projects+Home
+  email: cgp@lists.HL7.org
 jurisdiction: urn:iso:std:iso:3166#US "United States of America"
-description: This implementation guide design document is intended to create a set of profiles and extensions to support Military Service History and Status reporting. 
+description: Military Service History and STatus is an implementation guide for veteran status and history verification and confirmation.
 license: CC0-1.0
 fhirVersion: 4.0.1
 dependencies:
-  hl7.fhir.us.core: 3.1.0
+  hl7.fhir.us.core: 3.1.1
 parameters:
-  show-inherited-invariants: false
+  show-inherited-invariants: true
 copyrightYear: 2020+
 releaseLabel: STU1
 pages:
@@ -24,8 +25,7 @@ pages:
 
 menu:
   Home: index.html
-  Artifacts: artifacts.html
-  History: http://hl7.org/fhir/us/msh/history.html
+  FHIR Artifacts: artifacts.html
+  History: http://hl7.org/fhir/us/military-service/history.html
 groups:
 
-   
