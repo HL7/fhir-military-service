@@ -22,10 +22,18 @@ releaseLabel: STU1
 pages:
   index.md:
     title: Home
+  conformance.md:
+    title: Conformance
+  implementation.md:
+    title: Implementation
 
 menu:
   Home: index.html
-  FHIR Artifacts: artifacts.html
+  Conformance: conformance.html
+  Implementation: implementation.html
+  Artifacts: artifacts.html
+  Examples: examples.html
+  Downloads: downloads.html
   History: http://hl7.org/fhir/us/military-service/history.html
 groups:
 
