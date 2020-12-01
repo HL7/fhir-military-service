@@ -15,27 +15,21 @@ Description:   "Military Service Episode: A patient/Veteran may have zero or mor
 * effective[x] only Period
 * effectivePeriod 1..1 MS
 * effectivePeriod.start 1..1 MS
-* effectivePeriod.end 0..1 MS "It may be omitted if the episode is still in progress"
+* effectivePeriod.end 0..1 MS 
 * category.coding = http://terminology.hl7.org/CodeSystem/observation-category#social-history
 
 
 * hasMember ^slicing.discriminator.type = #profile // #pattern
 * hasMember ^slicing.discriminator.path =  "$this.resolve()" // "$this.resolve().code"
 * hasMember ^slicing.rules = #open
-* hasMember contains CombatEpisode 0..*
+* hasMember contains CombatEpisode 0..* MS
 * hasMember[CombatEpisode] only Reference(CombatEpisode)
 
 * hasMember ^slicing.discriminator.type = #profile // #pattern
 * hasMember ^slicing.discriminator.path =  "$this.resolve()" // "$this.resolve().code"
 * hasMember ^slicing.rules = #open
-* hasMember contains MilitaryOccupation 0..*
+* hasMember contains MilitaryOccupation 0..* MS
 * hasMember[MilitaryOccupation] only Reference(MilitaryOccupation)
-
-
-// add new military occupatin based on past or present 
-
-
-
 
 * component ^slicing.discriminator.type = #pattern
 * component ^slicing.discriminator.path = "code"
@@ -48,60 +42,29 @@ Description:   "Military Service Episode: A patient/Veteran may have zero or mor
 
 * component[mseo-Industry].code =  http://loinc.org#86188-0 "History of Occupation industry"
 * component[mseo-Industry].value[x] only CodeableConcept   
-* component[mseo-Industry].valueCodeableConcept 1..1
+* component[mseo-Industry].valueCodeableConcept 1..1 MS
 * component[mseo-Industry].valueCodeableConcept from MilitaryBranchCode (preferred)
 
 
 * component[mseo-DischargeStatus].code =  SOLOR#9B7095A70B024CD789A36E48A3936592 "Discharge Status"
 * component[mseo-DischargeStatus].value[x] only CodeableConcept   
-* component[mseo-DischargeStatus].valueCodeableConcept 1..1
+* component[mseo-DischargeStatus].valueCodeableConcept 1..1 MS
 * component[mseo-DischargeStatus].valueCodeableConcept from  DischargeStatusValueSet
-
 
 
 * component[mseo-SeparationReason].code =  SOLOR#9CEAD6537D6A4F198549F70598B8F8BF "Separation Reason"
 * component[mseo-SeparationReason].value[x] only CodeableConcept   
-* component[mseo-SeparationReason].valueCodeableConcept 1..1
+* component[mseo-SeparationReason].valueCodeableConcept 1..1 MS
 * component[mseo-SeparationReason].valueCodeableConcept from  SeparationReasonValueSet
-
-
-
-
-
-
-
-Profile:  VeteranStatus
-Parent:   Observation
-Id:       msh-veteranStatus
-Title:    "Veteran Status"
-Description:  "Veteran Status true/false"
-* effectivePeriod 0..0
-* basedOn 0..0
-* partOf 0..0
-* focus 0..0
-* encounter 0..0
-* issued 0..0
-* performer 0..0
-* dataAbsentReason 0..0
-* interpretation 0..0
-* bodySite 0..0
-* method 0..0
-* specimen 0..0
-* device 0..0
-* derivedFrom 0..0
-* subject only Reference(Patient)
-* subject 1..1
-* valueBoolean 1..1
-
 
 
 
 Instance: VeteranStatus
 InstanceOf: OperationDefinition
-Title: "Veteran Status"
+Title: "Veteran Status Verification and Confirmation"
 Usage: #definition
 * name = "VeteranStatus"
-* description = "The Veteran Status Operation returns VERIFIED or UNVERIFIED status of the patient.  The API should be used as part of use cases needing general veteran status and not neccesarily be used as part of eligibilty."
+* description = "The Veteran Status Operation returns 'tru' or 'false' based on the known veteran status of the patient.  The API should be used as part of use cases needing general veteran status and not neccesarily be used as part of eligibilty."
 * status = #draft "draft"
 * kind = #query "query"
 * code = #veteranStatus "veteranStatus"
@@ -143,9 +106,6 @@ Usage: #definition
 * parameter[5].min = 0
 * parameter[5].max = "1"
 * parameter[5].type = #code "code"
-
-
-
 
 * parameter[6].name = #veterandateStatus "veteranStatus"
 * parameter[6].use = #out "out"
