@@ -1,2 +1,7 @@
-
+.project
+fsh-generated/
+input-cache/
+output/
+temp/
+template/
 fsh/log.text
