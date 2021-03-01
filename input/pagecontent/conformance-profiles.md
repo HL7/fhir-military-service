@@ -15,17 +15,13 @@ Where US Core does not provide an appropriate base profile, MSH profiles FHIR re
 
 ### Conformance to MSH Profiles
 
-Each MSH profile expresses requirements and expectations for FHIR instances in terms of structural constraints and terminology bindings. If an instance is required to conform with an MSH profile, it MUST [validate](https://www.hl7.org/fhir/validation.html) against that profile. Only certain FHIR instances associated with an [MSH Patient](conformance-patients.html) carry MSH conformance expectations.
+Each MSH profile expresses requirements and expectations for FHIR instances in terms of structural constraints and terminology bindings. If an instance is required to conform with an MSH profile, it MUST [validate](https://www.hl7.org/fhir/validation.html) against that profile. Only certain FHIR instances associated with an [USVeteran](conformance-patients.html) carry MSH conformance expectations.
 
 #### Data Sender Expectations
 
-Each MSH profile has a conformance statement describing what data or FHIR instances MUST or SHOULD conform to it. For example, in [PrimaryCancerCondition], the conformance requirements are expressed in two parts:
+Each MSH profile has a conformance statement describing what data or FHIR instances MUST or SHOULD conform to it.  
 
-1. Any Condition resource associated with an [MSH Patient](conformance-patients.html) whose `Condition.code` is in the value set `[PrimaryOrUncertainBehaviorCancerDisorderVS]` MUST conform to the profile.
-2. Any resource instance that would reasonably be expected to conform to the profile SHOULD conform to the profile.
-
-The second statement is intended to discourage an MSH Data Sender from creating different representation for data that *should* fall into the scope of MSH. Compliance to this kind of condition is admittedly difficult to enforce, so it is expressed as a SHOULD.
-
+ 
 #### Data Receiver Expectations
 
 An MSH Data Receiver SHOULD perform validation on instances it receives. The Receiver first of all needs to identify which profile to use for validation. There four ways to identify the correct profile:
@@ -75,23 +71,7 @@ The following rules apply in MSH:
 * A [required element](#required-elements) carries a MS obligation on the part of a Data Sender, regardless of whether that element has an MS flag. 
 * A [required element](#required-elements) without an MS flag does not carry an MS obligation for the Data Receiver [^3].
 
-The following explains how to interpret MS flags in certain cases involving complex elements. Requirements for Senders and Receivers for elements with MS obligations are [defined above](#sender-and-receiver-expectations). For the sake of completeness, this table covers certain cases not seen in MSH.
-
-| # | MS-Flagged Element  | MSH Data Sender (Server) Obligation  | MSH Data Receiver (Client) Obligation | Example |
-|---|--------------|--------------|---------------|---|
-| 1 | Element is part of a profile that is not supported | No obligation to support | same |  |
-| 2 | Element is a nested (child) element and there is no MS flag on its parent element | Must be supported only if the sender/receiver chooses to support the parent element | same | [US Core Patient version 3.2](http://hl7.org/fhir/us/core/3.2.0/StructureDefinition-us-core-patient.html) Patient.telecom.system |
-| 3 | Element is a [complex data type](https://www.hl7.org/fhir/datatypes.html#complex) (such as CodeableConcept) with no MS flag on any immediate sub-element  | [MUST support at least one sub-element](http://hl7.org/fhir/us/core/3.2.0/conformance-expectations.html#must-support---complex-elements), and SHOULD support every sub-element the sender has data for | MUST support every sub-element (since the Receiver cannot anticipate which sub-elements might be populated) | [PrimaryCancerCondition.code][PrimaryCancerCondition] |
-| 4 | Element is a [complex data type](https://www.hl7.org/fhir/datatypes.html#complex) with an MS flag on one or more immediate sub-elements  | MUST support [only the sub-elements that are explicitly flagged](http://hl7.org/fhir/us/core/3.2.0/conformance-expectations.html#must-support---complex-elements) | same | [CancerPatient.name][CancerPatient] |
-| 5 | Element is a [choice \[x\] type](https://www.hl7.org/fhir/stu3/formats.html#choice) with no MS flag on any choice | MUST support at least one datatype choice, and SHOULD populate every datatype for which the server might possess data | MUST support **all** datatype choices (since the Receiver cannot anticipate which sub-elements might be populated)| [CancerPatient.deceased\[x\]][CancerPatient] |
-| 6 | Element is a [choice \[x\] type](https://www.hl7.org/fhir/stu3/formats.html#choice) with an MS flag on one or more choice | MUST support only the datatype choice(s) that are explicitly flagged | same |  [US Core Laboratory Result Observation Profile version 3.2](http://hl7.org/fhir/us/core/3.2.0/StructureDefinition-us-core-observation-lab.html) Observation.value[x] |
-| 7 | Element is a [Reference() data type](https://www.hl7.org/fhir/references.html#2.3.0) with no MS flag on any referenced resource or profile | MUST support all resources or profiles in the reference that are in Sender's capability statement | MUST support all resources or profiles in the reference unless outside the scope of the Receiver's capability statement | [Tumor.extension\[mcode-condition-related\].value\[x\]][Tumor] |
-| 8 | Element is a [Reference() data type](https://www.hl7.org/fhir/references.html#2.3.0) with an MS flag on one or more of the referenced types | MUST support only the resources or profiles in the reference that are explicitly flagged, and only if they are in the Sender's capability statement | MUST support only the resources or profiles in the reference that are explicitly flagged, and only if they are in the Receiver's capability statement | [US Core DocumentReference Profile version 3.2](http://hl7.org/fhir/us/core/3.2.0/StructureDefinition-us-core-documentreference.html) DocumentReference.author
-| 9 | Element is a [backbone data type](https://www.hl7.org/fhir/backboneelement.html#2.29.0) | No support expectation on sub-elements unless they are explicitly flagged  | same |
-| 10 | Element is an [array that is sliced](https://www.hl7.org/fhir/profiling.html#slicing), with no MS flag on any slice | MUST support populating the array, but [no obligation to support any particular slice](https://confluence.hl7.org/pages/viewpage.action?pageId=35718826#GuidetoDesigningResources-HowdoIinterpret'MustSupport'withrespecttoslicing?) | MUST support arbitrary array contents, including any and all populated slices |
-| 11 | Element is an [array that is sliced](https://www.hl7.org/fhir/profiling.html#slicing), with MS flags on one or more slices | MUST support only the slices that have MS flags | same | [TNMStageGroup].hasMember |
-| 12 | Element that has MS flag is a slice and the containing array does not have a MS flag | No support expectation for the slice | same | [US Core Patient Profile version 3.1.1](http://hl7.org/fhir/us/core/StructureDefinition-us-core-patient.html) Patient.extension:us-core-race (because Patient.extension is not MS)
-{: .grid }
+ 
 
 #### Non-Must Support Elements
 
