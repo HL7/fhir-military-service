@@ -7,16 +7,17 @@
 
 <
  
-[msh-solor-extension]: StructureDefinition-mcode-brachytherapy-prescription-delivery.html
+[msh-solor-extension]: CodeSystem-msh-solor-extension.html
 
  
 
-[ODHSupervisoryLevelValueSet]: StructureDefinition-mcode-brachytherapy-prescription-delivery.html
-[ODHOccupationValueSet]: StructureDefinition-mcode-brachytherapy-prescription-delivery.html
-[ODHIndustryValueSet]: StructureDefinition-mcode-brachytherapy-prescription-delivery.html
-[MilitaryBranchCode]: StructureDefinition-mcode-brachytherapy-prescription-delivery.html
-[PayGradeCode]: StructureDefinition-mcode-brachytherapy-prescription-delivery.html
-[SeparationReasonValueSet]: StructureDefinition-mcode-brachytherapy-prescription-delivery.html
-[DischargeStatusValueSet]: StructureDefinition-mcode-brachytherapy-prescription-delivery.html
-[CombatEpisodeMissionValueSet]: StructureDefinition-mcode-brachytherapy-prescription-delivery.html
-[MilitaryOccupationValueSet]: StructureDefinition-mcode-brachytherapy-prescription-delivery.html
+[ODHSupervisoryLevelValueSet]: https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.7613
+[ODHOccupationValueSet]: https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.7187
+[ODHIndustryValueSet]: https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.7187
+[MilitaryBranchCode]: ValueSet-msh-militarybranchcode-vs.html
+[PayGradeCode]: ValueSet-msh-paygradecode-vs.html
+[SeparationReasonValueSet]: ValueSet-msh-SeparationReason-vs.html
+[DischargeStatusValueSet]: ValueSet-msh-DischargeStatusValueSet.html
+[CombatEpisodeMissionValueSet]: ValueSet-msh-CombatEpisodeMissionValueSet.html
+[MilitaryOccupationValueSet]: ValueSet-msh-militaryoccupation-vs.html
+                              

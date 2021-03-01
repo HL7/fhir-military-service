@@ -2,7 +2,7 @@
 
 
 Profile:  MilitaryServiceEpisode
-Parent:   PastOrPresentJob
+Parent:   EmploymentHistoryEpisode
 Id:       msh-militaryserviceepisode
 Title:    "Military Service Episode"
 Description:   "Military Service Episode: A patient/Veteran may have zero or more military service episodes. The contents of this profile is based on the HL7 Version 2 ZMH segment and the ServiceHistoryEpisode schema specified in the current Veteran Verification API and it allows this API to migrate to FHIR and to be consistent with the prior work done by Center for Disease Control (CDC) National Institute for Occupational Safety and Health (NIOSH).  A service history episode may reference zero or more Combat episodes. This profile is based on the default FHIR Observation profile but may reuse ODD Past or Present Job profile ( http://hl.org/fhir/us/odh/StructureDefinition-odh-PastOrPresentJob.html)."
@@ -38,7 +38,7 @@ Description:   "Military Service Episode: A patient/Veteran may have zero or mor
 
 * component contains mseo-Industry 1..1 and
 					 mseo-DischargeStatus 1..1 and
-					 mseo-SeparationReason 1..1
+					 mseo-SeparationReason 1..1  
 
 * component[mseo-Industry].code =  http://loinc.org#86188-0 "History of Occupation industry"
 * component[mseo-Industry].value[x] only CodeableConcept   

@@ -1,8 +1,8 @@
 Profile:  DeploymentEpisode
-Parent:   Observation
+Parent:   EmploymentHistoryEpisode
 Id:       deploymentepisode
 Title:    "Deployment Episode"
-Description:   "Deployment Episode: This profile definition extends Deployment Zone Period profile (url: http://hl7.org/fhir/us/odh/StructureDefinition/odh-CombatZonePeriod )  and includes the requirements specified in ZMH and Deployment Schema. The base profile is: http://hl7.org/fhir/us/odh/StructureDefinition/odh-CombatZonePeriod"
+Description:   "Deployment Episode:"
 * status and code and subject and effectivePeriod and component MS
 * code 1..1
 * code  = SOLOR#3209820D5C9F4F4E855C5783E8F49228 "Deployment Episode"

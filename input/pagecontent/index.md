@@ -78,14 +78,40 @@ exchange information about
 ServiceHistoryEpisode and Deployment Schemas for
 the VA Veteran Verification API ([https://developer.va.gov/explore/verification/docs/veteran_verification?version=curren](https://developer.va.gov/explore/verification/docs/veteran_verification?version=current)[t](https://developer.va.gov/explore/verification/docs/veteran_verification?version=current))
 
-· 
 HL7 FHIR Profile: [odh-CombatZonePeriod](http://hl7.org/fhir/us/odh/StructureDefinition-odh-CombatZonePeriod.html) from
 Occupational Data for Health (ODH), Release 1.0 (Standard for Trial Use) ([HL7 FHIR Profile: Occupational Data for Health (ODH), Release 1.0 (Standard for Trial Use)](http://hl7.org/fhir/us/odh/))
 
+### Deferred Requirements
 
+The following use cases were discussed and deferred because they
+are out-of-scope for the profiles and extensions described in this
+implementation guide design document:
 
-Note: Certain requirements were discussed, deemed to be
-out-of-scope, and deferred (see [Deferred Requirements](#BKM_CB4D4746_7B24_4E2C_AA4E_FA6CBF63E1F5) ).
+#### Prior Authorization
+
+U.S. Department of Defense (DoD) administrative transactions are
+currently used for prior authorization for healthcare services. This use case
+will not be addressed in this document but it may be relevant to future FHIR
+profiling efforts.
+
+#### Apply for coverage
+
+A Veteran's military history and other service-related information
+are relevant to applying for healthcare coverage. This use case was discussed
+with the Financial Management Workgroup on March 31, 2020 and it will remain
+out-of-scope for this iteration of the specification. Military service history
+is relevant to establish level of care but will not be explored further in this
+document.  
+
+#### Schedule service-connected visit
+
+Another potential use case included scheduling a visit for a service-connected
+disorder or condition. This use case was discussed and deemed out-of-scope for
+now since it is related to level of disability and service-connected problems,
+as well as an encounter related to a service-connected disability, special
+authority designation and those services are not billable; care may be covered by special authority (e.g. neck/throat
+cancer); and coding system for special authority and service-related not in
+scope.
 
 
 ### Understanding this Guide

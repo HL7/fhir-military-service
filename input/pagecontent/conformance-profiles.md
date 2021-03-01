@@ -15,7 +15,7 @@ Where US Core does not provide an appropriate base profile, MSH profiles FHIR re
 
 ### Conformance to MSH Profiles
 
-Each MSH profile expresses requirements and expectations for FHIR instances in terms of structural constraints and terminology bindings. If an instance is required to conform with an MSH profile, it MUST [validate](https://www.hl7.org/fhir/validation.html) against that profile. Only certain FHIR instances associated with an [USVeteran](conformance-patients.html) carry MSH conformance expectations.
+Each MSH profile expresses requirements and expectations for FHIR instances in terms of structural constraints and terminology bindings. If an instance is required to conform with an MSH profile, it MUST [validate](https://www.hl7.org/fhir/validation.html) against that profile. 
 
 #### Data Sender Expectations
 

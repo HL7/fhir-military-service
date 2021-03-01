@@ -12,31 +12,6 @@ This IG currently only provides CapabilityStatements and documentation for "pull
 
 ### "MUST" Requirements for Conformance
 
-MSH participants MUST meet the following requirements for conformance:
-
-1. [Identify MSH patients](#identify-mcode-patients)
-1. [Follow conformance requirements for supported profiles](#follow-conformance-requirements-for-supported-profiles)
-1. [Populate and meaningfully process MSH resources](#populate-and-meaningfully-process-mcode-resources)
-1. [Support querying MSH-conforming resources](#support-querying-mcode-conforming-resources)
-1. [Publish a CapabilityStatement identifying supported profiles and operations](#publish-a-capabilitystatement-identifying-supported-profiles-and-operations)
-1. [Support US Core conformance requirements](#support-us-core-conformance-requirements)
-
-
-#### Identify MSH Patients
-
-To facilitate conformance testing, testing software must be able to determine which patients are "MSH Patients" -- those in scope for MSH. In general, all patients with confirmed cancer diagnoses SHOULD be covered by MSH, but MSH provides several ways to to identify the group of MSH patients. See the [Identifying MSH Patients](conformance-patients.html) page for details.
-
-#### Follow Conformance Requirements for Supported Profiles
-
-The information produced and consumed by MSH participants is defined by a set of profiles. Both senders and receivers must conform to the expectations set by these profiles. See the [Profile Conformance](conformance-profiles.html) page for details.
-
-#### Populate and Meaningfully Process MSH Resources
-
-MSH senders MUST be able to populate data elements that have Must Support (MS) obligations, for all profiles they support (as declared in their CapabilityStatement). Receivers MUST be able to meaningfully process elements with MS obligations for each profiles they support (as declared in their CapabilityStatement). "Able to Populate" and "Meaningfully Process" have particular meanings, as discussed on the [Profile Conformance](conformance-profiles.html) page.
-
-#### Support Querying MSH-Conforming Resources
-
-MSH defines operations that senders and receivers use to exchange MSH information. MSH participants MUST support these requests UNLESS they do not support the profile at all (see ["Support All MSH Profiles"](#support-all-mcode-profiles) below):
 
 <!-- @Max -- TODO: Provide examples of what this would look like. We can create a separate page for the queries if this gets lengthy -->
 
@@ -58,17 +33,16 @@ International users of MSH may find US Core an impediment to implementation. App
 
 MSH participants SHOULD meet the following requirements for conformance:
 
-1. [Support all MSH Profiles](#support-all-mcode-profiles)
-1. [Support the ee](#support-the-mcode-patient-bundle)
+1. [Support all MSH Profiles](#support-all-msh-profiles)
 1. [Use `meta.profile` to Signal Conformance](#use-metaprofile-to-signal-conformance)
 
 #### Support All MSH Profiles
 
-In addition to supporting the core profiles as described above, MSH participants SHOULD support all profiles defined in MSH UNLESS the participant does not anticipate supplying or consuming a certain type of data, usually by virtue of playing a limited or specialized role in clinical or information workflows. For example, a genomics laboratory may support [CancerGenomicsReport], but not vital signs or staging.
+In addition to supporting the core profiles as described above, MSH participants SHOULD support all profiles defined in MSH UNLESS the participant does not anticipate supplying or consuming a certain type of data, usually by virtue of playing a limited or specialized role in clinical or information workflows.  
 
 Participants SHOULD also support the non-MSH-specific profiles that are considered part of an [MSH Patient Bundle][MCODEPatientBundle], such as [blood pressure](http://hl7.org/fhir/StructureDefinition/bp).
 
- #### Use `meta.profile` to Signal Conformance
+#### Use `meta.profile` to Signal Conformance
 
 Participants SHOULD populate `meta.profile` elements for all resources to indicate which profiles the resources should conform to. Participants SHOULD also implement [profile search](https://www.hl7.org/fhir/search.html#profile), which allows participants to query using the `_profile` parameter to return resources conforming to the profiles declared in `meta.profile`.
 
@@ -76,13 +50,5 @@ Profile search and population of `meta.profile` originate as "SHALL" requirement
 
 ### Capability Statements
 
-* **Receiver**
-  * [mcode-receiver-patient-bundle]
-* **Sender**  
-  * [mcode-sender-patient-bundle]
-
-### Operations
-
-* [mcode-patient-everything]
 
 {% include markdown-link-references.md %}
