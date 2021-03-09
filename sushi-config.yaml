@@ -29,7 +29,7 @@ pages:
   terminology.md:
     title: Terminology
   examples.md:
-    title: Extended Example
+    title:  Examples
   change_log.md:
     title: Change log
 menu:
@@ -38,7 +38,7 @@ menu:
     General Expectations: conformance-general.html
     Profile Conformance: conformance-profiles.html
   Terminology: terminology.html
-  Extended Example: examples.html
+  Example: examples.html
   All Artifacts: artifacts.html
   Change Log: change_log.html
   History: history.html

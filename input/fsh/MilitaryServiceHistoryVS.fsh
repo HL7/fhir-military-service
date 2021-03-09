@@ -203,33 +203,33 @@ ValueSet:    PayGradeCode
 Id: msh-paygradecode-vs
 Title: "Pay Grade Code Value Set"
 Description: "Pay Grade Code Value Set"
-* ODH#C-0	"Civilian Non Supervisor"
-* ODH#C-3	"First Line Supervisor"
-* ODH#C-6	"Manager"
-* ODH#E-1	"US Military Enlisted paygrade E-1"
-* ODH#E-2	"US Military Enlisted paygrade E-2"
-* ODH#E-3	"US Military Enlisted paygrade E-3"
-* ODH#E-4	"US Military Enlisted paygrade E-4"
-* ODH#E-5	"US Military Enlisted paygrade E-5"
-* ODH#E-6	"US Military Enlisted paygrade E-6"
-* ODH#E-7	"US Military Enlisted paygrade E-7"
-* ODH#E-8	"US Military Enlisted paygrade E-8"
-* ODH#E-9	"US Military Enlisted paygrade E-9"
-* ODH#O-1	"US Military Commissioned Officer paygrade O-1"
-* ODH#O-10	"US Military Commissioned Officer paygrade O-10"
-* ODH#O-2	"US Military Commissioned Officer paygrade O-2"
-* ODH#O-3	"US Military Commissioned Officer paygrade  O-3"
-* ODH#O-4	"US Military Commissioned Officer paygrade O-4"
-* ODH#O-5	"US Military Commissioned Officer paygrade O-5"
-* ODH#O-6	"US Military Commissioned Officer paygrade O-6"
-* ODH#O-7	"US Military Commissioned Officer paygrade O-7"
-* ODH#O-8	"US Military Commissioned Officer paygrade O-8"
-* ODH#O-9	"US Military Commissioned Officer paygrade O-9"
-* ODH#W-1	"Warrant Officer paygrade W-1"
-* ODH#W-2	"Warrant Officer paygrade W-2"
-* ODH#W-3	"Warrant Officer paygrade W-3"
-* ODH#W-4	"Warrant Officer paygrade W-4"
-* ODH#W-5	"Warrant Officer paygrade W-5"
+* ODH#C-0 "Civilian Non Supervisor"
+* ODH#C-3 "First Line Supervisor"
+* ODH#C-6 "Manager"
+* ODH#E-1 "US Military Enlisted paygrade E-1"
+* ODH#E-2 "US Military Enlisted paygrade E-2"
+* ODH#E-3 "US Military Enlisted paygrade E-3"
+* ODH#E-4 "US Military Enlisted paygrade E-4"
+* ODH#E-5 "US Military Enlisted paygrade E-5"
+* ODH#E-6 "US Military Enlisted paygrade E-6"
+* ODH#E-7 "US Military Enlisted paygrade E-7"
+* ODH#E-8 "US Military Enlisted paygrade E-8"
+* ODH#E-9 "US Military Enlisted paygrade E-9"
+* ODH#O-1 "US Military Commissioned Officer paygrade O-1"
+* ODH#O-10 "US Military Commissioned Officer paygrade O-10"
+* ODH#O-2 "US Military Commissioned Officer paygrade O-2"
+* ODH#O-3 "US Military Commissioned Officer paygrade  O-3"
+* ODH#O-4 "US Military Commissioned Officer paygrade O-4"
+* ODH#O-5 "US Military Commissioned Officer paygrade O-5"
+* ODH#O-6 "US Military Commissioned Officer paygrade O-6"
+* ODH#O-7 "US Military Commissioned Officer paygrade O-7"
+* ODH#O-8 "US Military Commissioned Officer paygrade O-8"
+* ODH#O-9 "US Military Commissioned Officer paygrade O-9"
+* ODH#W-1 "Warrant Officer paygrade W-1"
+* ODH#W-2 "Warrant Officer paygrade W-2"
+* ODH#W-3 "Warrant Officer paygrade W-3"
+* ODH#W-4 "Warrant Officer paygrade W-4"
+* ODH#W-5 "Warrant Officer paygrade W-5"
 
 
 ValueSet:    SeparationReasonValueSet
@@ -377,11 +377,4 @@ Description: "Combat Episode Mission Value Set"
 ValueSet:    MilitaryOccupationValueSet
 Id: msh-militaryoccupation-vs
 Title: "Military Occupation ValueSet"
-Description: "Military Occupation ValueSet" 
-
-
-
-
-
-
-
+Description: "Military Occupation ValueSet"
