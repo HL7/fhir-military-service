@@ -27,7 +27,7 @@ Alias:   SOLOR = msh-solor-extension
 
 CodeSystem: SOLOR
 Id: msh-solor-extension
-Title: "SOLOR Military Service History and Status "
+Title: "SOLOR Military Service History and Status"
 Description: "Temporary extension holding concepts needed for this IG but no available in SNOMED and LOINC"
 * #79A512F77CFC4E63B9969930FC8787DB "Honorable"
 * #3209820D5C9F4F4E855C5783E8F49228 "Combat Episode"
@@ -158,7 +158,7 @@ Description: "Temporary extension holding concepts needed for this IG but no ava
 * #E963385389BC4541AB6DD77F3EF31EEA "Dishonorable for VA purposes"
 * #8412EEBCB8354A06AAB445C9486CA268 "Uncharacterized"
 * #7A3CBF5D942F41A9889C9406BB1D951F "Unknown"
-*
+
 
 ValueSet:    ODHSupervisoryLevelValueSet
 Id: 2.16.840.1.114222.4.11.7613
