@@ -80,8 +80,7 @@ recording self-reported military and combat history. It also illustrates how
 FHIR-based APIs can be used to validate employment history information reported
 by Veterans.
 
-![*Use Case Analysis Overview*](Use Case Analysis Overview.png)
-
+<img src="Use Case Analysis Overview.png" alt="Use Case Analysis Overview*" width="100%" />
 *Figure 1: Use Case Analysis Overview*
 
 ## Clinician
@@ -228,8 +227,7 @@ to creating extensible APIs based on FHIR.
 under development and evolving. This design document is intended to provide
 reasoning and context for future projects.
 
-![*Information Requirements*](Information Requirements.png)
-
+<img src="Information Requirements.png" alt="Information Requirements*" width="100%" />
 *Figure 2: Information Requirements*
 
 ## Employment History Episode
@@ -543,8 +541,7 @@ The following represents the proposed API. It relies on a custom operation
 **Observation** resources to represent the military service history episode
 including deployment and occupation:
 
-![Custom Operations](Custom Operations.png)
-
+<img src="Custom Operations.png" alt="Custom Operations*" width="100%" />
 *Figure 4: Custom Operations*
 
 The following diagram uses Object Management Group’s (OMG) Business Process
@@ -552,8 +549,7 @@ Modeling Notation (BPMN) to describe the pre-conditions/triggers and
 post-conditions/results of using the FHIR-based API outlined in this
 implementation guide:
 
-![Retrieving status and military history using a FHIR-based API](Retrieving status and military history using a FHIR-based API.png)
-
+<img src="Retrieving status and military history using a FHIR-based API.png" alt="Retrieving status and military history using a FHIR-based API*" width="100%" />
 *Figure 5: Retrieving status and military history using a FHIR-based API*
 
 ## FHIR API (server)
@@ -588,8 +584,7 @@ to be a veteran.
 A FHIR API may use veteran status extension specified in the US Patient profile
 to implement the \$veteranStatus operation.
 
-![*Associated Extensions related to Veteran Verification*](Associated Extensions related to Veteran Verificatoin.png)
-
+<img src="Associated Extensions related to Veteran Verification.png" alt="Associated Extensions related to Veteran Verification*" width="100%" />
 *Figure 6: Associated Extensions related to Veteran Verification.*
 
 # Testing Guidance and Examples
@@ -626,8 +621,8 @@ use test scripts and pre-conditions to results of an EHR invoking the proposed
 API to verify status and retrieve the military history information of a Veteran
 using FHIR-based resources.
 
-![Testing Workflow](Testing Workflow.png)
-
+ 
+<img src="Testing Workflow.png" alt="Testing Workflow*" width="100%" />
 *Figure 7: Testing Workflow*
 
 ## Verify Veteran Status: Step 1
