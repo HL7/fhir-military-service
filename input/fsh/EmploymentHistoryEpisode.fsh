@@ -4,9 +4,9 @@ Profile:  EmploymentHistoryEpisode
 Parent:   Observation
 Id:       odh-EmploymentHistoryEpisode
 Title:    "Employment History Episode"
-Description:   "Employment History Episode"
-
-
+Description:   "Employment history consists of a series Employment Episodes. In the past these episodes have been represented as Z-segments and added to various transactions to support social history determination, benefit, etc. This profile is intended to represent employment history for International use and it may be localized by HL7, IHE, and other profile developers.
+The Employment Episode profile of is the base profile for Military Service Episode profile and ODH Past or Present Job profile and other profiles intended to describe specific types of employment. 
+This profile is marked as 'constrainable' because it's intended to be reused to create additional profile, more specific, or localized to jurisdiction."
 * category.coding = http://terminology.hl7.org/CodeSystem/observation-category#social-history
 * status and code and subject and effective[x] and valueCodeableConcept MS
 * valueCodeableConcept from  2.16.840.1.114222.4.11.7901  (preferred)

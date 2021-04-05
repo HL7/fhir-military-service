@@ -5,7 +5,8 @@ Profile:  MilitaryOccupation
 Parent:   EmploymentHistoryEpisode
 Id:       msh-militaryOccupation
 Title:    "Military Occupation"
-Description:   "Military Occupation"
+Description:   "The profile reuses the ODH PastOrPresentJob profile to apply it specifically to military jobs/occupations.
+The observation  resource that conforms to this specification is referenced by Military Service Episode. A veteran may have several occupation during a single service episode."
 * subject 1..1
 * code = SOLOR#41C89BB67C9C48BFB718F57FAA6F3266
 

@@ -15,3 +15,5 @@
 [DischargeStatusValueSet]: ValueSet-msh-DischargeStatusValueSet.html
 [CombatEpisodeMissionValueSet]: ValueSet-msh-CombatEpisodeMissionValueSet.html
 [MilitaryOccupationValueSet]: ValueSet-msh-militaryoccupation-vs.html
+[FHIR US Core Capability Statement - Server]: https://www.hl7.org/fhir/us/core/CapabilityStatement-us-core-server.html
+[FHIR US Core Capability Statement - Client]:https://www.hl7.org/fhir/us/core/CapabilityStatement-us-core-client.html

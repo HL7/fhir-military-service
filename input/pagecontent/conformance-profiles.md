@@ -1,16 +1,19 @@
 ### Profile Base
 
 Most MSH profiles are based on US Core profiles defined in the [US Core Implementation Guide (v3.1.1)](http://hl7.org/fhir/us/core/index.html). For example, [USVeteran] is based on the [US Core Patient][USCorePatientProfile] profile. Because of the way profiles work in FHIR, any resource that validates against an MSH profile that is based a US Core profile will automatically be in compliance with the US Core profile.
+* [Employment History Episode][EmploymentHistoryEpisode] is an abstract, base profile for that illstrates the basic structure of a an employment episosde. It may be considered the base profile for [ODH PastOrPresentJob][PastOrPresentJob] and the [Military Service Episode][MilitaryServiceEpisode] profile defined in this implementation guide.
+* [Military Service Episode][MilitaryServiceEpisode] specfies a specific military service history; it includes references to [Deployment Episode][DeploymentEpisode] and [Military Occupation][MilitaryOccupation].
+* [Military Occupation][MilitaryOccupation] constrains [ODH PastOrPresentJob][PastOrPresentJob]. It is referenced by [Military Service Episode][MilitaryServiceEpisode].
 
 Where US Core does not provide an appropriate base profile, MSH profiles FHIR resources.  
 
 | Profile | Based on US Core?  | Immediate Parent Profile |
 |---------|--------------------|--------------------------|
-| [Combat Episode][CombatEpisode]| no | Observation |
-| [Military Occupation][MilitaryOccupation] | no | Observation |
-| [Military Service Episode][MilitaryServiceEpisode] | no | Observation |
-| [Past Or Present Job][PastOrPresentJob] | no | Observation |
-| [US Veteran][USVeteran] | no | Observation |
+| [Employment History Episode][EmploymentHistoryEpisode]| no | Observation |
+| [Deployment Episode][DeploymentEpisode]| no | EmploymentHistoryEpisode |
+| [Military Occupation][MilitaryOccupation] | no | PastOrPresentJob |
+| [Military Service Episode][MilitaryServiceEpisode] | no | EmploymentHistoryEpisode |
+| [US Veteran][USVeteran] | no | US Patient |
 {: .grid }
 
 ### Conformance to MSH Profiles
@@ -75,9 +78,9 @@ The following rules apply in MSH:
 
 #### Non-Must Support Elements
 
-Data elements in MSH that *do not have* MS obligations still MAY be supported. If an element is supported, whether it has a MS flag or not, the profile must be interpreted as if the MS flag were present. For example, `TumorMarkerTest.performer` does not have an MS flag, but a data receiver may implement the capability to display it. In such a case, by virtue of the fact this element is a Reference() data type with no MS flag on any referenced resource or profile (case #7 above), the receiver would be obligated to support all resources or profiles in the Reference unless outside the scope of the Receiver's capability statement, namely, Practitioner, PractitionerRole, Organization, CareTeam, Patient, and RelatedPerson.
+Data elements in MSH that *do not have* MS obligations still MAY be supported. If an element is supported, whether it has a MS flag or not, the profile must be interpreted as if the MS flag were present. For example, `Observation.category` does not have an MS flag, but a data receiver may implement the capability to display it. In such a case, by virtue of the fact this element is a Reference() data type with no MS flag on any referenced resource or profile (case #7 above), the receiver would be obligated to support all resources or profiles in the Reference unless outside the scope of the Receiver's capability statement, namely, Practitioner, PractitionerRole, Organization, CareTeam, Patient, and RelatedPerson.
 
-[^1]: Although not common practice, profiles can have MS flags at the very top level (see [CancerPatient] for example).
+[^1]: Although not common practice, profiles can have MS flags at the data element element.
 
 [^2]: When inheriting from another profile, it is possible to set the upper cardinality to zero on an element that was MS in the parent profile. For example, you could inherit from US Core Patient, but forbid the patient’s name for privacy reasons.  In this case, neither Sender nor Receiver are expected to populate or support the element – in fact, it would be an error if the element were present.
 

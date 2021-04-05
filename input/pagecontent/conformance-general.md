@@ -14,7 +14,10 @@ This IG currently only provides CapabilityStatements and documentation for "pull
 
 
 <!-- @Max -- TODO: Provide examples of what this would look like. We can create a separate page for the queries if this gets lengthy -->
-
+* Patient resources
+** veteranStatus operation
+* Observation resource
+Both resources implemented consistent with US Core  
 #### Publish a CapabilityStatement Identifying Supported Profiles and Operations
 
 Each MSH participant MUST publish a FHIR CapabilityStatement listing their supported profiles, by declaring the profile in `CapabilityStatement.rest.resource.supportedProfile`. The CapabilityStatement SHALL be returned in response to a `GET [base]/metadata` request.
@@ -49,6 +52,8 @@ Participants SHOULD populate `meta.profile` elements for all resources to indica
 Profile search and population of `meta.profile` originate as "SHALL" requirements in the base FHIR specification; they are not an additional requirements imposed by MSH. However, in practice, few implementations have followed these requirements. Refer to the [FHIR Documentation on supported profiles](https://www.hl7.org/fhir/profiling.html#CapabilityStatement.rest.resource.supportedProfile) for details.
 
 ### Capability Statements
-
+This implementation specifies a specialization of the generic US core implementation guide and the capabilities:
 
 {% include markdown-link-references.md %}
+[FHIR US Core Capability Statement - Server]: https://www.hl7.org/fhir/us/core/CapabilityStatement-us-core-server.html
+[FHIR US Core Capability Statement - Client]:https://www.hl7.org/fhir/us/core/CapabilityStatement-us-core-client.html

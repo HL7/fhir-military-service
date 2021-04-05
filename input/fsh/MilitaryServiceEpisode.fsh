@@ -5,7 +5,7 @@ Profile:  MilitaryServiceEpisode
 Parent:   EmploymentHistoryEpisode
 Id:       msh-militaryserviceepisode
 Title:    "Military Service Episode"
-Description:   "Military Service Episode: A patient/Veteran may have zero or more military service episodes. The contents of this profile is based on the HL7 Version 2 ZMH segment and the ServiceHistoryEpisode schema specified in the current Veteran Verification API and it allows this API to migrate to FHIR and to be consistent with the prior work done by Center for Disease Control (CDC) National Institute for Occupational Safety and Health (NIOSH).  A service history episode may reference zero or more Combat episodes. This profile is based on the default FHIR Observation profile but may reuse ODD Past or Present Job profile ( http://hl.org/fhir/us/odh/StructureDefinition-odh-PastOrPresentJob.html)."
+Description:   "A patient/Veteran may have zero or more military service episodes. The contents of this profile is based on the HL7 Version 2 ZMH segment and the ServiceHistoryEpisode schema specified in the current Veteran Verification API and it allows this API to migrate to FHIR and to be consistent with the prior work done by Center for Disease Control (CDC) National Institute for Occupational Safety and Health (NIOSH).  A service history episode may reference zero or more Combat episodes. This profile is based on the default FHIR Observation profile but may reuse ODD Past or Present Job profile ( http://hl.org/fhir/us/odh/StructureDefinition-odh-PastOrPresentJob.html)."
 * status and code and subject and effectivePeriod and component MS
 * id 1..1 
 * identifier 0..1 
@@ -61,10 +61,10 @@ Description:   "Military Service Episode: A patient/Veteran may have zero or mor
 
 Instance: VeteranStatus
 InstanceOf: OperationDefinition
-Title: "Veteran Status Verification and Confirmation"
+Title: "Veteran Status Verification and Confirmation - Operatoin"
 Usage: #definition
 * name = "VeteranStatus"
-* description = "The Veteran Status Operation returns 'tru' or 'false' based on the known veteran status of the patient.  The API should be used as part of use cases needing general veteran status and not neccesarily be used as part of eligibilty."
+* description = "The Veteran Status Operation returns 'true' or 'false' based on the known veteran status of the patient.  The API should be used as part of use cases needing general veteran status and not neccesarily be used as part of eligibilty."
 * status = #draft "draft"
 * kind = #query "query"
 * code = #veteranStatus "veteranStatus"

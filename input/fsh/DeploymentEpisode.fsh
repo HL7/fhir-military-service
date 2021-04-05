@@ -2,10 +2,11 @@ Profile:  DeploymentEpisode
 Parent:   EmploymentHistoryEpisode
 Id:       deploymentepisode
 Title:    "Deployment Episode"
-Description:   "Deployment Episode:"
+Description:   "This profile definition similar to Combat Zone Period profile (url: http://hl7.org/fhir/us/odh/StructureDefinition/odh-CombatZonePeriod )  and includes the requirements specified in ZMH and Deployment Schema.
+The base profile reuses the pattern Combat Zone Period profilee and adds new components. However, since it's intended to share 'deployment' information this profile is more generic that the specifics ODH. "
 * status and code and subject and effectivePeriod and component MS
 * code 1..1
-* code  = SOLOR#3209820D5C9F4F4E855C5783E8F49228 "Deployment Episode"
+* code  = SOLOR#f6bb8fdc-89b0-4c0b-8d81-d3916f182c2f "Deployment Episode"
 * subject only Reference(Patient)
 * subject 1..1
 * basedOn 0..0

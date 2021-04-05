@@ -158,6 +158,17 @@ Description: "Temporary extension holding concepts needed for this IG but no ava
 * #E963385389BC4541AB6DD77F3EF31EEA "Dishonorable for VA purposes"
 * #8412EEBCB8354A06AAB445C9486CA268 "Uncharacterized"
 * #7A3CBF5D942F41A9889C9406BB1D951F "Unknown"
+* #f6341bf2-e765-4639-8800-6805520ece8e "Employment History Episode" 
+* #d3f8e4e1-874f-4ccc-b70e-76133b2e317d "Military Service Episode" 
+* #066ccc24-04d1-4c58-a2cf-abe2e722d1a3 "Separation Reason" 
+* #836df973-002b-4bb6-9eca-83626af0c05c "Discharge Status" 
+* #4ec176a2-9afb-4b52-a011-d9a25c360d95 "Military Occupation" 
+* #f6bb8fdc-89b0-4c0b-8d81-d3916f182c2f "Deployment  Episode" 
+* #e06a57f8-329c-4d74-af88-47c765f0b83a "Training Deployment Episode" 
+* #77eb3c61-f5c3-425c-848a-6b180b5b0528 "Humanitarian Deployment Episode" 
+* #82bf75df-60b7-4505-ba9e-8d0171ebb6c3 "Combat Deployment Episode" 
+* #b18ae858-d1dd-4edb-89f2-b9835f2eba1e "Deployment Country" 
+
 
 
 ValueSet:    ODHSupervisoryLevelValueSet
@@ -180,7 +191,7 @@ Description: "The Industry CDC NAICS 2012 (ODH) value set is to be used to captu
 ValueSet:    MilitaryBranchCode
 Id: msh-militarybranchcode-vs
 Title: "Military Branch Value Set"
-Description: "Military Branch Value Set" 
+Description: "Military Branch Value Set - is a subset of the ODH Occupation value set." 
 * ODH#928110.000255	"Air Force [National Security ]"
 * ODH#928110.000275	"Air traffic control, military [National Security ]"
 * ODH#928110.000809	"Armed forces [National Security ]"
@@ -198,7 +209,7 @@ Description: "Military Branch Value Set"
 ValueSet:    PayGradeCode 
 Id: msh-paygradecode-vs
 Title: "Pay Grade Code Value Set"
-Description: "Pay Grade Code Value Set"
+Description: "Pay Grade Code Value Set - is a subset of the OHD Supervisory Role value set. Its scope is limited to miliatry pay grade codes."
 * ODH#C-0	"Civilian Non Supervisor"
 * ODH#C-3	"First Line Supervisor"
 * ODH#C-6	"Manager"
@@ -231,7 +242,7 @@ Description: "Pay Grade Code Value Set"
 ValueSet:    SeparationReasonValueSet
 Id: msh-SeparationReason-vs
 Title: "Separation Reason Value Set"
-Description: "Separation Reason Value Set"
+Description: "Separation Reason Value Set contains concepts that are managed as a local extenions, subject to sumission to SNOMED CT."
 *  SOLOR#001 "WEIGHT CONTROL FAILURE"
 *  SOLOR#002 "FRAUDULENT ENTRY INTO MILITARY SERVICE"
 *  SOLOR#003 "PARENTHOOD OR CUSTODY OF MINOR CHILDREN"
@@ -349,7 +360,7 @@ Description: "Separation Reason Value Set"
 ValueSet: DischargeStatusValueSet
 Id: msh-DischargeStatusValueSet
 Title: "Discharge Status Value Set"
-Description: "Discharge Status Value Set"
+Description: "Discharge Status Value Set - this valuse set identifies gaps in SNOMED CT. The only concept currenty supported is that of 'dishornorable' discharge."
 * SOLOR#79A512F77CFC4E63B9969930FC8787DB "Honorable"
 * SOLOR#B5BA882B31574AB0BF82DFE43765F264 "General"
 * SOLOR#59B40AF3E8B44B0587743B08290C7AD1 "Bad Conduct"
@@ -364,11 +375,19 @@ Description: "Discharge Status Value Set"
 ValueSet: CombatEpisodeMissionValueSet
 Id: msh-CombatEpisodeMissionValueSet
 Title: "Combat Episode Mission Value Set"
-Description: "Example combat mission code"
+Description: "Example combat mission code; this is only an example data element that may be associated with a Deployment Episode, if needed."
 * SOLOR#CD1CAD19F5494F1981211F8634DD6AB1 "ANTIGUERRILLA OPERATIONS"
 * SOLOR#469552D4E8AA4BBBBF075190F7ED430C "COMBAT PATROL"
 * SOLOR#750988FBBD6148DCB85C062DEFC871E2 "Individual Augmentee"
 
+ValueSet: DeploymentEpisodeMissionValueSet
+Id: msh-DeploymentEpisodeMissionValueSet
+Title: "Deployment Episode Type Value Set"
+Description: "Recommended deployment episeod type code - only the root concept of 'Deployment Episode' is needed for typical implementations."
+* SOLOR#f6bb8fdc-89b0-4c0b-8d81-d3916f182c2f "Deployment  Episode" 
+* SOLOR#e06a57f8-329c-4d74-af88-47c765f0b83a "Training Deployment Episode" 
+* SOLOR#77eb3c61-f5c3-425c-848a-6b180b5b0528 "Humanitarian Deployment Episode" 
+* SOLOR#82bf75df-60b7-4505-ba9e-8d0171ebb6c3 "Combat Deployment Episode" 
 
 ValueSet:    MilitaryOccupationValueSet
 Id: msh-militaryoccupation-vs
