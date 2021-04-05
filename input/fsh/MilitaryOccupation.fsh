@@ -2,13 +2,13 @@ Alias: USCorePatient = http://hl7.org/fhir/us/core/StructureDefinition/us-core-p
 
 
 Profile:  MilitaryOccupation
-Parent:   EmploymentHistoryEpisode
+Parent:    Observation
 Id:       msh-militaryOccupation
 Title:    "Military Occupation"
 Description:   "The profile reuses the ODH PastOrPresentJob profile to apply it specifically to military jobs/occupations.
 The observation  resource that conforms to this specification is referenced by Military Service Episode. A veteran may have several occupation during a single service episode."
 * subject 1..1
-* code = SOLOR#41C89BB67C9C48BFB718F57FAA6F3266
+* code = SOLOR#4ec176a2-9afb-4b52-a011-d9a25c360d95
 
 * effective[x] only Period
 * effectivePeriod 1..1
