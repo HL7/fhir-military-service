@@ -1,11 +1,11 @@
 The FHIR profiles and extensions in this implementation guide are intended to
 fill gaps in current implementations of HL7 Version 2 and RESTful APIs currently
-available to implementers. This specification includes a set of best practices
-for organizations that are planning to reuse and extend profiles and adapt them
-to local stakeholder requirements.
+available to implementers. This implementation guide expands FHIR best practices to assist
+ organizations that adapt and extend FHIR profiles and implementation guides required in their jurisdictions (e.g. US, Candada) to apply them
+to locally-applicable requirements that meet their stakeholders business needs.
 
-This specification also identifies code systems and terminology gaps that
-require extensions and change proposals to LOINC and SNOMED CT.
+This specification also identifies code systems and terminology gaps that require
+require subsequent change proposals to LOINC and SNOMED CT consistent with the requirements summarized in the use cases.
 
 ## Acknowledgements
 
@@ -18,7 +18,7 @@ best practices:
     1.0](http://hl7.org/fhir/us/odh/index.html) (reusing best practices,
     PastOrPresentJob profile)
 
-The project team would like to thank our leadership and colleagues for their
+The project team would like thank our leadership and colleagues for their
 support in the development of Application Programming Interface (API)
 implementation guide:
 
@@ -72,13 +72,15 @@ exchange information about Military Service History and Status. All requirements
 are analyzed as use cases involving actors/participants and system interactions.
 
 Note: Certain requirements were discussed, deemed to be out-of-scope, and
-deferred (see [Deferred Requirements](#BKM_CB4D4746_7B24_4E2C_AA4E_FA6CBF63E1F5)
-).
+deferred (see [Deferred Requirements]).
 
 Figure 1 is a summary of scenarios (use cases) representing the requirements for
 recording self-reported military and combat history. It also illustrates how
 FHIR-based APIs can be used to validate employment history information reported
 by Veterans.
+
+<img src="Use Case Analysis Overview.png" alt="Use Case Analysis Overview*" width="100%" />
+*Figure 1: Use Case Analysis Overview*
 
 ## Clinician
 
@@ -132,11 +134,10 @@ by using demographic information submitted as a query (search operation) to a
 FHIR server that supports **Observation** resource - - using the **Patient**
 endpoint to determine whether a person is a verified veteran. Additional
 information is provided using the [Search
-Service](#BKM_1D0C200D_D352_4DF3_8863_57C1F1363AF2)
-[History](#BKM_1D0C200D_D352_4DF3_8863_57C1F1363AF2) criteria using the profiles
+Service] [History] criteria using the profiles
 described in the [Information
-Requirements](#BKM_0837D0F3_42BA_4560_AB07_2F06324BBA47) section (see [Military
-Service Episode](#BKM_1EE5C72B_FAB7_48FE_81D2_FE7E3F24BBE0)).
+Requirements]section (see [Military
+Service Episode]).
 
 Testing note: "search" Patient resource and return a
 
@@ -152,7 +153,7 @@ proposed profile, the Veteran's status confirmed. If the search operation does
 not find any matching Observation resources, the Veteran's status could not be
 confirmed.
 
-The presence of one or more Observations that conform to the [Combat
+The presence of one or more Observations that conform to the [Deployment
 Episode](#BKM_15AF665A_23CD_4387_A2F0_EA121D7063E0) profile proposed here
 indicates that Veteran served in combat.
 
@@ -223,6 +224,9 @@ to creating extensible APIs based on FHIR.
 **Note:** FHIR implementation, localization, and profiling best-practices are
 under development and evolving. This design document is intended to provide
 reasoning and context for future projects.
+
+<img src="Information Requirements.png" alt="Information Requirements*" width="100%" />
+*Figure 2: Information Requirements*
 
 ## Employment History Episode
 
@@ -535,10 +539,16 @@ The following represents the proposed API. It relies on a custom operation
 **Observation** resources to represent the military service history episode
 including deployment and occupation:
 
+<img src="Custom Operations.png" alt="Custom Operations*" width="100%" />
+*Figure 4: Custom Operations*
+
 The following diagram uses Object Management Group’s (OMG) Business Process
 Modeling Notation (BPMN) to describe the pre-conditions/triggers and
 post-conditions/results of using the FHIR-based API outlined in this
 implementation guide:
+
+<img src="Retrieving status and military history using a FHIR-based API.png" alt="Retrieving status and military history using a FHIR-based API*" width="100%" />
+*Figure 5: Retrieving status and military history using a FHIR-based API*
 
 ## FHIR API (server)
 
@@ -571,6 +581,9 @@ to be a veteran.
 
 A FHIR API may use veteran status extension specified in the US Patient profile
 to implement the \$veteranStatus operation.
+
+<img src="Associated Extensions related to Veteran Verification.png" alt="Associated Extensions related to Veteran Verification*" width="100%" />
+*Figure 6: Associated Extensions related to Veteran Verification.*
 
 # Testing Guidance and Examples
 
@@ -605,6 +618,10 @@ The following is a testing workflow for this API. Successful testing may also
 use test scripts and pre-conditions to results of an EHR invoking the proposed
 API to verify status and retrieve the military history information of a Veteran
 using FHIR-based resources.
+
+ 
+<img src="Testing Workflow.png" alt="Testing Workflow*" width="100%" />
+*Figure 7: Testing Workflow*
 
 ## Verify Veteran Status: Step 1
 
