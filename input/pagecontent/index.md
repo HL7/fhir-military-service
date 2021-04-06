@@ -1,8 +1,8 @@
 The FHIR profiles and extensions in this implementation guide are intended to
 fill gaps in current implementations of HL7 Version 2 and RESTful APIs currently
-available to implementers. This design document is an example of best practices
-for organizations that are planning to reuse and extend profiles and apply them
-to an expanded set of requirements.
+available to implementers. This specification includes a set of best practices
+for organizations that are planning to reuse and extend profiles and adapt them
+to local stakeholder requirements.
 
 This specification also identifies code systems and terminology gaps that
 require extensions and change proposals to LOINC and SNOMED CT.
