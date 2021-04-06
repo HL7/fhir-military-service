@@ -24,6 +24,7 @@ Description: "SamShare Example"
 * gender = #male	
 * active = true
 * birthDate = "1987-02-20"
+
 * extension[USVeteranStatus].valueBoolean = true
 
 * extension[race].extension[ombCategory].valueCoding = OmbRaceCat#2106-3 "White"
@@ -34,6 +35,7 @@ Description: "SamShare Example"
 * extension[ethnicity].extension[detailed].valueCoding = OmbRaceCat#2184-0 "Dominican"
 * extension[ethnicity].extension[text].valueString = "Hispanic or Latino"
 
+* extension[birthsex].valueCode = #M
 
 
 * address[0].line[0] = "49 Pleasant Hill St"
@@ -57,4 +59,52 @@ Description: "SamShare Example"
 
 
 
+
+
+
+Instance: MilitaryServiceEpisode	
+InstanceOf: MilitaryServiceEpisode	
+Description: "MilitaryServiceEpisode Example"	
+* id = "MilitaryServiceEpisode"	
+* status = #final "final"
+* subject = Reference(sam-share-ssgt-veteran)
+* effectivePeriod.start = "2019-04-01"
+* component[mseo-Industry].valueCodeableConcept = ODH#928110.000255	"Air Force"
+* component[mseo-DischargeStatus].valueCodeableConcept = SOLOR#79A512F77CFC4E63B9969930FC8787DB "Honorable"
+* component[mseo-SeparationReason].valueCodeableConcept = SOLOR#034 "Medal of Honor Recipient"
+
+
+Instance: DeploymentEpisode1	
+InstanceOf: DeploymentEpisode	
+Description: "DeploymentEpisode Example"	
+* id = "DeploymentEpisode1"	
+* status = #final "final"
+* subject = Reference(sam-share-ssgt-veteran)
+* effectivePeriod.start = "2019-04-01"
+* effectivePeriod.end = "2019-04-01"
+* component[mshs-CombatEpisodeCountryCode].valueCodeableConcept = #AFG
+* component[mshs-CombatEpisodeMissionCode].valueCodeableConcept = SOLOR#46a15b13-b5c1-4ae8-acde-48c31f30175a "Enduring Freedom"
+
+Instance: DeploymentEpisode2	
+InstanceOf: DeploymentEpisode	
+Description: "DeploymentEpisode Example"	
+* id = "DeploymentEpisode2"	
+* status = #final "final"
+* subject = Reference(sam-share-ssgt-veteran)
+* effectivePeriod.start = "2019-04-01"
+* effectivePeriod.end = "2019-04-01"
+* component[mshs-CombatEpisodeCountryCode].valueCodeableConcept = #IRQ
+* component[mshs-CombatEpisodeMissionCode].valueCodeableConcept = SOLOR#46a15b13-b5c1-4ae8-acde-48c31f30175a "Enduring Freedom"
+
+
+Instance: DeploymentEpisode3
+InstanceOf: DeploymentEpisode	
+Description: "DeploymentEpisode Example"	
+* id = "DeploymentEpisode"	
+* status = #final "final"
+* subject = Reference(sam-share-ssgt-veteran)
+* effectivePeriod.start = "2019-04-01"
+* effectivePeriod.end = "2019-04-01"
+* component[mshs-CombatEpisodeCountryCode].valueCodeableConcept = #IRQ
+* component[mshs-CombatEpisodeMissionCode].valueCodeableConcept = SOLOR#46a15b13-b5c1-4ae8-acde-48c31f30175a "Enduring Freedom"
 
