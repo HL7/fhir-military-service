@@ -1,11 +1,11 @@
 The FHIR profiles and extensions in this implementation guide are intended to
 fill gaps in current implementations of HL7 Version 2 and RESTful APIs currently
-available to implementers. This design document is an example of best practices
-for organizations that are planning to reuse and extend profiles and apply them
-to an expanded set of requirements.
+available to implementers. This implementation guide expands FHIR best practices to assist
+ organizations that adapt and extend FHIR profiles and implementation guides required in their jurisdictions (e.g. US, Candada) to apply them
+to locally-applicable requirements that meet their stakeholders business needs.
 
-This specification also identifies code systems and terminology gaps that
-require extensions and change proposals to LOINC and SNOMED CT.
+This specification also identifies code systems and terminology gaps that require
+require subsequent change proposals to LOINC and SNOMED CT consistent with the requirements summarized in the use cases.
 
 ## Acknowledgements
 
@@ -155,7 +155,7 @@ proposed profile, the Veteran's status confirmed. If the search operation does
 not find any matching Observation resources, the Veteran's status could not be
 confirmed.
 
-The presence of one or more Observations that conform to the [Combat
+The presence of one or more Observations that conform to the [Deployment
 Episode](#combat-episode) profile proposed here
 indicates that Veteran served in combat.
 
