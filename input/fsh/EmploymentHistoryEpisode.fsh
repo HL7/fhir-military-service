@@ -7,9 +7,11 @@ Title:    "Employment History Episode"
 Description:   "Employment history consists of a series Employment Episodes. In the past these episodes have been represented as Z-segments and added to various transactions to support social history determination, benefit, etc. This profile is intended to represent employment history for International use and it may be localized by HL7, IHE, and other profile developers.
 The Employment Episode profile of is the base profile for Military Service Episode profile and ODH Past or Present Job profile and other profiles intended to describe specific types of employment. 
 This profile is marked as 'constrainable' because it's intended to be reused to create additional profile, more specific, or localized to jurisdiction."
+* ^abstract = true
 * category.coding = http://terminology.hl7.org/CodeSystem/observation-category#social-history
 * status and code and subject and effective[x] and valueCodeableConcept MS
-* valueCodeableConcept from  2.16.840.1.114222.4.11.7901  (preferred)
+* value[x] only CodeableConcept
+* value[x] from  2.16.840.1.114222.4.11.7901 (preferred)
 * effective[x] only Period
 * effectivePeriod.start 0..1 
 * effectivePeriod.end 0..1
@@ -40,24 +42,35 @@ This profile is marked as 'constrainable' because it's intended to be reused to 
 						odh-OccupationalHazard 0..1 and
 						odh-WorkSchedule 0..1 and
 						odh-WeeklyWorkDays 0..1 and
-						odh-DailyWorkHours 0..1 and
-						odh-IsCurrentJob 0..1 
+						odh-DailyWorkHours 0..1 
+//					and	odh-IsCurrentJob 0..1 
 
-
-
-* component[odh-Industry].code =  http://loinc.org#86188-0 "History of Occupation industry"
+* component[odh-Industry].code =  LNC#86188-0 "History of Occupation industry"
 * component[odh-Industry].value[x] only CodeableConcept   
-* component[odh-Industry].valueCodeableConcept 1..1
-* component[odh-Industry].valueCodeableConcept from https://phinvads.cdc.gov/2.16.840.1.114222.4.11.7187
-
+* component[odh-Industry].value[x] 1..1
+* component[odh-Industry].value[x] from https://phinvads.cdc.gov/2.16.840.1.114222.4.11.7187
  
-* component[odh-SupervisoryLevel].code =  http://loinc.org#87707-6 "Job supervisory level or pay grade"
+* component[odh-SupervisoryLevel].code =  LNC#87707-6
 * component[odh-SupervisoryLevel].value[x] only CodeableConcept
-* component[odh-SupervisoryLevel].valueCodeableConcept 1..1
-* component[odh-SupervisoryLevel].valueCodeableConcept from  https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.7613
+* component[odh-SupervisoryLevel].value[x] 1..1
+* component[odh-SupervisoryLevel].value[x] from  https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.7613
 
-* component[odh-Occupation].code =  http://loinc.org#63761-1 "What were your main activities or duties for this job [NHANES]"
+* component[odh-Occupation].code =  LNC#63761-1
 * component[odh-Occupation].value[x] only string
 * component[odh-Occupation].valueString 1..1
 
- 
+* component[odh-OccupationalHazard].code =  LNC#87729-0
+* component[odh-OccupationalHazard].value[x] only string
+
+* component[odh-WorkSchedule].code =  LNC#74159-5
+* component[odh-WorkSchedule].value[x] only CodeableConcept   
+* component[odh-WorkSchedule].value[x] from http://terminology.hl7.org/ValueSet/v3-WorkScheduleODH
+
+* component[odh-WeeklyWorkDays].code =  LNC#74160-3
+* component[odh-WeeklyWorkDays].value[x] only Quantity
+* component[odh-WeeklyWorkDays].valueQuantity.code = UCUM#h
+
+* component[odh-DailyWorkHours].code =  LNC#87512-0
+* component[odh-DailyWorkHours].value[x] only Quantity
+* component[odh-DailyWorkHours].valueQuantity.code = UCUM#h
+

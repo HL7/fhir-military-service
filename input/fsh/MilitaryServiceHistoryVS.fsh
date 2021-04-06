@@ -37,6 +37,9 @@ Description: "Temporary extension holding concepts needed for this IG but no ava
 * #41C89BB67C9C48BFB718F57FAA6F3266 "Military Occumpation"
 * #9B7095A70B024CD789A36E48A3936592 "Discharge Status"
 * #9CEAD6537D6A4F198549F70598B8F8BF "Separation Reason"
+* #CD1CAD19F5494F1981211F8634DD6AB1 "ANTIGUERRILLA OPERATIONS"
+* #469552D4E8AA4BBBBF075190F7ED430C "COMBAT PATROL"
+* #750988FBBD6148DCB85C062DEFC871E2 "Individual Augmentee"
 *  #001 "WEIGHT CONTROL FAILURE"
 *  #002 "FRAUDULENT ENTRY INTO MILITARY SERVICE"
 *  #003 "PARENTHOOD OR CUSTODY OF MINOR CHILDREN"
@@ -168,7 +171,7 @@ Description: "Temporary extension holding concepts needed for this IG but no ava
 * #77eb3c61-f5c3-425c-848a-6b180b5b0528 "Humanitarian Deployment Episode" 
 * #82bf75df-60b7-4505-ba9e-8d0171ebb6c3 "Combat Deployment Episode" 
 * #b18ae858-d1dd-4edb-89f2-b9835f2eba1e "Deployment Country" 
-
+* #46a15b13-b5c1-4ae8-acde-48c31f30175a "Enduring Freedom"
 
 
 ValueSet:    ODHSupervisoryLevelValueSet
@@ -379,6 +382,7 @@ Description: "Example combat mission code; this is only an example data element 
 * SOLOR#CD1CAD19F5494F1981211F8634DD6AB1 "ANTIGUERRILLA OPERATIONS"
 * SOLOR#469552D4E8AA4BBBBF075190F7ED430C "COMBAT PATROL"
 * SOLOR#750988FBBD6148DCB85C062DEFC871E2 "Individual Augmentee"
+* SOLOR#46a15b13-b5c1-4ae8-acde-48c31f30175a "Enduring Freedom"
 
 ValueSet: DeploymentEpisodeMissionValueSet
 Id: msh-DeploymentEpisodeMissionValueSet

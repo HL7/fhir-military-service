@@ -72,7 +72,7 @@ exchange information about Military Service History and Status. All requirements
 are analyzed as use cases involving actors/participants and system interactions.
 
 Note: Certain requirements were discussed, deemed to be out-of-scope, and
-deferred (see [Deferred Requirements](#BKM_CB4D4746_7B24_4E2C_AA4E_FA6CBF63E1F5)
+deferred (see [Deferred Requirements](#deferred-requirements)
 ).
 
 Figure 1 is a summary of scenarios (use cases) representing the requirements for
@@ -135,11 +135,11 @@ by using demographic information submitted as a query (search operation) to a
 FHIR server that supports **Observation** resource - - using the **Patient**
 endpoint to determine whether a person is a verified veteran. Additional
 information is provided using the [Search
-Service](#BKM_1D0C200D_D352_4DF3_8863_57C1F1363AF2)
-[History](#BKM_1D0C200D_D352_4DF3_8863_57C1F1363AF2) criteria using the profiles
+Service](#search-service)
+[History](#history) criteria using the profiles
 described in the [Information
-Requirements](#BKM_0837D0F3_42BA_4560_AB07_2F06324BBA47) section (see [Military
-Service Episode](#BKM_1EE5C72B_FAB7_48FE_81D2_FE7E3F24BBE0)).
+Requirements](#information-requirements) section (see [Military
+Service Episode](#military-service-episode)).
 
 Testing note: "search" Patient resource and return a
 
@@ -150,13 +150,13 @@ Veteran record.
 
 This use case is part of in the proposed verification API based on FHIR. If this
 search operation returns one or more **Observation** resources that conform
-[Military Service Episode](#BKM_1EE5C72B_FAB7_48FE_81D2_FE7E3F24BBE0) to the
+[Military Service Episode](#military-service-episode) to the
 proposed profile, the Veteran's status confirmed. If the search operation does
 not find any matching Observation resources, the Veteran's status could not be
 confirmed.
 
 The presence of one or more Observations that conform to the [Combat
-Episode](#BKM_15AF665A_23CD_4387_A2F0_EA121D7063E0) profile proposed here
+Episode](#combat-episode) profile proposed here
 indicates that Veteran served in combat.
 
 # Deferred Requirements
@@ -239,7 +239,7 @@ to represent employment history for International use and it may be localized by
 HL7, IHE, and other profile developers.
 
 The Employment Episode profile of is the base profile for [Military Service
-Episode profile](#BKM_1EE5C72B_FAB7_48FE_81D2_FE7E3F24BBE0) and [ODH Past or
+Episode profile](#military-service-episode-profile) and [ODH Past or
 Present
 Job](http://hl7.org/fhir/us/odh/StructureDefinition-odh-PastOrPresentJob.html)
 profile and other profiles intended to describe specific types of employment.
