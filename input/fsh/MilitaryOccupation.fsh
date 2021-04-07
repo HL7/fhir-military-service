@@ -3,11 +3,13 @@ Alias: ODHPastOrPresentJob = http://hl7.org/fhir/us/odh/StructureDefinition/odh-
 
 
 Profile:  MilitaryOccupation
-Parent:    ODHPastOrPresentJob
+Parent:    EmploymentHistoryEpisode
 Id:       msh-militaryOccupation
 Title:    "Military Occupation"
-Description:   "The profile reuses the ODH PastOrPresentJob profile to apply it specifically to military jobs/occupations.
-The observation  resource that conforms to this specification is referenced by Military Service Episode. A veteran may have several occupation during a single service episode."
+Description:   "The profile is intended to reusee ODH PastOrPresentJob profile to apply it specifically to military jobs/occupations.
+The observation  resource that conforms to this specification is referenced by Military Service Episode.  However, due to tooling issues
+this profile is uses the abstract, base profile [Employment History Episode] (employment-history-episode).
+A veteran may have several occupation during a single service episode. "
 * subject 1..1
 * valueCodeableConcept 1..1
 * valueCodeableConcept from MilitaryOccupationValueSet
