@@ -62,7 +62,8 @@ InstanceOf: MilitaryServiceEpisode
 Description: "MilitaryServiceEpisode Example"
 * status = #final "final"
 * subject = Reference(sam-share-ssgt-veteran)
-* effectivePeriod.start = "2019-04-01"
+* effectivePeriod.start = "2018-04-01"
+* effectivePeriod.end = "2020-09-01"
 * component[mseo-Industry].valueCodeableConcept = ODH#928110.000255	"Air Force"
 * component[mseo-DischargeStatus].valueCodeableConcept = SOLOR#79A512F77CFC4E63B9969930FC8787DB "Honorable"
 * component[mseo-SeparationReason].valueCodeableConcept = SOLOR#034 "Medal of Honor Recipient"
@@ -74,8 +75,8 @@ Description: "DeploymentEpisode Example"
 * id = "DeploymentEpisode1"	
 * status = #final "final"
 * subject = Reference(sam-share-ssgt-veteran)
-* effectivePeriod.start = "2019-04-01"
-* effectivePeriod.end = "2019-04-01"
+* effectivePeriod.start = "2018-05-01"
+* effectivePeriod.end = "2019-01-01"
 * component[mshs-CombatEpisodeCountryCode].valueCodeableConcept = #AFG
 * component[mshs-CombatEpisodeMissionCode].valueCodeableConcept = SOLOR#46a15b13-b5c1-4ae8-acde-48c31f30175a "Enduring Freedom"
 
@@ -85,8 +86,8 @@ Description: "DeploymentEpisode Example"
 * id = "DeploymentEpisode2"	
 * status = #final "final"
 * subject = Reference(sam-share-ssgt-veteran)
-* effectivePeriod.start = "2019-04-01"
-* effectivePeriod.end = "2019-04-01"
+* effectivePeriod.start = "2019-02-01"
+* effectivePeriod.end = "2019-11-15"
 * component[mshs-CombatEpisodeCountryCode].valueCodeableConcept = #IRQ
 * component[mshs-CombatEpisodeMissionCode].valueCodeableConcept = SOLOR#46a15b13-b5c1-4ae8-acde-48c31f30175a "Enduring Freedom"
 

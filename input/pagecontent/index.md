@@ -1,10 +1,13 @@
 The FHIR profiles and extensions in this implementation guide are intended to
 fill gaps in current implementations of HL7 Version 2 and RESTful APIs currently
-available to implementers. This implementation guide expands FHIR best practices to assist
- organizations that adapt and extend FHIR profiles and implementation guides required in their jurisdictions (e.g. US, Candada) to apply them to locally-applicable requirements that meet their stakeholders business needs.
+available to implementers. This implementation guide expands FHIR best practices
+to assist organizations that adapt and extend FHIR profiles and implementation
+guides required in their jurisdictions (e.g. US, Canada) to apply them to
+locally-applicable requirements that meet their stakeholders business needs.
 
-This specification also identifies code systems and terminology gaps that require
-require subsequent change proposals to LOINC and SNOMED CT consistent with the requirements summarized in the use cases.
+This specification also identifies code systems and terminology gaps that
+require require subsequent change proposals to LOINC and SNOMED CT consistent
+with the requirements summarized in the use cases.
 
 ## Acknowledgements
 
@@ -15,9 +18,9 @@ best practices:
 
 -   [Occupational Data for Health (ODH)
     1.0](http://hl7.org/fhir/us/odh/index.html) (reusing best practices,
-    PastOrPresentJob profile)
+    *PastOrPresentJob* profile)
 
-The project team would like thank our leadership and colleagues for their
+The project team would like to thank our leadership and colleagues for their
 support in the development of Application Programming Interface (API)
 implementation guide:
 
@@ -31,14 +34,18 @@ Ms. Catherine Hoang, Associate Director, KBS Terminology Services
 
 Dr. Keith Campbell MD, Director, KBS Informatics Architecture
 
-| **VA Developer API (Lighthouse Project):**                                                                                                                                                                                                    | **Defense Health Agency:**            |
-|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------|
-| Andrew Fichter Shawnee Petrosky Derek Brown                                                                                                                                                                                                   | Nancy Orvis Eric Strom Allyson Rigell |
-| **CDC NIOSH:**                                                                                                                                                                                                                                | **ALTARUM:**                          |
-| Genny Luensman                                                                                                                                                                                                                                | Craig Newman                          |
-| **Project team:**                                                                                                                                                                                                                             |                                       |
-| **Ioana Singureanu** MsCS, FHL7, Project Facilitator, Requirements Analysis, Terminology Modeling **Sean Muir,** FHIR Implementation Guide Developer/Publisher **Jayme Welty**, Project Manager, Book Zurman Dr. Mark Janczewski, Book Zurman |                                       |
-| **Work Group Co-chairs:** Dr. Floyd Eisenberg Jean Duteau                                                                                                                                                                                     |                                       |
+| **VA Developer API (Lighthouse Project):**                                                         | **Defense Health Agency:** |
+|----------------------------------------------------------------------------------------------------|----------------------------|
+| Andrew Fichter                                                                                     | Nancy Orvis                |
+| Shawnee Petrosky                                                                                   | Eric Strom                 |
+| Derek Brown                                                                                        | Allyson Rigell             |
+| **CDC NIOSH:**                                                                                     | **ALTARUM:**               |
+| Genny Luensman                                                                                     | Craig Newman               |
+| **Project team:**                                                                                  | **Work Group Co-chairs:**  |
+| **Ioana Singureanu** MsCS, FHL7, Project Facilitator, Requirements Analysis, Terminology Modeling  | Dr. Floyd Eisenberg        |
+| **Sean Muir,** FHIR Implementation Guide Developer/Publisher                                       | Jean Duteau                |
+| **Jayme Welty**, Project Manager, Book Zurman                                                      |                            |
+| Dr. Mark Janczewski, Book Zurman                                                                   |                            |
 
 # Background
 
@@ -48,9 +55,9 @@ consistent with US regulatory requirements (i.e. Title 38 Veteran Benefits) and
 extensible to other realms/jurisdictions (e.g. Canadian Forces) .
 
 It harmonizes the requirements of the U.S. Department of Veterans Affairs (VA)
-and the Centers for Disease Control and Prevention (CDC) to more easily record
-this information in support of administrative and clinical workflows and the
-work and social history of patients who are also Veterans.
+and the Centers for Disease Control and Prevention (CDC) to record this
+information more easily in support of administrative and clinical workflows and
+the work and social history of patients who are also Veterans.
 
 -   **ZMH** (Military Service History) Z-segment used to represent service and
     deployment history in HL7 Version 2 transactions. This segment is used to
@@ -62,7 +69,7 @@ work and social history of patients who are also Veterans.
 
 -   HL7 FHIR Profiles and patterns from Occupational Data for Health (ODH),
     Release 1.0 (Standard for Trial Use) (<http://hl7.org/fhir/us/odh/>) as well
-    of ODH concept for Military Branch and Pay Grade.
+    of ODH concept for **Military Branch** and **Pay Grade**.
 
 # Use Case Analysis
 
@@ -71,21 +78,21 @@ exchange information about Military Service History and Status. All requirements
 are analyzed as use cases involving actors/participants and system interactions.
 
 Note: Certain requirements were discussed, deemed to be out-of-scope, and
-deferred (see [Deferred Requirements](#deferred-requirements)
-).
+deferred (see **Deferred Requirements**).
 
 Figure 1 is a summary of scenarios (use cases) representing the requirements for
 recording self-reported military and combat history. It also illustrates how
 FHIR-based APIs can be used to validate employment history information reported
 by Veterans.
-
 <img src="Use Case Analysis Overview.png" alt="Use Case Analysis Overview*" width="100%" />
 *Figure 1: Use Case Analysis Overview*
 
+
+
 ## Clinician
 
-The clinician may be working with Veteran in the community an needs asses the
-health risks associate with military service,
+The clinician may be working with Veteran in the community and must asses the
+health risks associate with military service.
 
 ## Veteran
 
@@ -133,14 +140,11 @@ The Verification API proposed in this document determines the Veteran’s status
 by using demographic information submitted as a query (search operation) to a
 FHIR server that supports **Observation** resource - - using the **Patient**
 endpoint to determine whether a person is a verified veteran. Additional
-information is provided using the [Search
-Service](#search-service)
-[History](#history) criteria using the profiles
-described in the [Information
-Requirements](#information-requirements) section (see [Military
-Service Episode](#military-service-episode)).
+information is provided using the Search Service History criteria using the
+profiles described in the **Information Requirements** section (see[**Military
+Service Episode**).
 
-Testing note: "search" Patient resource and return a
+Testing note: "search" Patient resource and return a Patient resource.
 
 **Operation**: \$**veteranStatus** returns true of the identity criteria match a
 Veteran record.
@@ -149,13 +153,13 @@ Veteran record.
 
 This use case is part of in the proposed verification API based on FHIR. If this
 search operation returns one or more **Observation** resources that conform
-[Military Service Episode](#military-service-episode) to the
-proposed profile, the Veteran's status confirmed. If the search operation does
-not find any matching Observation resources, the Veteran's status could not be
-confirmed.
+[Military Service Episode](#military-service-episode) to the proposed profile,
+the Veteran's status confirmed. If the search operation does not find any
+matching Observation resources, the Veteran's status could not be confirmed.
 
 The presence of one or more Observations that conform to the [Deployment
-Episode](#combat-episode) profile proposed here indicates that Veteran served in combat.
+Episode](#deployment-episode) profile proposed here indicates that Veteran
+served in combat.
 
 # Deferred Requirements
 
@@ -225,9 +229,6 @@ to creating extensible APIs based on FHIR.
 under development and evolving. This design document is intended to provide
 reasoning and context for future projects.
 
-<img src="Information Requirements.png" alt="Information Requirements*" width="100%" />
-*Figure 2: Information Requirements*
-
 ## Employment History Episode
 
 Employment history consists of a series Employment Episodes. In the past these
@@ -237,8 +238,8 @@ to represent employment history for International use and it may be localized by
 HL7, IHE, and other profile developers.
 
 The Employment Episode profile of is the base profile for [Military Service
-Episode profile](#military-service-episode-profile) and [ODH Past or
-PresentJob](http://hl7.org/fhir/us/odh/StructureDefinition-odh-PastOrPresentJob.html)
+Episode profile](#military-service-episode) and [ODH Past or Present
+Job](http://hl7.org/fhir/us/odh/StructureDefinition-odh-PastOrPresentJob.html)
 profile and other profiles intended to describe specific types of employment.
 
 This profile is marked as "constrainable" because it's intended to be reused to
@@ -282,26 +283,25 @@ Occupational Safety and Health (NIOSH).
 
 A service history episode may reference zero or more deployment episodes. This
 profile is based on the default FHIR Observation profile and The base profile is
-a newly defined [Employment History Episeod](#employment-history-episode) *abstract* profile. This profile is
-similar **ODH Past or Present Job** profile (
-http://hl7.org/fhir/us/odh/StructureDefinition-odh-PastOrPresentJob.html). The
+a newly defined [Employment History Episeod](#employment-history-episode)
+*abstract* profile. This profile is similar **ODH Past or Present Job** profile
+( http://hl7.org/fhir/us/odh/StructureDefinition-odh-PastOrPresentJob.html). The
 major distinction from the ODH Is that Military Service History Episode does not
 require any information the job performed by the Veteran during their service.
 
 The following is a list of constraints applied to [Employment History
-Episode](#employment-history-episode) to describe military service
-episodes:
+Episode](#employment-history-episode) to describe military service episodes:
 
-|                                           | **Multiplicity**     | **Notes**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-|-------------------------------------------|----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **url** url                               | [1...1]              | Profile canonical url used to reference this profile in an Observation that conforms this profile, **http://hl7.org/fhir/us/StructureDefinition/ms-military-service-episode** Path\*\*: Observation.meta.profile\*\*                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| **code** CodeableConcept                  | LN:Extension [1...1] | LOINC concept: to be defined - a member of "employment episode" value set. Path: **Observation.code Constraints**: Cardinality: [1,1] **Local concept id (fixed):** d3f8e4e1-874f-4ccc-b70e-76133b2e317d **LOINC concept: tbd LN:Extension**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| **startDate** date                        | [1...1]              | Start of military service episode. It is a mandatory data element for a valid military service episode. Path: Observation.effectivePeriod.start **Constraints**: Cardinality: [1,1]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| **endDate** date                          | [0...1]              | End of military service episode date. It must be specified (mandatory) for any valid military service episode. Path: **Observation.effectivePeriod.end Constraints**: Cardinality: [1,1]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+|                                           | **Multiplicity**     | **Notes**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+|-------------------------------------------|----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **url** url                               | [1...1]              | Profile canonical url used to reference this profile in an Observation that conforms this profile, **http://hl7.org/fhir/us/StructureDefinition/ms-military-service-episode** Path\*\*: Observation.meta.profile\*\*                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| **code** CodeableConcept                  | LN:Extension [1...1] | LOINC concept: to be defined - a member of "employment episode" value set. Path: **Observation.code Constraints**: Cardinality: [1,1] **Local concept id (fixed):** d3f8e4e1-874f-4ccc-b70e-76133b2e317d **LOINC concept: tbd LN:Extension**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| **startDate** date                        | [1...1]              | Start of military service episode. It is a mandatory data element for a valid military service episode. Path: Observation.effectivePeriod.start **Constraints**: Cardinality: [1,1]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| **endDate** date                          | [0...1]              | End of military service episode date. It must be specified (mandatory) for any valid military service episode. Path: **Observation.effectivePeriod.end Constraints**: Cardinality: [1,1]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | **industry** MilitaryBranchCode           | [1...1]              | For this profile, this component/element contains the branch military or a code indicating national guard or reserve. *"Branch of military including National Guard or Reserve status."* The CDC OMB 2010 (or 2020) *Industry* concepts are sufficient to describe the Military Branch including "National Guard or Reserve" - as a single concept. These US-specific concept will be added to the SNOMED CT US extension maintained by NLM. Based on feedback from VA implementers, it' snot necessary to distinguish “reserve” from “national guard” service. This profile will use a subset of Industry concepts related to military service. **Constraints**: Cardinality: [1,1] Value set binding for component.valueCodedConcept: [MilitaryBranchCode](#militarybranchcode) Binding strength: **required**; to enforce the use of the value set. **LOINC code**: 86188-0 reused from ODH |
-| **dischargeStatus** DischargeStatusCode   | [0...1]              | For this profile, the data element specifies to "discharge status" described as "Character of discharge from service episode." This data element is mandatory for service history reported by the VA but it may be empty if the patient is still active military. **Path:** Observation.component (code: **to be added to LOINC**). See Logica Solor page: https://logica.atlassian.net/wiki/spaces/SOLOR/pages/865271876/Military+Service+History+and+Status **Constraints**: Cardinality: [1,1] Value set binding for component.valueCodedConcept: [DischargeStatusCode](#dischargestatuscode) Binding strength: **required**; to enforce the use of the value set. Local concept id: 836df973-002b-4bb6-9eca-83626af0c05c                                                                                                                                                                    |
-| **supervisoryLevel** PayGradeCode         | [1...1]              | This data element corresponds to the Pay Grade associated with a military service episode. **Constraints**: Cardinality: [1,1] Value set binding for component.valueCodedConcept: [PayGradeCode](#paygradecode) Binding strength: **required**; to enforce the use of the value set. **Fixed Value:** 87707-6 (Supervisory Level)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| **separationReason** SeparationReasonCode | [0...1]              | Additional text description for **separation** reason beyond discharge status value. It's an optional, coded data element (see [SeparationReasonCode](#separationreasoncode) for a list of proposed concepts to be added to SNOMED CT). **Path:** Observation.component (code: **to be added to LOINC**). See Logica Solor page: https://logica.atlassian.net/wiki/spaces/SOLOR/pages/865271876/Military+Service+History+and+Status **Constraints**: Cardinality: [1,1] Value set binding for component.valueCodedConcept: [SeparationReasonCode](#separationreasoncode) Binding strength: **required**; to enforce the use of the value set. Local concept it: 066ccc24-04d1-4c58-a2cf-abe2e722d1a3                                                                                                                                                                         |
+| **dischargeStatus** DischargeStatusCode   | [0...1]              | For this profile, the data element specifies to "discharge status" described as "Character of discharge from service episode." This data element is mandatory for service history reported by the VA but it may be empty if the patient is still active military. **Path:** Observation.component (code: **to be added to LOINC**). See Logica Solor page: https://logica.atlassian.net/wiki/spaces/SOLOR/pages/865271876/Military+Service+History+and+Status **Constraints**: Cardinality: [1,1] Value set binding for component.valueCodedConcept: [DischargeStatusCode](#dischargestatuscode) Binding strength: **required**; to enforce the use of the value set. Local concept id: 836df973-002b-4bb6-9eca-83626af0c05c                                                                                                                                                                   |
+| **supervisoryLevel** PayGradeCode         | [1...1]              | This data element corresponds to the Pay Grade associated with a military service episode. **Constraints**: Cardinality: [1,1] Value set binding for component.valueCodedConcept: [PayGradeCode](#paygradecode) Binding strength: **required**; to enforce the use of the value set. **Fixed Value:** 87707-6 (Supervisory Level)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| **separationReason** SeparationReasonCode | [0...1]              | Additional text description for **separation** reason beyond discharge status value. It's an optional, coded data element (see [SeparationReasonCode](#separationreasoncode) for a list of proposed concepts to be added to SNOMED CT). **Path:** Observation.component (code: **to be added to LOINC**). See Logica Solor page: https://logica.atlassian.net/wiki/spaces/SOLOR/pages/865271876/Military+Service+History+and+Status **Constraints**: Cardinality: [1,1] Value set binding for component.valueCodedConcept: [SeparationReasonCode](#separationreasoncode) Binding strength: **required**; to enforce the use of the value set. Local concept it: 066ccc24-04d1-4c58-a2cf-abe2e722d1a3                                                                                                                                                                                           |
 
 ## Deployment Episode
 
@@ -371,8 +371,8 @@ Other terminology extension and harmonization targets are:
 Another gap is "separation reason" that requires a coded concept for its
 Observation component and its allowed values.
 
-In the future, the [MissionCode](#missioncode) may
-also need a SNOMED CT extension if the VA API requires it.
+In the future, the [MissionCode](#missioncode) may also need a SNOMED CT
+extension if the VA API requires it.
 
 For a complete set of terminology extension, refer to the Logica Solor page
 intended to address the concept gaps:
@@ -512,8 +512,7 @@ branches. This value set harmonizes the concepts used in VA wit those specified
 by FDA for Occupational Data for Health implementations.
 
 This specification will use the latest FDA value set specified in [Job
-Supervisory Level or Pay Grade](#supervisory-level-or-pay-grade) 
-(ODH).
+Supervisory Level or Pay Grade](#supervisory-level-or-pay-grade) (ODH).
 
 ### SeparationReasonCode
 
@@ -536,22 +535,15 @@ The following represents the proposed API. It relies on a custom operation
 **Observation** resources to represent the military service history episode
 including deployment and occupation:
 
-<img src="Custom Operations.png" alt="Custom Operations*" width="100%" />
-*Figure 4: Custom Operations*
-
 The following diagram uses Object Management Group’s (OMG) Business Process
 Modeling Notation (BPMN) to describe the pre-conditions/triggers and
 post-conditions/results of using the FHIR-based API outlined in this
 implementation guide:
 
-<img src="Retrieving status and military history using a FHIR-based API.png" alt="Retrieving status and military history using a FHIR-based API*" width="100%" />
-*Figure 5: Retrieving status and military history using a FHIR-based API*
-
 ## FHIR API (server)
 
 This API specifies the resources and operations required in an API that meets
-the requirements specified in the [Use Case
-Analysis](#use-case-analysis):
+the requirements specified in the [Use Case Analysis](#use-case-analysis):
 
 -   **Patient/\$veteranStatus** with parameters: last name, first name, gender,
     date of birth, social security number.
@@ -562,11 +554,11 @@ Analysis](#use-case-analysis):
 -   **Observation** resource to manage the information associated with military
     service and veteran status.
 
-| **Transaction**                       | **Notes**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | **Parameters**                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-|---------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Patient/\$veteranStatus()** boolean | This operation provides verification and confirmation of a Patient's status as a Veteran based on the identifying traits. This operations addresses both the "verification" and "confirmation" capabilities currently available to application developers who use the VA Developer API "Veteran Verification" endpoint. This operation returns a true, if the patient is confirmed to be a Veteran, false if the patient is not validated/confirmed to be Veteran. Error 404 will specify that the patient could not be found. The client system may resubmit the operation with revised parameter or interpret the error to indicate that the Veteran status of an individual could not be confirmed or validated using the API. This operation implements the [Verify Veteran Status](#verify-veteran-status) use case described in the [Use Case Analysis](#use-case-analysis ) section. 
-**Note**: This operation has a dependency on the implementation of a **Patient** resource that supports the capability to record that a Patient's veteran status was confirmed.                                                         | **Identifier** ] **identifier** Social Security Number or another identifier; only one, the most relevant identifier should be used. **string-primitive** ] **firstName** Patient's first name, mandatory **string-primitive** ] **lastName** Patient's last name, mandatory **date** ] **dateOfBirth** Patient's date of birth **code** ] **gender** Patients gender - as specified in the Administrative Gender value set: http://build.fhir.org/valueset-administrative-gender.html |
-| **Observation()** Bundle              | The [Military Service Episode](#military-service-episode) , [Deployment Episode](#deployment-episode), and [Military Occupation](#military-occupation) are all profiles of Observation resource and using a subset of [available parameters](#search) for Observation resource): **code** to search all Observations corresponding [Military Service Episode](#military-service-episode) for the patient specified in t **has-member** - to search by combat episode or military occupation **patient** - patient id of Veteran's Patient record, used to search for observations associated with a specific Patient who is a verified Veteran. A **search** operation that uses the search parameters described here meets the requirements specified in [Use Case Analysis](#use-case-analysis) : [Search Service History](#search-service-history) use case. Note: the "code" values corresponding to [Military Service Episode](#military-service-episode) , [Deployment Episode](#deployment-episode), and [Military Occupation](#military-occupation) will be submitted to post the ballot. | **code** ] **code** This parameter would be set to the LOINC code associated with Military Service and/or Deployment History **reference** ] **has-member** This parameter set to the Military Occupation and/or Combat History **reference** ] **patient**                                                                                                                                                                                                                                |
+| **Transaction**                                                                                                                                                                 | **Notes**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | **Parameters**                                                                                                                                                                                                                                              |
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Patient/\$veteranStatus()** boolean                                                                                                                                           | This operation provides verification and confirmation of a Patient's status as a Veteran based on the identifying traits. This operations addresses both the "verification" and "confirmation" capabilities currently available to application developers who use the VA Developer API "Veteran Verification" endpoint. This operation returns a true, if the patient is confirmed to be a Veteran, false if the patient is not validated/confirmed to be Veteran. Error 404 will specify that the patient could not be found. The client system may resubmit the operation with revised parameter or interpret the error to indicate that the Veteran status of an individual could not be confirmed or validated using the API. This operation implements the [Verify Veteran Status](#verify-veteran-status) use case described in the [Use Case Analysis](#use-case-analysis) section.                                                                                                                                                                                                        |                                                                                                                                                                                                                                                             |
+| **Note**: This operation has a dependency on the implementation of a **Patient** resource that supports the capability to record that a Patient's veteran status was confirmed. | **Identifier** ] **identifier** Social Security Number or another identifier; only one, the most relevant identifier should be used. **string-primitive** ] **firstName** Patient's first name, mandatory **string-primitive** ] **lastName** Patient's last name, mandatory **date** ] **dateOfBirth** Patient's date of birth **code** ] **gender** Patients gender - as specified in the Administrative Gender value set: http://build.fhir.org/valueset-administrative-gender.html                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |                                                                                                                                                                                                                                                             |
+| **Observation()** Bundle                                                                                                                                                        | The [Military Service Episode](#military-service-episode) , [Deployment Episode](#deployment-episode), and [Military Occupation](#military-occupation) are all profiles of Observation resource and using a subset of [available parameters](#search) for Observation resource): **code** to search all Observations corresponding [Military Service Episode](#military-service-episode) for the patient specified in t **has-member** - to search by combat episode or military occupation **patient** - patient id of Veteran's Patient record, used to search for observations associated with a specific Patient who is a verified Veteran. A **search** operation that uses the search parameters described here meets the requirements specified in [Use Case Analysis](#use-case-analysis) : [Search Service History](#search-service-history) use case. Note: the "code" values corresponding to [Military Service Episode](#military-service-episode) , [Deployment Episode](#deployment-episode), and [Military Occupation](#military-occupation) will be submitted to post the ballot. | **code** ] **code** This parameter would be set to the LOINC code associated with Military Service and/or Deployment History **reference** ] **has-member** This parameter set to the Military Occupation and/or Combat History **reference** ] **patient** |
 
 ## Associated Extensions and Profile
 
@@ -574,14 +566,11 @@ To record the confirmed Veteran status, this IG has identified the need to
 specify an extension on the Patient to specify whether the patient was confirmed
 to be a veteran.
 
--   [US Veteran](#US Veteran) specifies a flag to
-    indicate the veteran status as a boolean value.
+-   [US Veteran](\#US Veteran) specifies a flag to indicate the veteran status
+    as a boolean value.
 
 A FHIR API may use veteran status extension specified in the US Patient profile
 to implement the \$veteranStatus operation.
-
-<img src="Associated Extensions related to Veteran Verification.png" alt="Associated Extensions related to Veteran Verification*" width="100%" />
-*Figure 6: Associated Extensions related to Veteran Verification.*
 
 # Testing Guidance and Examples
 
@@ -607,8 +596,7 @@ military branch and pay grade of a Veteran.
 ## Testing Workflow
 
 This workflow identifies the activities and API calls required to address the
-requirements specified in the [Use Case
-Analysis](#use-case-analysis).
+requirements specified in the [Use Case Analysis](#use-case-analysis).
 
 ### Testing Workflow
 
@@ -616,10 +604,6 @@ The following is a testing workflow for this API. Successful testing may also
 use test scripts and pre-conditions to results of an EHR invoking the proposed
 API to verify status and retrieve the military history information of a Veteran
 using FHIR-based resources.
-
- 
-<img src="Testing Workflow.png" alt="Testing Workflow*" width="100%" />
-*Figure 7: Testing Workflow*
 
 ## Verify Veteran Status: Step 1
 

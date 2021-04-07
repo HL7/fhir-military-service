@@ -40,7 +40,7 @@ This profile is marked as 'constrainable' because it's intended to be reused to 
 						odh-SupervisoryLevel 0..1 and 
 						odh-Occupation 0..1 and 
 						odh-OccupationalHazard 0..1 and
-						odh-WorkSchedule 0..1 and
+//						odh-WorkSchedule 0..1 and
 						odh-WeeklyWorkDays 0..1 and
 						odh-DailyWorkHours 0..1 
 //					and	odh-IsCurrentJob 0..1 
@@ -48,12 +48,12 @@ This profile is marked as 'constrainable' because it's intended to be reused to 
 * component[odh-Industry].code =  LNC#86188-0 "History of Occupation industry"
 * component[odh-Industry].value[x] only CodeableConcept   
 * component[odh-Industry].value[x] 1..1
-* component[odh-Industry].value[x] from https://phinvads.cdc.gov/2.16.840.1.114222.4.11.7187
+* component[odh-Industry].valueCodeableConcept from 2.16.840.1.114222.4.5.327
  
 * component[odh-SupervisoryLevel].code =  LNC#87707-6
 * component[odh-SupervisoryLevel].value[x] only CodeableConcept
 * component[odh-SupervisoryLevel].value[x] 1..1
-* component[odh-SupervisoryLevel].value[x] from  https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.7613
+* component[odh-SupervisoryLevel].valueCodeableConcept from  2.16.840.1.114222.4.11.7613
 
 * component[odh-Occupation].code =  LNC#63761-1
 * component[odh-Occupation].value[x] only string
@@ -61,10 +61,6 @@ This profile is marked as 'constrainable' because it's intended to be reused to 
 
 * component[odh-OccupationalHazard].code =  LNC#87729-0
 * component[odh-OccupationalHazard].value[x] only string
-
-* component[odh-WorkSchedule].code =  LNC#74159-5
-* component[odh-WorkSchedule].value[x] only CodeableConcept   
-* component[odh-WorkSchedule].value[x] from http://terminology.hl7.org/ValueSet/v3-WorkScheduleODH
 
 * component[odh-WeeklyWorkDays].code =  LNC#74160-3
 * component[odh-WeeklyWorkDays].value[x] only Quantity
@@ -74,3 +70,4 @@ This profile is marked as 'constrainable' because it's intended to be reused to 
 * component[odh-DailyWorkHours].value[x] only Quantity
 * component[odh-DailyWorkHours].valueQuantity.code = UCUM#h
 
+* valueCodeableConcept from 2.16.840.1.114222.4.11.7901
