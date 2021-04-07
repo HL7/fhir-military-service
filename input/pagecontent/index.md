@@ -71,7 +71,8 @@ exchange information about Military Service History and Status. All requirements
 are analyzed as use cases involving actors/participants and system interactions.
 
 Note: Certain requirements were discussed, deemed to be out-of-scope, and
-deferred (see [Deferred Requirements]).
+deferred (see [Deferred Requirements](#deferred-requirements)
+).
 
 Figure 1 is a summary of scenarios (use cases) representing the requirements for
 recording self-reported military and combat history. It also illustrates how
@@ -133,10 +134,11 @@ by using demographic information submitted as a query (search operation) to a
 FHIR server that supports **Observation** resource - - using the **Patient**
 endpoint to determine whether a person is a verified veteran. Additional
 information is provided using the [Search
-Service] [History] criteria using the profiles
+Service](#search-service)
+[History](#history) criteria using the profiles
 described in the [Information
-Requirements]section (see [Military
-Service Episode]).
+Requirements](#information-requirements) section (see [Military
+Service Episode](#military-service-episode)).
 
 Testing note: "search" Patient resource and return a
 
@@ -153,8 +155,7 @@ not find any matching Observation resources, the Veteran's status could not be
 confirmed.
 
 The presence of one or more Observations that conform to the [Deployment
-Episode](#deployment-episode) profile proposed here
-indicates that Veteran served in combat.
+Episode](#combat-episode) profile proposed here indicates that Veteran served in combat.
 
 # Deferred Requirements
 
@@ -236,9 +237,8 @@ to represent employment history for International use and it may be localized by
 HL7, IHE, and other profile developers.
 
 The Employment Episode profile of is the base profile for [Military Service
-Episode profile](#military-service-episode) and [ODH Past or
-Present
-Job](http://hl7.org/fhir/us/odh/StructureDefinition-odh-PastOrPresentJob.html)
+Episode profile](#military-service-episode-profile) and [ODH Past or
+PresentJob](http://hl7.org/fhir/us/odh/StructureDefinition-odh-PastOrPresentJob.html)
 profile and other profiles intended to describe specific types of employment.
 
 This profile is marked as "constrainable" because it's intended to be reused to

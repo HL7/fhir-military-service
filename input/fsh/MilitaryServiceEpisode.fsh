@@ -40,7 +40,7 @@ Description:   "A patient/Veteran may have zero or more military service episode
 					 mseo-DischargeStatus 1..1 and
 					 mseo-SeparationReason 1..1  
 
-* component[mseo-Industry].code =  http://loinc.org#86188-0 "History of Occupation industry"
+* component[mseo-Industry].code =  LNC#86188-0 "History of Occupation industry"
 * component[mseo-Industry].value[x] only CodeableConcept   
 * component[mseo-Industry].valueCodeableConcept 1..1 MS
 * component[mseo-Industry].valueCodeableConcept from MilitaryBranchCode (preferred)

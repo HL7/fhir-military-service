@@ -1,7 +1,13 @@
 == Suppressed Messages ==
 
-# Observations are not instances of any from US Core
-US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles. Comparison with US Core Pediatric Head Occipital-frontal Circumference Percentile Profile. Comparison with US Core Pediatric BMI for Age Observation Profile. Comparison with US Core Pediatric Weight for Height Observation Profile. Comparison with US Core Laboratory Result Observation Profile. Comparison with US Core Pulse Oximetry Profile. Comparison with US Core Smoking Status Observation Profile
+# Observations are not instances of any from US Core. approved by Cross-Group Projects Work Group on XX/XX/2021 Motion/Second for-against-abstain. See https://jira.hl7.org/browse/FHIR-30707
+
+# SUPPRESS US CORE OBSERVATION MESSAGES. This was approved by Cross-Group Projects Work Group on 1/28/2021 Floyd Eisenberg/Brett Marquard 28-0-1. See https://jira.hl7.org/browse/FHIR-30707
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/military-service/StructureDefinition/deploymentepisode').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/military-service/StructureDefinition/msh-militaryOccupation').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/military-service/StructureDefinition/msh-militaryserviceepisode').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/military-service/StructureDefinition/odh-EmploymentHistoryEpisode').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
+
 
 # Phinvads Code Systems and Value Sets that are referenced in the guide but not freely available
 ValueSet https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.7613 

@@ -1,7 +1,6 @@
-Instance: SamShare	
-InstanceOf: USVeteran	
+Instance: sam-share-ssgt-veteran
+InstanceOf: USVeteran
 Description: "SamShare Example"	
-* id = "sam-share-ssgt-veteran"	
 * meta.profile = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"	
 * identifier.use = #usual	
 * identifier.value = "1032702"	
@@ -58,14 +57,9 @@ Description: "SamShare Example"
 * telecom[1].value = "sam.share@veterans-org.com"
 
 
-
-
-
-
-Instance: MilitaryServiceEpisode	
+Instance: MilitaryServiceEpisode1	
 InstanceOf: MilitaryServiceEpisode	
-Description: "MilitaryServiceEpisode Example"	
-* id = "MilitaryServiceEpisode"	
+Description: "MilitaryServiceEpisode Example"
 * status = #final "final"
 * subject = Reference(sam-share-ssgt-veteran)
 * effectivePeriod.start = "2019-04-01"
