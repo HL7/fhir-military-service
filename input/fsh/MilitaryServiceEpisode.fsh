@@ -36,14 +36,11 @@ Description:   "A patient/Veteran may have zero or more military service episode
 * component ^slicing.rules = #open
 * component ^slicing.description = "Slice based on the component.code pattern"
 
-* component contains mseo-Industry 1..1 and
-					 mseo-DischargeStatus 1..1 and
+* component contains mseo-DischargeStatus 1..1 and
 					 mseo-SeparationReason 1..1  
 
-* component[mseo-Industry].code =  LNC#86188-0 "History of Occupation industry"
-* component[mseo-Industry].value[x] only CodeableConcept   
-* component[mseo-Industry].valueCodeableConcept 1..1 MS
-* component[mseo-Industry].valueCodeableConcept from MilitaryBranchCode (preferred)
+
+* component[odh-Industry].valueCodeableConcept from MilitaryBranchCode
 
 
 * component[mseo-DischargeStatus].code =  SOLOR#9B7095A70B024CD789A36E48A3936592 "Discharge Status"

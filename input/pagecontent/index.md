@@ -9,7 +9,7 @@ This specification also identifies code systems and terminology gaps that
 require require subsequent change proposals to LOINC and SNOMED CT consistent
 with the requirements summarized in the use cases.
 
-## Acknowledgements
+### Acknowledgements
 
 This implementation guide builds upon existing FHIR implementation guidance and
 best practices:
@@ -47,7 +47,7 @@ Dr. Keith Campbell MD, Director, KBS Informatics Architecture
 | **Jayme Welty**, Project Manager, Book Zurman                                                      |                            |
 | Dr. Mark Janczewski, Book Zurman                                                                   |                            |
 
-# Background
+### Background
 
 This implementation guide design document is intended to create a set of
 profiles and extensions to support Military Service History and Status reporting
@@ -71,7 +71,7 @@ the work and social history of patients who are also Veterans.
     Release 1.0 (Standard for Trial Use)] (http://hl7.org/fhir/us/odh/)) as well
     of ODH concept for **Military Branch** and **Pay Grade**.
 
-# Use Case Analysis
+### Use Case Analysis
 
 The following is a set of requirements and associated capabilities to manage and
 exchange information about Military Service History and Status. All requirements
@@ -89,13 +89,11 @@ by Veterans.
 
 
 
-## Clinician
-
+### Clinician
 The clinician may be working with Veteran in the community and must asses the
 health risks associate with military service.
 
-## Veteran
-
+### Veteran
 The Veteran is the focus of this specification. The API describe here allows
 Veterans to access and share their military service history and status
 information with community clinicians, community service agencies, vendors, and
@@ -109,7 +107,7 @@ This section describes the use cases needed to manage Military Service History
 both as self-reported employment history and API-supported verification of
 detailed military service history.
 
-## Request Employment History part of Social History
+### Request Employment History part of Social History
 
 The clinician is requesting employment information in conjunction with their
 social history. If the patient is a Veteran, their employment history will
@@ -119,12 +117,12 @@ The current specification expands this use case to specify application (i.e.
 EHR) capabilities as well as reusable FHIR-based APIs that may be provided by an
 authoritative organization (e.g. US Department of Veterans Affairs).
 
-## Record Military Service History and Status
+### Record Military Service History and Status
 
 The social history information reported by the patient - including employment
 and military service history - is entered in the system of record (i.e. EHR).
 
-## Verify Veteran History
+### Verify Veteran History
 
 The EHR system, acting as a FHIR client, uses a standards-based VA RESTful API
 (FHIR Observation with profiles and extensions) to verify that the patient is a
@@ -134,7 +132,7 @@ The verification API is triggered by an EHR. Based on the verification result,
 the EHR may validate the Veteran status and fill in the combat episodes as
 needed to determine social history risks.
 
-## Verify Veteran Status
+### Verify Veteran Status
 
 The Verification API proposed in this document determines the Veteran’s status
 by using demographic information submitted as a query (search operation) to a
@@ -149,7 +147,7 @@ Testing note: "search" Patient resource and return a Patient resource.
 **Operation**: \$**veteranStatus** returns true of the identity criteria match a
 Veteran record.
 
-## Search Service History
+### Search Service History
 
 This use case is part of in the proposed verification API based on FHIR. If this
 search operation returns one or more **Observation** resources that conform
@@ -254,7 +252,7 @@ Path: **Observation.meta.profile** This profile may be used along with other pro
 | **code** CodeableConcept             | extensible LOINC value set [1...1] | Standard code that describes a generic employment episode using an extensible value set binding. This data element is mandatory (cannot be null) is this profile and any of its derivation. The value set binding is extensible but it requires a LOINC code. Path: **Observation.code** Binding strength: **Extensible**; to allow derived profiles to substitute the binding with a subset of the value set referenced here. Local temporary concept id: **f6341bf2-e765-4639-8800-6805520ece8e The value set associated with this data element includes:** 11341-5 (History of Occupation) 87511-2 (Combat zone AndOr hazardous duty work dates\*\*)\*\* **extensible LOINC value set**                                                                                                                                                                                                                                                                  |
 | **startDate** date                   | [0...1]                            | Data when the employment period started. This data element is optional in profile. Path: **Observation.effectivePeriod.start**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | **endDate** date                     | [0...1]                            | End of employment date. if this employment episode is on-going, this data element is empty. Path: **Observation.effectivePeriod.end** Derived information: active employment episode if this data element is missing. A data-absent-reason extension may be used to clarify that the end of the period is [not-applicable](http://hl7.org/fhir/R4/codesystem-data-absent-reason.html).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| **industry** CodeableConcept         | [0...1]                            | For this profile, this component/element contains the industry in which the patient was or is currently employed. This data element optional in this profile but it may be mandatory, required, or conditionally used in a derived profile. It may also be localized for required terminology in each realm. For example in the US, implementers are expected to use “Industry CDC NAICS 2012 (ODH)” [https://phinvads.cdc.gov/vads/ViewValueSet.action?id=571](https://phinvads.cdc.gov/vads/ViewValueSet.action?id=5718C508-111B-4737-A48C-FDCFD301C0DF)[8C508-111B-4737-A48C-FDCFD301C0DF](https://phinvads.cdc.gov/vads/ViewValueSet.action?id=5718C508-111B-4737-A48C-FDCFD301C0DF)” Path\*\*: Observation.component.valueCodeableConcept\*\* Binding strength: **Preferred**; to allow derived profiles to substitute the binding with a subset of the value set referenced here. The **Observation.component.code** is fixed to: **86188-0 (LOINC**) |
+| **industry** CodeableConcept         | [0...1]                            | For this profile, this component/element contains the industry in which the patient was or is currently employed. This data element optional in this profile but it may be mandatory, required, or conditionally used in a derived profile. It may also be localized for required terminology in each realm. For example in the US, implementers are expected to use “Industry CDC NAICS 2012 (ODH)” (https://phinvads.cdc.gov/vads/ViewValueSet.action?id=571)(https://phinvads.cdc.gov/vads/ViewValueSet.action?id=5718C508-111B-4737-A48C-FDCFD301C0DF)[8C508-111B-4737-A48C-FDCFD301C0DF](https://phinvads.cdc.gov/vads/ViewValueSet.action?id=5718C508-111B-4737-A48C-FDCFD301C0DF)” Path\*\*: Observation.component.valueCodeableConcept\*\* Binding strength: **Preferred**; to allow derived profiles to substitute the binding with a subset of the value set referenced here. The **Observation.component.code** is fixed to: **86188-0 (LOINC**) |
 | **supervisoryLevel** CodeableConcept | [0...1]                            | This data element corresponds to the Pay Grade associated with a military service episode. The value is intended to be a **CodeableConcept**. This data element may be localized to use a US-specific value set (e.g. "Supervisory Level or Pay Grade" : https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.7613) Path\*\*: Observation.component.valueCodeableConcept\*\* The **Observation.component.code** if fixed to: **87707-6 (LOINC)**. Binding strength: **Preferred**; to allow derived profiles to substitute the binding with a subset of the value set referenced here.                                                                                                                                                                                                                                                                                                                              |
 | **category** CodeableConcept         | [1...1]                            | Employment history is a part of the patient's social history. Therefore this data element is fixed to **"social-history"**. This information in inherited by profiles derived from this constrainable profile. Path: **Observation.category**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | **occupation** CodeableConcept       | [0...1]                            | The occupation during the episode as a coded value. **Path: Observation.valueCodeableConcept** The recommended value set binding uses the CDC PHVS_Occupation_CDC_ONET-SOC2010_ODH https://phinvads.cdc.gov/vads/ViewValueSet.action?id=3ED71C35-8147-492B-B88F-94953573E55F (Occupation CDC ONET-SOC 2010 (ODH)) The recommended value set binding references the CDC PH_OccupationalDataForHealth_ODH code system: OID: 2.16.840.1.114222.4.5.327 Code System Name: Occupational Data for Health (ODH) Code System Code: PH_OccupationalDataForHealth_ODH Content: https://phinvads.cdc.gov/vads/ViewCodeSystem.action?id=2.16.840.1.114222.4.5.327 Binding strength: **Preferred**; to allow derived profiles to substitute the binding with a subset of the value set referenced here.                                                                                                                                                                  |
@@ -476,7 +474,7 @@ the service episode is the current episode.
 "The military branch associated with service, National guard, and Reserve."
 
 The **Military Branches** coded concepts are documented in PHIN VADS as
-[Industry CDC NAICS 2012 (ODH)](#industry-CDC-NAICS-2012-(ODH)).
+[Industry CDC NAICS 2012 (ODH)](https://phinvads.cdc.gov/vads/ViewValueSet.action?id=3ED34BBC-617F-DD11-B38D-00188B398520).
 
 **Localization Note:**
 
@@ -513,7 +511,7 @@ branches. This value set harmonizes the concepts used in VA wit those specified
 by FDA for Occupational Data for Health implementations.
 
 This specification will use the latest FDA value set specified in [Job
-Supervisory Level or Pay Grade](#job-supervisory-level-or-pay-grade-(ODH)).
+Supervisory Level or Pay Grade](https://phinvads.cdc.gov/vads/ViewValueSet.action?id=D696FF02-C038-EB11-8196-005056ABE2F0).
 
 ### SeparationReasonCode
 
@@ -559,7 +557,7 @@ the requirements specified in the [Use Case Analysis](#use-case-analysis):
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Patient/\$veteranStatus()** boolean                                                                                                                                           | This operation provides verification and confirmation of a Patient's status as a Veteran based on the identifying traits. This operations addresses both the "verification" and "confirmation" capabilities currently available to application developers who use the VA Developer API "Veteran Verification" endpoint. This operation returns a true, if the patient is confirmed to be a Veteran, false if the patient is not validated/confirmed to be Veteran. Error 404 will specify that the patient could not be found. The client system may resubmit the operation with revised parameter or interpret the error to indicate that the Veteran status of an individual could not be confirmed or validated using the API. This operation implements the [Verify Veteran Status](#verify-veteran-status) use case described in the [Use Case Analysis](#use-case-analysis) section.                                                                                                                                                                                                        |                                                                                                                                                                                                                                                             |
 | **Note**: This operation has a dependency on the implementation of a **Patient** resource that supports the capability to record that a Patient's veteran status was confirmed. | **Identifier** ] **identifier** Social Security Number or another identifier; only one, the most relevant identifier should be used. **string-primitive** ] **firstName** Patient's first name, mandatory **string-primitive** ] **lastName** Patient's last name, mandatory **date** ] **dateOfBirth** Patient's date of birth **code** ] **gender** Patients gender - as specified in the Administrative Gender value set: http://build.fhir.org/valueset-administrative-gender.html                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |                                                                                                                                                                                                                                                             |
-| **Observation()** Bundle                                                                                                                                                        | The [Military Service Episode](#military-service-episode) , [Deployment Episode](#deployment-episode), and [Military Occupation](#military-occupation) are all profiles of Observation resource and using a subset of [available parameters](#search-military-service-history:-step-2) for Observation resource): **code** to search all Observations corresponding [Military Service Episode](#military-service-episode) for the patient specified in t **has-member** - to search by combat episode or military occupation **patient** - patient id of Veteran's Patient record, used to search for observations associated with a specific Patient who is a verified Veteran. A **search** operation that uses the search parameters described here meets the requirements specified in [Use Case Analysis](#use-case-analysis) : [Search Service History](#search-service-history) use case. Note: the "code" values corresponding to [Military Service Episode](#military-service-episode) , [Deployment Episode](#deployment-episode), and [Military Occupation](#military-occupation) will be submitted to post the ballot. | **code** ] **code** This parameter would be set to the LOINC code associated with Military Service and/or Deployment History **reference** ] **has-member** This parameter set to the Military Occupation and/or Combat History **reference** ] **patient** |
+| **Observation()** Bundle                                                                                                                                                        | The [Military Service Episode](#military-service-episode) , [Deployment Episode](#deployment-episode), and [Military Occupation](#military-occupation) are all profiles of Observation resource and using a subset of [available parameters](#search-service-history) for Observation resource): **code** to search all Observations corresponding [Military Service Episode](#military-service-episode) for the patient specified in t **has-member** - to search by combat episode or military occupation **patient** - patient id of Veteran's Patient record, used to search for observations associated with a specific Patient who is a verified Veteran. A **search** operation that uses the search parameters described here meets the requirements specified in [Use Case Analysis](#use-case-analysis) : [Search Service History](#search-service-history) use case. Note: the "code" values corresponding to [Military Service Episode](#military-service-episode) , [Deployment Episode](#deployment-episode), and [Military Occupation](#military-occupation) will be submitted to post the ballot. | **code** ] **code** This parameter would be set to the LOINC code associated with Military Service and/or Deployment History **reference** ] **has-member** This parameter set to the Military Occupation and/or Combat History **reference** ] **patient** |
 
 ## Associated Extensions and Profile
 
@@ -567,7 +565,7 @@ To record the confirmed Veteran status, this IG has identified the need to
 specify an extension on the Patient to specify whether the patient was confirmed
 to be a veteran.
 
--   [US Veteran](\#US Veteran) specifies a flag to indicate the veteran status
+-   [US Veteran](StructureDefinition-usveteran.html) specifies a flag to indicate the veteran status
     as a boolean value.
 
 A FHIR API may use veteran status extension specified in the US Patient profile

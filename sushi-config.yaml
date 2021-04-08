@@ -1,4 +1,4 @@
-id: hl7.fhir.us.msh
+id: hl7.fhir.us.military.service
 canonical: http://hl7.org/fhir/us/military-service
 version: 1.0.1
 name: military-service
