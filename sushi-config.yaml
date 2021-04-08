@@ -1,4 +1,4 @@
-id: hl7.fhir.us.msh
+id: hl7.fhir.us.military-service
 canonical: http://hl7.org/fhir/us/military-service
 version: 1.0.1
 name: military-service
@@ -7,8 +7,8 @@ title: "HL7 FHIR Implementation Guide: Military Service History and Status
 status: active
 publisher:
   name: HL7 Cross-Group Projects WG
-  url: https://confluence.hl7.org/display/CGP/Cross-Group+Projects+Home
-  email: cgp@lists.HL7.org
+  url: http://www.hl7.org/Special/committees/cgp/index.cfm
+  email: cgp@lists.hl7.org
 jurisdiction: urn:iso:std:iso:3166#US "United States of America"
 description: Military Service History and STatus is an implementation guide for veteran status and history verification and confirmation.
 license: CC0-1.0
@@ -43,4 +43,4 @@ menu:
   Example: examples.html
   All Artifacts: artifacts.html
   Change Log: change_log.html
-  History: http://hl7.org/fhir/us/msh/history.html
+  History: http://hl7.org/fhir/us/military-service/history.html
