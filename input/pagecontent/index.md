@@ -13,7 +13,8 @@ with the requirements summarized in the use cases.
 
 This implementation guide builds upon existing FHIR implementation guidance and
 best practices:
--   FHIR US Core Implementation Guide 3.1.1 (reusing US Core Patient profile)
+-  [US Core
+Implementation Guide (v3.1.1)](http://hl7.org/fhir/us/core/index.html) (reusing US Core Patient profile)
 
 -   [Occupational Data for Health (ODH)
     1.0](http://hl7.org/fhir/us/odh/index.html) (reusing best practices,
@@ -44,6 +45,8 @@ implementation guide:
  - Dr. Mark A. Kramer
 **ESAC**
 - Peter Muir
+- **ALTARUM**
+- Craig Newman
 **Work Group Co-chairs:**                                                                          
 - Dr. Floyd Eisenberg                                                                                 |
 - Jean Duteau   
@@ -648,5 +651,6 @@ Scenario Step 2: Search the Observation resource for a list of Military Service
 Episodes: search by "subject" (i.e. Patient/Veteran) and by "patient" and "code"
 search parameters
 
-
+For more details on testing, you may refer to the FHIR Connectathon (September 2020).
+______________________________
 

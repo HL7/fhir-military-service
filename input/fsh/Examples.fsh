@@ -23,20 +23,14 @@ Description: "SamShare Example"
 * gender = #male	
 * active = true
 * birthDate = "1987-02-20"
-
 * extension[USVeteranStatus].valueBoolean = true
-
 * extension[race].extension[ombCategory].valueCoding = OmbRaceCat#2106-3 "White"
 * extension[race].extension[detailed].valueCoding = OmbRaceCat#2036-2 "Filipino"
 * extension[race].extension[text].valueString = "Mixed"
-
 * extension[ethnicity].extension[ombCategory].valueCoding = OmbRaceCat#2135-2 "Hispanic or Latino"
 * extension[ethnicity].extension[detailed].valueCoding = OmbRaceCat#2184-0 "Dominican"
 * extension[ethnicity].extension[text].valueString = "Hispanic or Latino"
-
 * extension[birthsex].valueCode = #M
-
-
 * address[0].line[0] = "49 Pleasant Hill St"
 * address[0].city = "Anytowm"
 * address[0].state =  "NH"
@@ -102,4 +96,3 @@ Description: "DeploymentEpisode Example"
 * effectivePeriod.end = "2019-04-01"
 * component[mshs-CombatEpisodeCountryCode].valueCodeableConcept = #IRQ
 * component[mshs-CombatEpisodeMissionCode].valueCodeableConcept = SOLOR#46a15b13-b5c1-4ae8-acde-48c31f30175a "Enduring Freedom"
-

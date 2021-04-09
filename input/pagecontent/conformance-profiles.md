@@ -1,39 +1,35 @@
 ### Profile Base
 
-Most MSH profiles are based on US Core profiles defined in the [US Core
-Implementation Guide (v3.1.1)](http://hl7.org/fhir/us/core/index.html). For
-example, [USVeteran] is based on the [US Core Patient][USCorePatientProfile]
-profile. Because of the way profiles work in FHIR, any resource that validates
-against an MSH profile that is based a US Core profile will automatically be in
-compliance with the US Core profile.
+Most MSH profiles are based on US Core profiles defined in the [US Core Implementation Guide (v3.1.1)](http://hl7.org/fhir/us/core/index.html). For
+example, the [US Veteran profile](StructureDefinition-usveteran.html) is based on the [US Core Patient](https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-patient.html)
+profile. Because of the way profiles work in FHIR, any resource that validates against an MSH profile that is based a US Core profile will automatically be in
+compliance with the US Core profile and the associated US Core Data for Interperability (USCDI) data element required by [US regulation](https://www.healthit.gov/curesrule/).
 
--   [Employment History Episode][EmploymentHistoryEpisode] is an abstract, base
-    profile for that illstrates the basic structure of a an employment episosde.
-    It may be considered the base profile for [ODH
-    PastOrPresentJob][PastOrPresentJob] and the [Military Service
-    Episode][MilitaryServiceEpisode] profile defined in this implementation
+-   [Employment History Episode](StructureDefinition-odh-EmploymentHistoryEpisode.html) is an abstract, base profile for that illstrates the basic structure of a an employment episode.
+    It may be considered the base profile for [ODH PastOrPresentJob](http://hl7.org/fhir/us/odh/StructureDefinition-odh-PastOrPresentJob.html) and the 
+    [Military Service Episode](StructureDefinition-msh-militaryserviceepisode.html) profile defined in this implementation
     guide.
 
--   [Military Service Episode][MilitaryServiceEpisode] specfies a specific
-    military service history; it includes references to [Deployment
-    Episode][DeploymentEpisode] and [Military Occupation][MilitaryOccupation].
+-   [Military Service Episode](StructureDefinition-msh-militaryserviceepisode.html) profile can be used to create Observatoin resources that describe a Veteran's military service history; it includes references to [Deployment Episode](StructureDefinition-deploymentepisode.html)  and [Military Occupation](StructureDefinition-msh-militaryOccupation.html).
 
--   [Military Occupation][MilitaryOccupation] constrains [ODH
-    PastOrPresentJob][PastOrPresentJob]. It is referenced by [Military Service
-    Episode][MilitaryServiceEpisode].
+-   [Military Occupation](StructureDefinition-msh-militaryOccupation.html)is similar to [ODH
+    PastOrPresentJob](http://hl7.org/fhir/us/odh/StructureDefinition-odh-PastOrPresentJob.html). It is referenced by [Military Service
+    Episode](StructureDefinition-msh-militaryserviceepisode.html).
 
-Where US Core does not provide an appropriate base profile, MSH profiles FHIR
-resources.
+Where US Core does not provide an appropriate base profile, this implementation profiles FHIR
+resources directly as described below:
 
 | Profile                                                | Based on US Core? | Immediate Parent Profile |
 |--------------------------------------------------------|-------------------|--------------------------|
-| [Employment History Episode][EmploymentHistoryEpisode] | no                | Observation              |
-| [Deployment Episode][DeploymentEpisode]                | no                | EmploymentHistoryEpisode |
-| [Military Occupation][MilitaryOccupation]              | no                | PastOrPresentJob         |
-| [Military Service Episode][MilitaryServiceEpisode]     | no                | EmploymentHistoryEpisode |
-| [US Veteran][USVeteran]                                | no                | US Patient               |
-
+| [Employment History Episode](StructureDefinition-odh-EmploymentHistoryEpisode.html) | no                | Observation              |
+| [Deployment Episode](StructureDefinition-deploymentepisode.html)                | no                |  [Employment History Episode](StructureDefinition-odh-EmploymentHistoryEpisode.html)                 |          |
+| [Military Occupation](StructureDefinition-msh-militaryOccupation.html)          |no    |  [Employment History Episode](StructureDefinition-odh-EmploymentHistoryEpisode.html)                 |          |
+| [Military Service Episode](StructureDefinition-msh-militaryserviceepisode.html)    | no                | Observation (See "Note") | |
+| [US Veteran](StructureDefinition-usveteran.html)                                | yes                | [US Patient](https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-patient.html)              |
 {: .grid }
+
+**Note:** Due to limitations in the reuse of profiles, even though a "Military Service Episode" is logically a type of 
+"Employment History Episode" it was not possible to specify it as a parent profile.
 
 ### Conformance to MSH Profiles
 
@@ -57,8 +53,8 @@ There four ways to identify the correct profile:
     search](https://www.hl7.org/fhir/search.html#profile), so the validating
     profile is known in advance.
 
-2.  The instance self-identifies using `meta.profile`. Every Data Sender SHOULD
-    populate this element.
+2.  The instance self-identifies using `meta.profile`. Every Data Sender SHALL
+    populate this element to specify which type of information was used/provided to consumer/receivers of military service history.
 
 3.  The Data Receiver can examine the contents of the instance to associate it
     with a profile (in particular, by looking for identifying code or category).
@@ -137,7 +133,7 @@ The following rules apply in MSH:
     CapabilityStatement.
 
     [^1]: Although not common practice, profiles can have MS flags at the data
-        element element.
+        element.
 
 -   Any MS flag or flags on an unsupported profile (as stated in participant's
     CapabilityStatement) do not carry MS obligations.

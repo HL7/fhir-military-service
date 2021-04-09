@@ -176,7 +176,7 @@
 <artifact deprecated="true" id="ValueSet/mcode-units-of-length-value-set" key="units-of-length-value-set" name="Units of Length Value Set"/>
 <artifact deprecated="true" id="ValueSet/mcode-tumor-size-units-vs" key="ValueSet-mcode-tumor-size-units-vs" name="Units of tumor size value set"/>
 <artifact deprecated="true" key="ValueSet" name="ValueSet"/>
-<artifact id="OperationDefinition/VeteranStatus" key="OperationDefinition-VeteranStatus" name="Veteran Status Verification and Confirmation - Operatoin"/>
+<artifact id="OperationDefinition/VeteranStatus" key="OperationDefinition-VeteranStatus" name="Veteran Status Verification and Confirmation - Operation"/>
 <artifact deprecated="true" id="Observation/binet-stage-group-A" key="Observation-binet-stage-group-A" name="binet-stage-group-A"/>
 <artifact deprecated="true" id="Observation/bodyheight-jenny-m-2018-03-06" key="Observation-bodyheight-jenny-m-2018-03-06" name="bodyheight-jenny-m-2018-03-06"/>
 <artifact deprecated="true" id="Observation/bodyweight-jenny-m-2018-03-16" key="Observation-bodyweight-jenny-m-2018-03-16" name="bodyweight-jenny-m-2018-03-16"/>
