@@ -7,6 +7,15 @@ WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/military-servic
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/military-service/StructureDefinition/odh-EmploymentHistoryEpisode').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
 
 # Phinvads Code Systems and Value Sets that are referenced in the guide but not freely available
-ValueSet https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.7613 
-Binding https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.7613 could not be located
+# https://www.logicahealth.org/solutions/solor/MSH is the temporary Solor extension
+# http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH does not have any content
+
+INFORMATION: Observation/MilitaryServiceEpisode1: Observation.component[0].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH' is unknown so the code cannot be validated
+INFORMATION: Observation/MilitaryServiceEpisode1: Observation.component[1].code.coding[0]: Code System URI 'https://www.logicahealth.org/solutions/solor/MSH' is unknown so the code cannot be validated
+WARNING: Observation/MilitaryServiceEpisode1: Observation.component[1].value.ofType(CodeableConcept): [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/military-service/ValueSet/msh-DischargeStatusValueSet because the value set or code system is not known to the validator]
+INFORMATION: Observation/MilitaryServiceEpisode1: Observation.component[1].value.ofType(CodeableConcept).coding[0]: Code System URI 'https://www.logicahealth.org/solutions/solor/MSH' is unknown so the code cannot be validated
+INFORMATION: Observation/MilitaryServiceEpisode1: Observation.component[2].code.coding[0]: Code System URI 'https://www.logicahealth.org/solutions/solor/MSH' is unknown so the code cannot be validated
+WARNING: Observation/MilitaryServiceEpisode1: Observation.component[2].value.ofType(CodeableConcept): [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/military-service/ValueSet/msh-SeparationReason-vs because the value set or code system is not known to the validator]
+INFORMATION: Observation/MilitaryServiceEpisode1: Observation.component[2].value.ofType(CodeableConcept).coding[0]: Code System URI 'https://www.logicahealth.org/solutions/solor/MSH' is unknown so the code cannot be validated
+== C:\Users\Ioana\Documents\GitHub\fhir-military-service\fsh-generated\resources\OperationDefinition-VeteranStatus.json ==
 

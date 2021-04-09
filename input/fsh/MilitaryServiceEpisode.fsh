@@ -1,16 +1,32 @@
 // Code Systems
 
-
 Profile:  MilitaryServiceEpisode
-Parent:   EmploymentHistoryEpisode
+Parent:   Observation
 Id:       msh-militaryserviceepisode
 Title:    "Military Service Episode"
 Description:   "A patient/Veteran may have zero or more military service episodes. The contents of this profile is based on the HL7 Version 2 ZMH segment and the ServiceHistoryEpisode schema specified in the current Veteran Verification API and it allows this API to migrate to FHIR and to be consistent with the prior work done by Center for Disease Control (CDC) National Institute for Occupational Safety and Health (NIOSH).  A service history episode may reference zero or more Combat episodes. This profile is based on the default FHIR Observation profile but may reuse ODD Past or Present Job profile ( http://hl.org/fhir/us/odh/StructureDefinition-odh-PastOrPresentJob.html)."
 * status and code and subject and effectivePeriod and component MS
 * id 1..1 
 * identifier 0..1 
+* effective[x] only Period
+* effectivePeriod.start 0..1 
+* effectivePeriod.end 0..1
+* basedOn 0..0
+* partOf 0..0
+* focus 0..0
+* encounter 0..0
+* issued 0..0
+* performer 0..0
+* dataAbsentReason 0..0
+* interpretation 0..0
+* bodySite 0..0
+* method 0..0
+* specimen 0..0
+* device 0..0
+* referenceRange 0..0
+* derivedFrom 0..0
 * code = LNC#87511-2 
-* subject 1..1 
+* subject 1..1 MS
 * subject only Reference(USVeteran)
 * effective[x] only Period
 * effectivePeriod 1..1 MS
@@ -36,11 +52,15 @@ Description:   "A patient/Veteran may have zero or more military service episode
 * component ^slicing.rules = #open
 * component ^slicing.description = "Slice based on the component.code pattern"
 
-* component contains mseo-DischargeStatus 1..1 and
-					 mseo-SeparationReason 1..1  
+* component contains mseo-Industry 1..1 and
+					 mseo-DischargeStatus 1..1 and
+					 mseo-SeparationReason 0..1  
 
 
-* component[odh-Industry].valueCodeableConcept from MilitaryBranchCode
+* component[mseo-Industry].code =  LNC#86188-0 "History of Occupation industry"
+* component[mseo-Industry].value[x] only CodeableConcept   
+* component[mseo-Industry].value[x] 1..1
+* component[mseo-Industry].valueCodeableConcept from MilitaryBranchCode
 
 
 * component[mseo-DischargeStatus].code =  SOLOR#9B7095A70B024CD789A36E48A3936592 "Discharge Status"

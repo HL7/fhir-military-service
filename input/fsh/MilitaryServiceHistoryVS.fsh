@@ -1,35 +1,18 @@
 Alias:   LNC = http://loinc.org
 Alias:   SCT = http://snomed.info/sct
 Alias:   UCUM = http://unitsofmeasure.org
-Alias:   MTH = http://ncimeta.nci.nih.gov
-Alias:   ICD10CM = http://hl7.org/fhir/sid/icd-10-cm 
-Alias:   RXN = http://www.nlm.nih.gov/research/umls/rxnorm
-Alias:   CPT = http://www.ama-assn.org/go/cpt
-Alias:   ICD10PCS = http://www.nlm.nih.gov/research/umls/icd10pcs
-Alias:   AJCC = http://cancerstaging.org
-Alias:   GTR = http://www.ncbi.nlm.nih.gov/gtr
-Alias:   CLINVAR = http://www.ncbi.nlm.nih.gov/clinvar
-Alias:   IDTYPE = http://terminology.hl7.org/CodeSystem/v2-0203
-Alias:   HGNC = http://www.genenames.org/geneId
-Alias:   HGVS = http://varnomen.hgvs.org
-Alias:   SPTY = http://terminology.hl7.org/CodeSystem/v2-0487
-Alias:   ClinStatus = http://terminology.hl7.org/CodeSystem/condition-clinical
-Alias:   VerStatus = http://terminology.hl7.org/CodeSystem/condition-ver-status
-Alias:   MedStatus = http://hl7.org/fhir/CodeSystem/medication-statement-status
-Alias:   MedCat = http://terminology.hl7.org/CodeSystem/medication-statement-category
-Alias:   ObsCat = http://terminology.hl7.org/CodeSystem/observation-category
-Alias:   ObsInt = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation
 Alias:   DiagnosticService = http://terminology.hl7.org/CodeSystem/v2-0074
 Alias:   OmbRaceCat = urn:oid:2.16.840.1.113883.6.238
 Alias:   ISO = urn:iso:std:iso:3166
-Alias:   ODH = http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH
+Alias:   ODH = https://phinvads.cdc.gov/vads/ViewCodeSystem.action?id=2.16.840.1.114222.4.5.327
 Alias:   SOLOR = https://www.logicahealth.org/solutions/solor/MSH
 
 
 CodeSystem: SOLOR
 Id: msh-solor-extension
 Title: "SOLOR Military Service History and Status"
-Description: "Temporary extension holding concepts needed for this IG but no available in SNOMED and LOINC"
+Description: "Temporary extension holding concepts needed for this IG but no available in SNOMED and LOINC. https://logica.atlassian.net/wiki/spaces/SOLOR/pages/865271876/Military+Service+History+and+Status
+This coding system is represented as a local value set but it may be replaced to CodeSysten resource in the future. Reference: https://www.logicahealth.org/solutions/solor"
 * #79A512F77CFC4E63B9969930FC8787DB "Honorable"
 * #3209820D5C9F4F4E855C5783E8F49228 "Combat Episode"
 * #175ECB0F9DBC41708BC7ABD3468E7F53 "Military occupation"
@@ -173,23 +156,6 @@ Description: "Temporary extension holding concepts needed for this IG but no ava
 * #82bf75df-60b7-4505-ba9e-8d0171ebb6c3 "Combat Deployment Episode" 
 * #b18ae858-d1dd-4edb-89f2-b9835f2eba1e "Deployment Country" 
 * #46a15b13-b5c1-4ae8-acde-48c31f30175a "Enduring Freedom"
-
-
-ValueSet:    ODHSupervisoryLevelValueSet
-Id: 2.16.840.1.114222.4.11.7613
-Title: "Job Supervisory Level or Pay Grade ODH"
-Description: "Reflects the amount of supervisory or management responsibilities for an individual’s job. In the military, this is the person’s pay grade, which serves as a proxy for supervisory level and can be interpreted across branches."
-
-ValueSet:    ODHOccupationValueSet
-Id: 2.16.840.1.114222.4.11.7901
-Title: "Occupation CDC ONET-SOC 2010 ODH"
-Description: "The Occupation CDC O*NET-SOC 2010 (ODH) value set is to be used to capture self-reported occupation within electronic health information systems to support direct patient care, population health and public health activities. Occupation is the type of work done by the subject. It is based on the 2010 O*Net-SOC Classification System. For more information, a mapping to 2010 Census Codes, and tips on using this value set go to the Occupational Data for Health (ODH) Hot Topics section on the PHIN VADS home page."
-
-ValueSet:    ODHIndustryValueSet
-Id: 2.16.840.1.114222.4.5.327
-Title: "Industry CDC NAICS 2012 ODH"
-Description: "The Industry CDC NAICS 2012 (ODH) value set is to be used to capture self-reported industry within electronic health information systems to support direct patient care, population health and public health activities. Industry is described as the economic or business sector of a business or enterprise. For more information, a mapping to 2012 Census Industry Codes, and tips on using this value set go to the Occupational Data for Health (ODH) Hot Topics section on the PHIN VADS home page." 
-
 
 
 ValueSet:    MilitaryBranchCode

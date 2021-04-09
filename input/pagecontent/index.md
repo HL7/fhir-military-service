@@ -9,11 +9,10 @@ This specification also identifies code systems and terminology gaps that
 require require subsequent change proposals to LOINC and SNOMED CT consistent
 with the requirements summarized in the use cases.
 
-### Acknowledgements
+**Acknowledgements**
 
 This implementation guide builds upon existing FHIR implementation guidance and
 best practices:
-
 -   FHIR US Core Implementation Guide 3.1.1 (reusing US Core Patient profile)
 
 -   [Occupational Data for Health (ODH)
@@ -26,26 +25,34 @@ implementation guide:
 
 **Department of Veterans Affairs:**
 
-Dr. Steven Brown, MD, Director, CIDMO Knowledge Based Systems (KBS)
+- Dr. Steven Brown, MD, Director, CIDMO Knowledge Based Systems (KBS)
+- Mr. Javon Hyland, Deputy Program Manager, , KBS Standards & Interoperability
+- Ms. Catherine Hoang, Associate Director, KBS Terminology Services
+- Dr. Keith Campbell MD, Director, KBS Informatics Architecture
 
-Mr. Javon Hyland, Deputy Program Manager, , KBS Standards & Interoperability
-
-Ms. Catherine Hoang, Associate Director, KBS Terminology Services
-
-Dr. Keith Campbell MD, Director, KBS Informatics Architecture
-
-| **VA Developer API (Lighthouse Project):**                                                         | **Defense Health Agency:** |
-|----------------------------------------------------------------------------------------------------|----------------------------|
-| Andrew Fichter                                                                                     | Nancy Orvis                |
-| Shawnee Petrosky                                                                                   | Eric Strom                 |
-| Derek Brown                                                                                        | Allyson Rigell             |
-| **CDC NIOSH:**                                                                                     | **ALTARUM:**               |
-| Genny Luensman                                                                                     | Craig Newman               |
-| **Project team:**                                                                                  | **Work Group Co-chairs:**  |
-| **Ioana Singureanu** MsCS, FHL7, Project Facilitator, Requirements Analysis, Terminology Modeling  | Dr. Floyd Eisenberg        |
-| **Sean Muir,** FHIR Implementation Guide Developer/Publisher                                       | Jean Duteau                |
-| **Jayme Welty**, Project Manager, Book Zurman                                                      |                            |
-| Dr. Mark Janczewski, Book Zurman                                                                   |                            |
+**VA Developer API (Lighthouse Project):**
+- Andrew Fichter                                                                                  
+- Shawnee Petrosky                                                                                  
+-  Derek Brown                                                                                       
+**Defense Health Agency:**                                                                            
+- Nancy Orvis
+- Eric Strom
+- llyson Rigel                                                                                       |
+**CDC NIOSH:**                                                      
+- Genny Luensman                                                                                     
+**MITRE**:              
+ - Dr. Mark A. Kramer
+**ESAC**
+- Peter Muir
+**Work Group Co-chairs:**                                                                          
+- Dr. Floyd Eisenberg                                                                                 |
+- Jean Duteau   
+**Project team:** 
+ **Ioana Singureanu** MsCS, FHL7, Project Facilitator,                                              
+                      Requirements Analysis, Terminology Modeling                                    
+ **Sean Muir,** FHIR Implementation Guide Developer/Publisher                                       | 
+ **Jayme Welty**, Project Manager, Book Zurman                                                      |          
+ **Dr. Mark Janczewski**, Book Zurman                                                                   |
 
 ### Background
 
@@ -86,8 +93,6 @@ FHIR-based APIs can be used to validate employment history information reported
 by Veterans.
 <img src="Use Case Analysis Overview.png" alt="Use Case Analysis Overview*" width="100%" />
 *Figure 1: Use Case Analysis Overview*
-
-
 
 ### Clinician
 The clinician may be working with Veteran in the community and must asses the
@@ -139,13 +144,12 @@ by using demographic information submitted as a query (search operation) to a
 FHIR server that supports **Observation** resource - - using the **Patient**
 endpoint to determine whether a person is a verified veteran. Additional
 information is provided using the Search Service History criteria using the
-profiles described in the **Information Requirements** section (see[**Military
+profiles described in the **Information Requirements** section (see**Military
 Service Episode**).
 
-Testing note: "search" Patient resource and return a Patient resource.
-
-**Operation**: \$**veteranStatus** returns true of the identity criteria match a
-Veteran record.
+This use cases requires a cutom operation:
+**Operation**: \$**veteranStatus** returns true if a patient is a Vetern, false otherwise, 
+or an error if the search crieria do not match a patient record.
 
 ### Search Service History
 
@@ -222,6 +226,9 @@ ensure backwards-compatibility. Furthermore, using [Observation R4 and
 later](http://build.fhir.org/observation.html) - rather than
 [Basic](http://build.fhir.org/basic.html) resource - is the recommended approach
 to creating extensible APIs based on FHIR.
+
+<img src="Information Requirements.png" alt="Information Requirements" width="100%" />
+*Figure 2: Information Requirements*
 
 **Note:** FHIR implementation, localization, and profiling best-practices are
 under development and evolving. This design document is intended to provide
@@ -383,6 +390,8 @@ activity:
 
 https://logica.atlassian.net/wiki/spaces/SOLOR/pages/865271876/Military+Service+History+and+Status
 
+<img src="Terminology Requirements.png" alt="Terminology Requirements" width="100%" />
+
 *Figure 3: Terminology Requirements*
 
 ### Job Supervisory Level or Pay Grade (ODH)
@@ -529,15 +538,21 @@ https://logica.atlassian.net/wiki/spaces/SOLOR/pages/865271876/Military+Service+
 One of the requirements of this implementation guide is to provide an operation
 for to confirm or verify that an individual has been confirmed to be a veteran.
 
+
+<img src="Retrieving status and military history using a FHIR-based API.png" 
+alt="Retrieving status and military history using a FHIR-based API" width="100%" />
+*Figure 5: Retrieving status and military history using a FHIR-based API*
+
+
+
+<img src="Custom Operations.png" alt="Custom Operations" width="100%" />
+*Figure 6: Custom Operations*
+
+
 The following represents the proposed API. It relies on a custom operation
 (\$**veteranStatus**) associated with the **Patient** resource and
 **Observation** resources to represent the military service history episode
 including deployment and occupation:
-
-The following diagram uses Object Management Group’s (OMG) Business Process
-Modeling Notation (BPMN) to describe the pre-conditions/triggers and
-post-conditions/results of using the FHIR-based API outlined in this
-implementation guide:
 
 ### FHIR API (server)
 
@@ -564,6 +579,11 @@ the requirements specified in the [Use Case Analysis](#use-case-analysis):
 To record the confirmed Veteran status, this IG has identified the need to
 specify an extension on the Patient to specify whether the patient was confirmed
 to be a veteran.
+
+<img src="Associated Extensions related to Veteran Verification.png" 
+alt="Associated Extensions related to Veteran Verification" width="100%" />
+*Figure 6: Associated Extensions related to Veteran Verification*
+
 
 -   [US Veteran](StructureDefinition-usveteran.html) specifies a flag to indicate the veteran status
     as a boolean value.
@@ -602,7 +622,13 @@ requirements specified in the [Use Case Analysis](#use-case-analysis).
 The following is a testing workflow for this API. Successful testing may also
 use test scripts and pre-conditions to results of an EHR invoking the proposed
 API to verify status and retrieve the military history information of a Veteran
-using FHIR-based resources.
+using FHIR-based resources. This diagram uses Object Management Group’s (OMG) Business Process
+Modeling Notation (BPMN) to describe the pre-conditions/triggers and
+post-conditions/results of using the FHIR-based API outlined in this
+implementation guide:
+
+<img src="Testing Workflow.png" alt="Testing Workflow" width="100%" />
+*Figure 7: Testing Workflow*
 
 ### Verify Veteran Status: Step 1
 
@@ -622,402 +648,5 @@ Scenario Step 2: Search the Observation resource for a list of Military Service
 Episodes: search by "subject" (i.e. Patient/Veteran) and by "patient" and "code"
 search parameters
 
-Action:
 
-Client Code - Use the following code snippet to execute this action in your own
-client.
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-// Create a client (only needed once)
-FhirContext ctx = new FhirContext();
-IGenericClient client = ctx.newRestfulGenericClient("http://hapi.fhir.org/baseR4");
-// Invoke the client
-Bundle bundle = client.search().forResource(Observation.class)
-.where(new TokenClientParam("code").exactly().code("bdb89d1f-f2c1-497b-ad7e-9ab8078a124b"))
-.where(new ReferenceClientParam("patient").hasId("sam-share-ssgt-veteran"))
-.prettyPrint()
-.execute();
-Request GET http://hapi.fhir.org/baseR4/Observation?code=bdb89d1f-f2c1-497b-ad7e-9ab8078a124b&patient=sam-share-ssgt-veteran&_pretty=true
-Request Headers
-Accept-Charset: utf-8
-Accept: application/fhir+xml;q=1.0, application/fhir+json;q=1.0, application/xml+fhir;q=0.9, application/json+fhir;q=0.9
-User-Agent: HAPI-FHIR/5.2.0-SNAPSHOT (FHIR Client; FHIR 4.0.1/R4; apache)
-Accept-Encoding: gzip
-Response HTTP 200 OK
-Response Headers
-x-request-id: TnguHYocTUtM3Rl1
-date: Thu, 10 Sep 2020 13:03:59 GMT
-last-modified: Thu, 10 Sep 2020 13:03:58 GMT
-server: nginx/1.14.0 (Ubuntu)
-transfer-encoding: chunked
-x-powered-by: HAPI FHIR 5.2.0-SNAPSHOT REST Server (FHIR Server; FHIR 4.0.1/R4)
-connection: keep-alive
-content-type: application/fhir+json;charset=utf-8
-Result Body JSON bundle (4368 bytes)
-Bundle contains 1 / 1 entries
-Observation/military-service-episode/_history/1 12:42:36
-Raw Message
-{
-"resourceType": "Bundle",
-"id": "3d60dd95-8620-4542-af97-b2fa9a19e6cc",
-"meta": {
-"lastUpdated": "2020-09-10T13:03:58.951+00:00"
-},
-"type": "searchset",
-"total": 1,
-"link": [ {
-"relation": "self",
-"url": "http://hapi.fhir.org/baseR4/Observation?_pretty=true&code=bdb89d1f-f2c1-497b-ad7e-9ab8078a124b&patient=sam-share-ssgt-veteran"
-} ],
-"entry": [ {
-"fullUrl": "http://hapi.fhir.org/baseR4/Observation/military-service-episode",
-"resource": {
-"resourceType": "Observation",
-"id": "military-service-episode",
-"meta": {
-"versionId": "1",
-"lastUpdated": "2020-09-10T12:42:36.025+00:00",
-"source": "#5DZ27OcD1FKIROE9",
-"profile": [ "http://hl7.org/fhir/militaryserviceandstatus/StructureDefinition/militaryserviceepisode" ]
-},
-"text": {
-"status": "generated",
-"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"/>"
-},
-"status": "final",
-"category": [ {
-"coding": [ {
-"system": "http://terminology.hl7.org/CodeSystem/observation-category",
-"code": "social-history",
-"display": "Social History"
-} ],
-"text": "Social History: Military Service"
-} ],
-"code": {
-"coding": [ {
-"system": "http://www.logicahealth.org/solutions/solor",
-"_system": {
-"fhir_comments": [ " http://www.logicahealth.org/solutions/solor will be replaced with http://loinc.org when the concept will be added to LOINC " ]
-},
-"code": "bdb89d1f-f2c1-497b-ad7e-9ab8078a124b",
-"_code": {
-"fhir_comments": [ " placeholder concept in Solor " ]
-},
-"display": "Military Service Episode"
-} ],
-"text": "Vital signs panel"
-},
-"subject": {
-"fhir_comments": [ " Referenced Veteran's Patient resource insstance " ],
-"reference": "Patient/sam-share-ssgt-veteran",
-"display": "veteran"
-},
-"effectivePeriod": {
-"fhir_comments": [ " Period of service " ],
-"start": "2016-12-06",
-"end": "2020-07-22"
-},
-"hasMember": [ {
-"fhir_comments": [ " Associated combat episodes " ],
-"reference": "Observation/combat-episode-1",
-"display": "1st compbat episode"
-}, {
-"reference": "Observation/combat-episode-2",
-"display": "2nd compbat episode"
-} ],
-"component": [ {
-"fhir_comments": [ " Military branch/industry" ],
-"code": {
-"coding": [ {
-"system": "http://loinc.org",
-"code": "86188-0",
-"display": "Industry"
-} ]
-},
-"valueCodeableConcept": {
-"coding": [ {
-"system": "http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH",
-"code": "928110.000255",
-"display": "Air Force"
-} ]
-}
-}, {
-"fhir_comments": [ " Supervisory Level Pay grade " ],
-"code": {
-"coding": [ {
-"system": "http://www.logicahealth.org/solutions/solor",
-"code": "E-5",
-"display": "US Military Enlisted paygrade E-5"
-} ]
-}
-}, {
-"fhir_comments": [ " Gaps managed in http://www.logicahealth.org/solutions/solor ", " Discharge status code " ],
-"code": {
-"coding": [ {
-"system": "http://www.logicahealth.org/solutions/solor",
-"code": "79A512F77CFC4E63B9969930FC8787DB",
-"_code": {
-"fhir_comments": [ " Placeholder concept from http://build.fhir.org/ig/HL7/fhir-military-service/ValueSet-msh-DischargeStatusValueSet.html " ]
-},
-"display": "Honorably Discharged"
-} ]
-}
-}, {
-"fhir_comments": [ " Separation Reason code: 034\MEDAL OF HONOR RECIPIENT " ],
-"code": {
-"coding": [ {
-"system": "http://www.logicahealth.org/solutions/solor",
-"code": "034",
-"_code": {
-"fhir_comments": [ " Placeholder concept from http://build.fhir.org/ig/HL7/fhir-military-service/ValueSet-msh-SeparationReason-vs.html " ]
-},
-"display": "Medal of Honor Recipient"
-} ]
-}
-} ]
-},
-"search": {
-"mode": "match"
-}
-} ]
-}
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-### Search Military History: Step 3
-
-Scenario Step 3: Search the Observation resource for a list of Combat Episodes:
-search by "subject" (i.e. Patient/Veteran) and by "patient" and "code" search
-parameters
-
-Action:
-
-Request GET
-http://hapi.fhir.org/baseR4/Observation?patient=sam-share-ssgt-veteran&code=4166ca15-bb96-4f7a-b968-7caab70e01b8&_pretty=true
-
-Request Headers
-
-Accept-Charset: utf-8
-
-Accept: application/fhir+xml;q=1.0, application/fhir+json;q=1.0,
-application/xml+fhir;q=0.9, application/json+fhir;q=0.9
-
-User-Agent: HAPI-FHIR/5.2.0-SNAPSHOT (FHIR Client; FHIR 4.0.1/R4; apache)
-
-Accept-Encoding: gzip
-
-Response HTTP 200 OK
-
-Response Headers
-
-x-request-id: FoM14c2teQZPTigG
-
-date: Thu, 10 Sep 2020 14:32:44 GMT
-
-last-modified: Thu, 10 Sep 2020 14:32:44 GMT
-
-server: nginx/1.14.0 (Ubuntu)
-
-transfer-encoding: chunked
-
-x-powered-by: HAPI FHIR 5.2.0-SNAPSHOT REST Server (FHIR Server; FHIR 4.0.1/R4)
-
-connection: keep-alive
-
-content-type: application/fhir+json;charset=utf-8
-
-Result Body JSON bundle (6005 bytes)
-
-Bundle contains 2 / 2 entries
-
-Observation/combat-episode-2/_history/1 12:36:58
-
-Observation/combat-episode-1/_history/1 12:35:24
-
-Raw Message
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-{
-"resourceType": "Bundle",
-"id": "811f735d-26c4-411c-9602-347c7e37e5bb",
-"meta": {
-"lastUpdated": "2020-09-10T14:32:44.654+00:00"
-},
-"type": "searchset",
-"total": 2,
-"link": [ {
-"relation": "self",
-"url": "http://hapi.fhir.org/baseR4/Observation?_pretty=true&code=4166ca15-bb96-4f7a-b968-7caab70e01b8&patient=sam-share-ssgt-veteran"
-} ],
-"entry": [ {
-"fullUrl": "http://hapi.fhir.org/baseR4/Observation/combat-episode-2",
-"resource": {
-"resourceType": "Observation",
-"id": "combat-episode-2",
-"meta": {
-"versionId": "1",
-"lastUpdated": "2020-09-10T12:36:58.427+00:00",
-"source": "#UbUeKRDrKjlcufio",
-"profile": [ "http://hl7.org/fhir/militaryserviceandstatus/StructureDefinition/combatepisode" ]
-},
-"text": {
-"status": "generated",
-"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"/>"
-},
-"status": "final",
-"category": [ {
-"coding": [ {
-"system": "http://terminology.hl7.org/CodeSystem/observation-category",
-"code": "social-history",
-"display": "Social History"
-} ],
-"text": "Social History: Military Service"
-} ],
-"code": {
-"coding": [ {
-"system": "http://www.logicahealth.org/solutions/solor",
-"_system": {
-"fhir_comments": [ " http://www.logicahealth.org/solutions/solor will be replaced with http://loinc.org when the concept will be added to LOINC " ]
-},
-"code": "4166ca15-bb96-4f7a-b968-7caab70e01b8",
-"_code": {
-"fhir_comments": [ " placeholder concept in Solor " ]
-},
-"display": "Combat Episode"
-} ],
-"text": "Vital signs panel"
-},
-"subject": {
-"fhir_comments": [ " Referenced Veteran's Patient resource insstance " ],
-"reference": "Patient/sam-share-ssgt-veteran",
-"display": "veteran"
-},
-"effectivePeriod": {
-"fhir_comments": [ " Period of service " ],
-"start": "2018-07-22",
-"end": "2020-07-22"
-},
-"component": [ {
-"fhir_comments": [ " Location" ],
-"code": {
-"coding": [ {
-"system": "http://loinc.org",
-"code": "86188-0",
-"display": "Combat Location"
-} ]
-},
-"valueCodeableConcept": {
-"coding": [ {
-"system": "http://hl7.org/fhir/ValueSet/iso3166-1-3",
-"code": "IRQ",
-"display": "Iraq"
-} ]
-}
-}, {
-"fhir_comments": [ " Mission Details Code " ],
-"code": {
-"coding": [ {
-"system": "http://www.logicahealth.org/solutions/solor",
-"code": "ff83dbf9-592a-4e60-a979-4e4e10c9ace3",
-"display": "Military Mission Code"
-} ]
-},
-"valueCodeableConcept": {
-"coding": [ {
-"system": "http://www.logicahealth.org/solutions/solor",
-"code": "46a15b13-b5c1-4ae8-acde-48c31f30175a",
-"display": "Enduring Freedom"
-} ]
-}
-} ]
-},
-"search": {
-"mode": "match"
-}
-}, {
-"fullUrl": "http://hapi.fhir.org/baseR4/Observation/combat-episode-1",
-"resource": {
-"resourceType": "Observation",
-"id": "combat-episode-1",
-"meta": {
-"versionId": "1",
-"lastUpdated": "2020-09-10T12:35:24.111+00:00",
-"source": "#gCSeRD2R1Usnwz05",
-"profile": [ "http://hl7.org/fhir/militaryserviceandstatus/StructureDefinition/combatepisode" ]
-},
-"text": {
-"status": "generated",
-"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"/>"
-},
-"status": "final",
-"category": [ {
-"coding": [ {
-"system": "http://terminology.hl7.org/CodeSystem/observation-category",
-"code": "social-history",
-"display": "Social History"
-} ],
-"text": "Social History: Military Service"
-} ],
-"code": {
-"coding": [ {
-"system": "http://www.logicahealth.org/solutions/solor",
-"_system": {
-"fhir_comments": [ " http://www.logicahealth.org/solutions/solor will be replaced with http://loinc.org when the concept will be added to LOINC " ]
-},
-"code": "4166ca15-bb96-4f7a-b968-7caab70e01b8",
-"_code": {
-"fhir_comments": [ " placeholder concept in Solor " ]
-},
-"display": "Combat Episode"
-} ],
-"text": "Vital signs panel"
-},
-"subject": {
-"fhir_comments": [ " Referenced Veteran's Patient resource insstance " ],
-"reference": "Patient/sam-share-ssgt-veteran",
-"display": "veteran"
-},
-"effectivePeriod": {
-"fhir_comments": [ " Period of service " ],
-"start": "2016-12-06",
-"end": "2018-07-22"
-},
-"component": [ {
-"fhir_comments": [ " Location" ],
-"code": {
-"coding": [ {
-"system": "http://loinc.org",
-"code": "86188-0",
-"display": "Combat Location"
-} ]
-},
-"valueCodeableConcept": {
-"coding": [ {
-"system": "http://hl7.org/fhir/ValueSet/iso3166-1-3",
-"code": "AFG",
-"display": "Afghanistan"
-} ]
-}
-}, {
-"fhir_comments": [ " Mission Details Code " ],
-"code": {
-"coding": [ {
-"system": "http://www.logicahealth.org/solutions/solor",
-"code": "ff83dbf9-592a-4e60-a979-4e4e10c9ace3",
-"display": "Military Mission Code"
-} ]
-},
-"valueCodeableConcept": {
-"coding": [ {
-"system": "http://www.logicahealth.org/solutions/solor",
-"code": "46a15b13-b5c1-4ae8-acde-48c31f30175a",
-"display": "Enduring Freedom"
-} ]
-}
-} ]
-},
-"search": {
-"mode": "match"
-}
-} ]
-}
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
