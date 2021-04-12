@@ -12,4 +12,4 @@ this profile is uses the abstract, base profile [Employment History Episode] (St
 A veteran may have several occupation during a single service episode."
 * subject 1..1
 * valueCodeableConcept 1..1
-* valueCodeableConcept from MilitaryOccupationValueSet
+* valueCodeableConcept from MilitaryOccupationVS

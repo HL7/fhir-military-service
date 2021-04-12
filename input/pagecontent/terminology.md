@@ -39,7 +39,7 @@ extension for gap concepts intended to be added to LOINC and SNOMED CT:
 
 ### Code Systems Defined
 
--   [msh-solor-extension]
+-   [military-service-solor-extension]
 
 ### Value Sets Defined
 
@@ -49,16 +49,16 @@ extension for gap concepts intended to be added to LOINC and SNOMED CT:
 
 -   [ODHIndustryValueSet]
 
--   [MilitaryBranchCode]
+-   [MilitaryBranchVS]
 
--   [PayGradeCode]
+-   [PayGradeVS]
 
--   [SeparationReasonValueSet]
+-   [SeparationReasonVS]
 
--   [DischargeStatusValueSet]
+-   [DischargeStatusVS]
 
--   [CombatEpisodeMissionValueSet]
+-   [CombatEpisodeMissionVS]
 
--   [MilitaryOccupationValueSet]
+-   [MilitaryOccupationVS]
 
 {% include markdown-link-references.md %}

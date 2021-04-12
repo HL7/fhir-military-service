@@ -46,7 +46,7 @@ The base profile reuses the pattern Combat Zone Period profilee and adds new com
 * component[military-service-CombatEpisodeMissionCode].code =  SOLOR#BF3432CC716B4DC7AA0DF43C176F4F05 "Combat Episode Mission Code"
 * component[military-service-CombatEpisodeMissionCode].value[x] only CodeableConcept
 * component[military-service-CombatEpisodeMissionCode].value[x] 1..1
-* component[military-service-CombatEpisodeMissionCode].value[x] from CombatEpisodeMissionValueSet
+* component[military-service-CombatEpisodeMissionCode].value[x] from CombatEpisodeMissionVS
 * component[military-service-CombatEpisodeMissionCode].dataAbsentReason 0..0
 * component[military-service-CombatEpisodeMissionCode].interpretation 0..0
 * component[military-service-CombatEpisodeMissionCode].referenceRange 0..0

@@ -60,19 +60,19 @@ Description:   "A patient/Veteran may have zero or more military service episode
 * component[military-service-Industry].code =  LNC#86188-0 "History of Occupation industry"
 * component[military-service-Industry].value[x] only CodeableConcept   
 * component[military-service-Industry].value[x] 1..1
-* component[military-service-Industry].valueCodeableConcept from MilitaryBranchCode
+* component[military-service-Industry].valueCodeableConcept from MilitaryBranchVS
 
 
 * component[military-service-DischargeStatus].code =  SOLOR#9B7095A70B024CD789A36E48A3936592 "Discharge Status"
 * component[military-service-DischargeStatus].value[x] only CodeableConcept   
 * component[military-service-DischargeStatus].valueCodeableConcept 1..1 MS
-* component[military-service-DischargeStatus].valueCodeableConcept from  DischargeStatusValueSet
+* component[military-service-DischargeStatus].valueCodeableConcept from  DischargeStatusVS
 
 
 * component[military-service-SeparationReason].code =  SOLOR#9CEAD6537D6A4F198549F70598B8F8BF "Separation Reason"
 * component[military-service-SeparationReason].value[x] only CodeableConcept   
 * component[military-service-SeparationReason].valueCodeableConcept 1..1 MS
-* component[military-service-SeparationReason].valueCodeableConcept from  SeparationReasonValueSet
+* component[military-service-SeparationReason].valueCodeableConcept from  SeparationReasonVS
 
 
 
