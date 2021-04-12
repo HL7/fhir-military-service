@@ -7,14 +7,14 @@ compliance with the US Core profile and the associated US Core Data for Interper
 
 -   [Employment History Episode](StructureDefinition-odh-EmploymentHistoryEpisode.html) is an abstract, base profile for that illstrates the basic structure of a an employment episode.
     It may be considered the base profile for [ODH PastOrPresentJob](http://hl7.org/fhir/us/odh/StructureDefinition-odh-PastOrPresentJob.html) and the 
-    [Military Service Episode](StructureDefinition-msh-militaryserviceepisode.html) profile defined in this implementation
+    [Military Service Episode](StructureDefinition-military-service-episode.html) profile defined in this implementation
     guide.
 
--   [Military Service Episode](StructureDefinition-msh-militaryserviceepisode.html) profile can be used to create Observatoin resources that describe a Veteran's military service history; it includes references to [Deployment Episode](StructureDefinition-deploymentepisode.html)  and [Military Occupation](StructureDefinition-military-service-Occupation.html).
+-   [Military Service Episode](StructureDefinition-military-service-episode.html) profile can be used to create Observatoin resources that describe a Veteran's military service history; it includes references to [Deployment Episode](StructureDefinition-deploymentepisode.html)  and [Military Occupation](StructureDefinition-military-service-Occupation.html).
 
 -   [Military Occupation](StructureDefinition-military-service-Occupation.html)is similar to [ODH
     PastOrPresentJob](http://hl7.org/fhir/us/odh/StructureDefinition-odh-PastOrPresentJob.html). It is referenced by [Military Service
-    Episode](StructureDefinition-msh-militaryserviceepisode.html).
+    Episode](StructureDefinition-military-service-episode.html).
 
 Where US Core does not provide an appropriate base profile, this implementation profiles FHIR
 resources directly as described below:
@@ -24,7 +24,7 @@ resources directly as described below:
 | [Employment History Episode](StructureDefinition-odh-EmploymentHistoryEpisode.html) | no                | Observation              |
 | [Deployment Episode](StructureDefinition-deploymentepisode.html)                | no                |  [Employment History Episode](StructureDefinition-odh-EmploymentHistoryEpisode.html)                 |          |
 | [Military Occupation](StructureDefinition-military-service-Occupation.html)          |no    |  [Employment History Episode](StructureDefinition-odh-EmploymentHistoryEpisode.html)                 |          |
-| [Military Service Episode](StructureDefinition-msh-militaryserviceepisode.html)    | no                | Observation (See "Note") | |
+| [Military Service Episode](StructureDefinition-military-service-episode.html)    | no                | Observation (See "Note") | |
 | [US Veteran](StructureDefinition-usveteran.html)                                | yes                | [US Patient](https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-patient.html)              |
 {: .grid }
 

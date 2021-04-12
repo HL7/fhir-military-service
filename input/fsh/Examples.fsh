@@ -58,9 +58,9 @@ Description: "MilitaryServiceEpisode Example"
 * subject = Reference(sam-share-ssgt-veteran)
 * effectivePeriod.start = "2018-04-01"
 * effectivePeriod.end = "2020-09-01"
-* component[mseo-Industry].valueCodeableConcept = ODH#928110.000255	"Air Force [National Security ]"
-* component[mseo-DischargeStatus].valueCodeableConcept = SOLOR#79A512F77CFC4E63B9969930FC8787DB "Honorable"
-* component[mseo-SeparationReason].valueCodeableConcept = SOLOR#034 "Medal of Honor Recipient"
+* component[military-service-Industry].valueCodeableConcept = ODH#928110.000255	"Air Force [National Security ]"
+* component[military-service-DischargeStatus].valueCodeableConcept = SOLOR#79A512F77CFC4E63B9969930FC8787DB "Honorable"
+* component[military-service-SeparationReason].valueCodeableConcept = SOLOR#034 "Medal of Honor Recipient"
 
 
 Instance: DeploymentEpisode1	

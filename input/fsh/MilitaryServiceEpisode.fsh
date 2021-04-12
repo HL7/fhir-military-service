@@ -2,7 +2,7 @@
 
 Profile:  MilitaryServiceEpisode
 Parent:   Observation
-Id:       msh-militaryserviceepisode
+Id:       military-service-episode
 Title:    "Military Service Episode"
 Description:   "A patient/Veteran may have zero or more military service episodes. The contents of this profile is based on the HL7 Version 2 ZMH segment and the ServiceHistoryEpisode schema specified in the current Veteran Verification API and it allows this API to migrate to FHIR and to be consistent with the prior work done by Center for Disease Control (CDC) National Institute for Occupational Safety and Health (NIOSH).  A service history episode may reference zero or more Combat episodes. This profile is based on the default FHIR Observation profile but may reuse ODD Past or Present Job profile ( http://hl.org/fhir/us/odh/StructureDefinition-odh-PastOrPresentJob.html)."
 * status and code and subject and effectivePeriod and component MS
@@ -52,27 +52,27 @@ Description:   "A patient/Veteran may have zero or more military service episode
 * component ^slicing.rules = #open
 * component ^slicing.description = "Slice based on the component.code pattern"
 
-* component contains mseo-Industry 1..1 and
-					 mseo-DischargeStatus 1..1 and
-					 mseo-SeparationReason 0..1  
+* component contains military-service-Industry 1..1 and
+					 military-service-DischargeStatus 1..1 and
+					 military-service-SeparationReason 0..1  
 
 
-* component[mseo-Industry].code =  LNC#86188-0 "History of Occupation industry"
-* component[mseo-Industry].value[x] only CodeableConcept   
-* component[mseo-Industry].value[x] 1..1
-* component[mseo-Industry].valueCodeableConcept from MilitaryBranchCode
+* component[military-service-Industry].code =  LNC#86188-0 "History of Occupation industry"
+* component[military-service-Industry].value[x] only CodeableConcept   
+* component[military-service-Industry].value[x] 1..1
+* component[military-service-Industry].valueCodeableConcept from MilitaryBranchCode
 
 
-* component[mseo-DischargeStatus].code =  SOLOR#9B7095A70B024CD789A36E48A3936592 "Discharge Status"
-* component[mseo-DischargeStatus].value[x] only CodeableConcept   
-* component[mseo-DischargeStatus].valueCodeableConcept 1..1 MS
-* component[mseo-DischargeStatus].valueCodeableConcept from  DischargeStatusValueSet
+* component[military-service-DischargeStatus].code =  SOLOR#9B7095A70B024CD789A36E48A3936592 "Discharge Status"
+* component[military-service-DischargeStatus].value[x] only CodeableConcept   
+* component[military-service-DischargeStatus].valueCodeableConcept 1..1 MS
+* component[military-service-DischargeStatus].valueCodeableConcept from  DischargeStatusValueSet
 
 
-* component[mseo-SeparationReason].code =  SOLOR#9CEAD6537D6A4F198549F70598B8F8BF "Separation Reason"
-* component[mseo-SeparationReason].value[x] only CodeableConcept   
-* component[mseo-SeparationReason].valueCodeableConcept 1..1 MS
-* component[mseo-SeparationReason].valueCodeableConcept from  SeparationReasonValueSet
+* component[military-service-SeparationReason].code =  SOLOR#9CEAD6537D6A4F198549F70598B8F8BF "Separation Reason"
+* component[military-service-SeparationReason].value[x] only CodeableConcept   
+* component[military-service-SeparationReason].valueCodeableConcept 1..1 MS
+* component[military-service-SeparationReason].valueCodeableConcept from  SeparationReasonValueSet
 
 
 
