@@ -362,8 +362,8 @@ Description: "Recommended deployment episeod type code - only the root concept o
 
 ValueSet:    MilitaryOccupationVS
 Id: military-service-military-occupation-vs
-Title: "Military Occupation ValueSet"
-Description: "Military Occupation ValueSet" 
+Title: "Military Occupation Value Set"
+Description: "Military Occupation Value Set" 
 *  ODH#55-1011.00.000736    "Air Battle Manager [Air Crew Officers]"
 *  ODH#55-1011.00.000951    "Airdrop Systems Technician [Air Crew Officers]"
 *  ODH#55-1011.00.002270    "Astronaut, Mission Specialist [Air Crew Officers]"

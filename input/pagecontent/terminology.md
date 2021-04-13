@@ -39,26 +39,26 @@ extension for gap concepts intended to be added to LOINC and SNOMED CT:
 
 ### Code Systems Defined
 
--   [military-service-solor-extension]
+-   [Military Service SOLOR-Extension] 
 
 ### Value Sets Defined
 
--   [ODHSupervisoryLevelValueSet]
+-   [ODH Supervisory Level Value Set]
 
--   [ODHOccupationValueSet]
+-   [ODH Occupation Value Set]
 
--   [ODHIndustryValueSet]
+-   [ODH Industry Value Set]
 
--   [MilitaryBranchVS]
+-   [Military Service Branch Value Set]
 
--   [PayGradeVS]
+-   [Pay Grade Value Set]
 
--   [SeparationReasonVS]
+-   [Separation Reason Value Set]
 
--   [DischargeStatusVS]
+-   [Discharge Status Value Set]
 
--   [CombatEpisodeMissionVS]
+-   [Combat Episode Mission Value Set]
 
--   [MilitaryOccupationVS]
+-   [Military Occupation Value Set]
 
 {% include markdown-link-references.md %}
