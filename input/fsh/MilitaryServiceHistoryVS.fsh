@@ -5,11 +5,11 @@ Alias:   DiagnosticService = http://terminology.hl7.org/CodeSystem/v2-0074
 Alias:   OmbRaceCat = urn:oid:2.16.840.1.113883.6.238
 Alias:   ISO = urn:iso:std:iso:3166
 Alias:   ODH = https://phinvads.cdc.gov/vads/ViewCodeSystem.action?id=2.16.840.1.114222.4.5.327
-Alias:   SOLOR = https://www.logicahealth.org/solutions/solor/MSH
+Alias:   SOLOR = https://www.logicahealth.org/solutions/solor/military-service
 
-
+ 
 CodeSystem: SOLOR
-Id: msh-solor-extension
+Id: military-service-solor-extension
 Title: "SOLOR Military Service History and Status"
 Description: "Temporary extension holding concepts needed for this IG but no available in SNOMED and LOINC. https://logica.atlassian.net/wiki/spaces/SOLOR/pages/865271876/Military+Service+History+and+Status
 This coding system is represented as a local value set but it may be replaced to CodeSysten resource in the future. Reference: https://www.logicahealth.org/solutions/solor"
@@ -158,8 +158,8 @@ This coding system is represented as a local value set but it may be replaced to
 * #46a15b13-b5c1-4ae8-acde-48c31f30175a "Enduring Freedom"
 
 
-ValueSet:    MilitaryBranchCode
-Id: msh-militarybranchcode-vs
+ValueSet:    MilitaryBranchVS
+Id: military-service-branch-vs
 Title: "Military Branch Value Set"
 Description: "Military Branch Value Set - is a subset of the ODH Occupation value set." 
 * ODH#928110.000255	"Air Force [National Security ]"
@@ -176,8 +176,8 @@ Description: "Military Branch Value Set - is a subset of the ODH Occupation valu
 * ODH#928110.011438	"Navy [National Security ]"
 
 
-ValueSet:    PayGradeCode 
-Id: msh-paygradecode-vs
+ValueSet:    PayGradeVS
+Id: military-service-paygrade-vs
 Title: "Pay Grade Code Value Set"
 Description: "Pay Grade Code Value Set - is a subset of the OHD Supervisory Role value set. Its scope is limited to miliatry pay grade codes."
 * ODH#C-0	"Civilian Non Supervisor"
@@ -209,8 +209,8 @@ Description: "Pay Grade Code Value Set - is a subset of the OHD Supervisory Role
 * ODH#W-5	"Warrant Officer paygrade W-5"
 
 
-ValueSet:    SeparationReasonValueSet
-Id: msh-SeparationReason-vs
+ValueSet:    SeparationReasonVS
+Id: military-service-separation-reason-vs
 Title: "Separation Reason Value Set"
 Description: "Separation Reason Value Set contains concepts that are managed as a local extenions, subject to sumission to SNOMED CT."
 *  SOLOR#001 "WEIGHT CONTROL FAILURE"
@@ -327,8 +327,8 @@ Description: "Separation Reason Value Set contains concepts that are managed as 
 *  SOLOR#999 "UNKNOWN"
 
 
-ValueSet: DischargeStatusValueSet
-Id: msh-DischargeStatusValueSet
+ValueSet: DischargeStatusVS
+Id: military-service-discharge-status-vs
 Title: "Discharge Status Value Set"
 Description: "Discharge Status Value Set - this valuse set identifies gaps in SNOMED CT. The only concept currenty supported is that of 'dishornorable' discharge."
 * SOLOR#79A512F77CFC4E63B9969930FC8787DB "Honorable"
@@ -342,8 +342,8 @@ Description: "Discharge Status Value Set - this valuse set identifies gaps in SN
 * SOLOR#8412EEBCB8354A06AAB445C9486CA268 "Uncharacterized"
 * SOLOR#7A3CBF5D942F41A9889C9406BB1D951F "Unknown"
 
-ValueSet: CombatEpisodeMissionValueSet
-Id: msh-CombatEpisodeMissionValueSet
+ValueSet: CombatEpisodeMissionVS
+Id: military-service-combat-episode-mission-vs
 Title: "Combat Episode Mission Value Set"
 Description: "Example combat mission code; this is only an example data element that may be associated with a Deployment Episode, if needed."
 * SOLOR#CD1CAD19F5494F1981211F8634DD6AB1 "ANTIGUERRILLA OPERATIONS"
@@ -351,8 +351,8 @@ Description: "Example combat mission code; this is only an example data element 
 * SOLOR#750988FBBD6148DCB85C062DEFC871E2 "Individual Augmentee"
 * SOLOR#46a15b13-b5c1-4ae8-acde-48c31f30175a "Enduring Freedom"
 
-ValueSet: DeploymentEpisodeMissionValueSet
-Id: msh-DeploymentEpisodeMissionValueSet
+ValueSet: DeploymentEpisodeMissionVS
+Id: military-service-deployment-episode-mission-vs
 Title: "Deployment Episode Type Value Set"
 Description: "Recommended deployment episeod type code - only the root concept of 'Deployment Episode' is needed for typical implementations."
 * SOLOR#f6bb8fdc-89b0-4c0b-8d81-d3916f182c2f "Deployment  Episode" 
@@ -360,8 +360,8 @@ Description: "Recommended deployment episeod type code - only the root concept o
 * SOLOR#77eb3c61-f5c3-425c-848a-6b180b5b0528 "Humanitarian Deployment Episode" 
 * SOLOR#82bf75df-60b7-4505-ba9e-8d0171ebb6c3 "Combat Deployment Episode" 
 
-ValueSet:    MilitaryOccupationValueSet
-Id: msh-militaryoccupation-vs
+ValueSet:    MilitaryOccupationVS
+Id: military-service-military-occupation-vs
 Title: "Military Occupation ValueSet"
 Description: "Military Occupation ValueSet" 
 *  ODH#55-1011.00.000736    "Air Battle Manager [Air Crew Officers]"

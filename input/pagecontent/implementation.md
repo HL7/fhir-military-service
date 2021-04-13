@@ -5256,7 +5256,7 @@ color:black'>            &quot;_code&quot;: {</span></p>
 <p class=MsoNormal><span style='font-size:10.0pt;font-family:"Verdana",sans-serif;
 color:black'>              &quot;fhir_comments&quot;: [ &quot; Placeholder
 concept from
-http://build.fhir.org/ig/HL7/fhir-military-service/ValueSet-msh-DischargeStatusValueSet.html
+http://build.fhir.org/ig/HL7/fhir-military-service/ValueSet-military-service-discharge-status-vs.html
 &quot; ]</span></p>
 
 <p class=MsoNormal><span style='font-size:10.0pt;font-family:"Verdana",sans-serif;
@@ -5296,7 +5296,7 @@ color:black'>            &quot;_code&quot;: {</span></p>
 <p class=MsoNormal><span style='font-size:10.0pt;font-family:"Verdana",sans-serif;
 color:black'>              &quot;fhir_comments&quot;: [ &quot; Placeholder
 concept from
-http://build.fhir.org/ig/HL7/fhir-military-service/ValueSet-msh-SeparationReason-vs.html
+http://build.fhir.org/ig/HL7/fhir-military-service/ValueSet-military-service-separation-reason-vs.html
 &quot; ]</span></p>
 
 <p class=MsoNormal><span style='font-size:10.0pt;font-family:"Verdana",sans-serif;
