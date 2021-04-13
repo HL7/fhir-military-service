@@ -4,7 +4,7 @@ available to implementers. This implementation guide expands FHIR best practices
 to assist organizations that adapt and extend FHIR profiles and implementation
 guides required in their jurisdictions (e.g. US, Canada) to apply them to
 locally-applicable requirements that meet their stakeholders business needs.
-
+Currently there are several US Realm projects that need to use, manage, and collect information about military service, discharge, status, combat, etc. using information provided by patients/Veterans, validated based on service records. This project will help coordinate the effort to create profiles and extensions needed to represent Military Service History, Veteran status, and associated risk factors
 This specification also identifies code systems and terminology gaps that
 require require subsequent change proposals to LOINC and SNOMED CT consistent
 with the requirements summarized in the use cases.
