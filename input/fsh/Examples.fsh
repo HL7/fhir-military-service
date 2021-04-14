@@ -1,7 +1,7 @@
 Instance: sam-share-ssgt-veteran
 InstanceOf: USVeteran
 Description: "Sam Share: Veteran's patient record"	
-* meta.profile = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"	
+* meta.profile = "http://hl7.org/fhir/us/military-service/StructureDefinition/usveteran"	
 * identifier.use = #usual	
 * identifier.value = "1032702"	
 * identifier.type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
