@@ -38,7 +38,7 @@ The base profile reuses the pattern Combat Zone Period profilee and adds new com
 * component[military-service-CombatEpisodeCountryCode].code =  SOLOR#7E33243654BB42F5BF3F3A59E0E6E6BD "Combat Episode Country Code"
 * component[military-service-CombatEpisodeCountryCode].value[x] only CodeableConcept
 * component[military-service-CombatEpisodeCountryCode].value[x] 1..1
-* component[military-service-CombatEpisodeCountryCode].value[x] from http://hl7.org/fhir/ValueSet/iso3166-1-3 (preferred)
+* component[military-service-CombatEpisodeCountryCode].value[x] from http://hl7.org/fhir/ValueSet/iso3166-1-3 (required)
 * component[military-service-CombatEpisodeCountryCode].dataAbsentReason 0..0
 * component[military-service-CombatEpisodeCountryCode].interpretation 0..0
 * component[military-service-CombatEpisodeCountryCode].referenceRange 0..0

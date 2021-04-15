@@ -71,7 +71,7 @@ Description: "Deployment to Afghanistan"
 * subject = Reference(sam-share-ssgt-veteran)
 * effectivePeriod.start = "2018-05-01"
 * effectivePeriod.end = "2019-01-01"
-* component[military-service-CombatEpisodeCountryCode].valueCodeableConcept = #AFG
+* component[military-service-CombatEpisodeCountryCode].valueCodeableConcept = urn:iso:std:iso:3166#AFG
 * component[military-service-CombatEpisodeMissionCode].valueCodeableConcept = SOLOR#46a15b13-b5c1-4ae8-acde-48c31f30175a "Enduring Freedom"
 
 Instance: DeploymentEpisode2	
@@ -82,7 +82,7 @@ Description: "Deployment to Iraq"
 * subject = Reference(sam-share-ssgt-veteran)
 * effectivePeriod.start = "2019-02-01"
 * effectivePeriod.end = "2019-11-15"
-* component[military-service-CombatEpisodeCountryCode].valueCodeableConcept = #IRQ
+* component[military-service-CombatEpisodeCountryCode].valueCodeableConcept = urn:iso:std:iso:3166#IRQ
 * component[military-service-CombatEpisodeMissionCode].valueCodeableConcept = SOLOR#46a15b13-b5c1-4ae8-acde-48c31f30175a "Enduring Freedom"
 
 
@@ -94,5 +94,5 @@ Description: "DeploymentEpisode Example"
 * subject = Reference(sam-share-ssgt-veteran)
 * effectivePeriod.start = "2019-04-01"
 * effectivePeriod.end = "2019-04-01"
-* component[military-service-CombatEpisodeCountryCode].valueCodeableConcept = #IRQ
+* component[military-service-CombatEpisodeCountryCode].valueCodeableConcept = urn:iso:std:iso:3166#IRQ
 * component[military-service-CombatEpisodeMissionCode].valueCodeableConcept = SOLOR#46a15b13-b5c1-4ae8-acde-48c31f30175a "Enduring Freedom"
