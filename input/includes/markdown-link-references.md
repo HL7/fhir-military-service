@@ -5,9 +5,6 @@
   }
 </style> 
 [Military Service SOLOR-Extension]: CodeSystem-military-service-solor-extension.html
-
-
- 
 [ODH Supervisory Level Value Set]: https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.7613
 [ODH Occupation Value Set]: https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.7186
 [ODH Industry Value Set]: https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.7187
@@ -19,7 +16,3 @@
 [Military Occupation Value Set]: ValueSet-military-service-military-occupation-vs.html
 [FHIR US Core Capability Statement - Server]: https://www.hl7.org/fhir/us/core/CapabilityStatement-us-core-server.html
 [FHIR US Core Capability Statement - Client]: https://www.hl7.org/fhir/us/core/CapabilityStatement-us-core-client.html
-
-
-https://phinvads.cdc.gov/vads/ViewValueSet.action?id=2.16.840.1.114222.4.11.7613
-https://phinvads.cdc.gov/vads/ViewValueSet.action?id=D696FF02-C038-EB11-8196-005056ABE2F0

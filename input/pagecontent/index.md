@@ -9,73 +9,30 @@ This specification also identifies code systems and terminology gaps that
 require require subsequent change proposals to LOINC and SNOMED CT consistent
 with the requirements summarized in the use cases.
 
-**Acknowledgements**
-
-This implementation guide builds upon existing FHIR implementation guidance and
-best practices:
--  [US Core Implementation Guide (v3.1.1)](http://hl7.org/fhir/us/core/index.html) (reusing US Core Patient profile)
--  [Occupational Data for Health (ODH) 1.0](http://hl7.org/fhir/us/odh/index.html) (reusing best practices, *PastOrPresentJob* profile)
-
-The project team would like to thank our leadership and colleagues for their
-support in the development of Application Programming Interface (API)
-implementation guide:
-**Department of Veterans Affairs:**
-- Dr. Steven Brown, MD, Director, CIDMO Knowledge Based Systems (KBS)
-- Mr. Javon Hyland, Deputy Program Manager, , KBS Standards & Interoperability
-- Ms. Catherine Hoang, Associate Director, KBS Terminology Services
-- Dr. Keith Campbell MD, Director, KBS Informatics Architecture
-**VA Developer API (Lighthouse Project):**
-- Andrew Fichter                                                                                  
-- Shawnee Petrosky                                                                                  
--  Derek Brown                                                                                       
-**Defense Health Agency:**                                                                            
-- Nancy Orvis
-- Eric Strom
-- Allyson Rigel                                                                                       |
-**CDC NIOSH:**                                                      
-- Genny Luensman                                                                                     
-**MITRE**:              
- - Dr. Mark A. Kramer
-**ESAC**
-- Peter Muir
-- **ALTARUM**
-- Craig Newman
-**Work Group Co-chairs:**                                                                          
-- Dr. Floyd Eisenberg                                                                                 
-- Jean Duteau   
-**Project team:** 
-- **Ioana Singureanu** MsCS, FHL7, Project Facilitator                                    
-- **Sean Muir,** FHIR Implementation Guide Developer/Publisher                                       
-- **Jayme Welty**, Project Manager, Book Zurman                                                               
-- **Dr. Mark Janczewski**, Book Zurman                                                                   
-
+                                                                 
 ### Background
 
 This implementation guide design document is intended to create a set of
 profiles and extensions to support Military Service History and Status reporting
 consistent with US regulatory requirements (i.e. Title 38 Veteran Benefits) and
 extensible to other realms/jurisdictions (e.g. Canadian Forces).
-
 It harmonizes the requirements of the U.S. Department of Veterans Affairs (VA)
 and the Centers for Disease Control and Prevention (CDC) to record this
 information more easily in support of administrative and clinical workflows and
 the work and social history of patients who are also Veterans.
-
 -   **ZMH** (Military Service History) Z-segment used to represent service and
     deployment history in HL7 Version 2 transactions. This segment is used to
     exchange information about military service history,
-
 -   **ServiceHistoryEpisode** and **Deployment** Schemas for the [VA Veteran Verification API](https://developer.va.gov/explore/verification/docs/veteran_verification?version=current)
 -   [HL7 FHIR Profiles and patterns from Occupational Data for Health (ODH),Release 1.0](http://hl7.org/fhir/us/odh/) as well
     of ODH concept for **Military Branch** and **Pay Grade**.
-
 ### Use Case Analysis
 
 The use case anlaysis describes requirements and associated capabilities to manage and
 exchange information about Military Service History and Status. All requirements
 are analyzed as use cases involving actors/participants and system interactions.
 
-Note: Certain requirements were discussed, deemed to be out-of-scope, and
+*Note:* Certain requirements were discussed, deemed to be out-of-scope, and
 deferred (see **Deferred Requirements**).
 
 Figure 1 is a summary of scenarios (use cases) representing the requirements for
@@ -84,7 +41,6 @@ FHIR-based APIs can be used to validate employment history information reported
 by Veterans.
 <img src="Use Case Analysis Overview.png" alt="Use Case Analysis Overview*" width="100%" />
 *Figure 1: Use Case Analysis Overview*
-
 
 #### Use Case Analysis: Actors
 
@@ -618,6 +574,58 @@ For more details on testing, you may refer to the [FHIR Connectathon 25 (Septemb
 #### Examples
 
 Example Patient and Observation resources conforming to this IG are available in this publication under [Examples](examples.html). 
+
+### Acknowledgements
+
+This implementation guide builds upon existing FHIR implementation guidance and
+best practices:
+-  [US Core Implementation Guide (v3.1.1)](http://hl7.org/fhir/us/core/index.html) (reusing US Core Patient profile)
+-  [Occupational Data for Health (ODH) 1.0](http://hl7.org/fhir/us/odh/index.html) (reusing best practices, *PastOrPresentJob* profile)
+
+The project team would like to thank our leadership and colleagues for their
+support in the development of Application Programming Interface (API)
+implementation guide:
+
+**Department of Veterans Affairs:**
+- Dr. Steven Brown, MD, Director, CIDMO Knowledge Based Systems (KBS)
+- Mr, Christopher Shawn, Directory of Stndards  & Interoperability, KBS
+- Mr. Javon Hyland, Deputy Program Manager, KBS Standards & Interoperability
+- Ms. Catherine Hoang, Associate Director, KBS Terminology Services
+- Dr. Keith Campbell MD, Director, KBS Informatics Architecture
+
+**Work Group Co-chairs:**                                                                          
+- Dr. Floyd Eisenberg                                                                                 
+- Jean Duteau  
+
+**Project team:** 
+- Ioana Singureanu MsCS, FHL7, Project Facilitatorm BookZurman                                    
+- Sean Muir, FHIR Implementation Guide Developer/Publisher, BookZurman                                       
+- Jayme Welty, Project Manager, BookZurman                                                               
+- Dr. Mark Janczewski, MD, BookZurman  
+  
+**VA Developer API (Lighthouse Project):**
+- Andrew Fichter                                                                                  
+- Shawnee Petrosky                                                                                  
+- Derek Brown                     
+                                                                   
+**Defense Health Agency:**                                                                            
+- Nancy Orvis
+- Eric Strom
+- Allyson Rigel    
+                                                                                   |
+
+**CDC NIOSH:**                                                      
+- Genny Luensman  
+                                                                                    
+**MITRE**:              
+ - Dr. Mark A. Kramer
+ 
+ 
+**ESAC**
+- Peter Muir
+ 
+**ALTARUM**
+- Craig Newman
 
 {% include markdown-link-references.md %}
 
