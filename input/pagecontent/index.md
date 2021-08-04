@@ -24,7 +24,7 @@ the work and social history of patients who are also Veterans.
     deployment history in HL7 Version 2 transactions. This segment is used to
     exchange information about military service history,
 -   **ServiceHistoryEpisode** and **Deployment** Schemas for the [VA Veteran Verification API](https://developer.va.gov/explore/verification/docs/veteran_verification?version=current)
--   [HL7 FHIR Profiles and patterns from Occupational Data for Health (ODH),Release 1.0](http://hl7.org/fhir/us/odh/) as well
+-   [HL7 FHIR Profiles and patterns from Occupational Data for Health (ODH),Release 1.0](http://hl7.org/fhir/us/odh/index.html) as well
     of ODH concept for **Military Branch** and **Pay Grade**.
 ### Use Case Analysis
 

@@ -6,3 +6,5 @@ temp/
 template/
 fsh/log.text
 input/fsh/EmploymentHistoryEpisode.stash
+_updatePublisher.bat
+_updatePublisher.sh
