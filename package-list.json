@@ -14,7 +14,7 @@
      {
       "version": "0.1.0",
       "desc": "First public ballot",
-      "path": "http://build.fhir.org/ig/HL7/fhir-military-service",
+      "path": "http://hl7.org/fhir/us/military-service",
 	  "date": "2021Sep",
       "status": "ballot",
 	  "sequence": "STU 1",
