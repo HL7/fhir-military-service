@@ -3,7 +3,7 @@ canonical: http://hl7.org/fhir/us/military-service
 version: 0.1.0
 name: military-service
 title: "HL7 FHIR Implementation Guide: Military Service History and Status
-  Release 1 - US Realm | STU1"
+  Release 1 - US Realm | STU1 Ballot"
 status: active
 publisher:
   name: HL7 Cross-Group Projects WG
