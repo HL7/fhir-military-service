@@ -20,7 +20,7 @@ dependencies:
 parameters:
   show-inherited-invariants: true
 copyrightYear: 2020+
-releaseLabel: STU1
+releaseLabel: STU1 Ballot
 pages:
   index.md:
     title: Home
