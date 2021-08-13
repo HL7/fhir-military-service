@@ -6,9 +6,9 @@ title: "HL7 FHIR Implementation Guide: Military Service History and Status
   Release 1 - US Realm | STU1 Ballot"
 status: active
 publisher:
-  name: HL7 Cross-Group Projects WG
-  url: http://www.hl7.org/Special/committees/cgp/index.cfm
-  email: cgp@lists.hl7.org
+   name: Cross Group Projects WG
+   url: http://www.hl7.org/Special/committees/cgp
+   email: cgp@lists.hl7.org
 jurisdiction: urn:iso:std:iso:3166#US "United States of America"
 description: Military Service History and Status is an implementation guide for veteran status and history verification and confirmation.
 license: CC0-1.0
