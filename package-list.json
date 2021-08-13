@@ -5,20 +5,22 @@
   "introduction": "This implementation guide design document is intended to create a set of profiles and extensions to support Military Service History and Status reporting. It harmonizes the requirements of the U.S. Department of Veterans Affairs (VA) and the Centers for Disease Control and Prevention (CDC) to more easily record this information in support of administrative and clinical workflows and the work and social history of patients who are also Veterans.  ZMH (Military Service History) Z-segment used to represent service and deployment history in HL7 Version 2 transactions.ServiceHistoryEpisode and Deployment Schemas for the VA Veteran Verification API (https://developer.va.gov/explore/verification/docs/veteran_verification?version=current)HL7 FHIR Profile: odh-CombatZonePeriod from Occupational Data for Health (ODH), Release 1.0 (Standard for Trial Use) (http://hl7.org/fhir/us/odh/)",
   "list": [
     {
-      "version": "current",
-      "desc": "Continuous Integration Build (latest in version control)",
-      "path": "http://build.fhir.org/ig/HL7/fhir-military-service",
-      "status": "ci-build",
-      "current": true
-    },  
-     {
-      "version": "0.1.0",
-      "desc": "First public ballot",
-      "path": "http://hl7.org/fhir/us/military-service/2021Sep",
-	  "date": "2021-08-11",
-      "status": "ballot",
-	  "sequence": "STU 1",
-      "fhirversion": "4.0.1"
+      "list": [
+        {
+          "version": "current",
+          "desc": "Continuous Integration Build (latest in version control)",
+          "path": "http://build.fhir.org/ig/HL7/fhir-military-service",
+          "status": "ci-build",
+          "current": true
+        },
+         {
+          "version": "0.1.0",
+          "desc": "First public ballot",
+          "path": "http://hl7.org/fhir/us/military-service/2021Sep",
+	        "date": "2021-08-11",
+          "status": "ballot",
+	        "sequence": "STU 1",
+          "fhirversion": "4.0.1"
     }
   ],
   "category": "Clinical Records"
