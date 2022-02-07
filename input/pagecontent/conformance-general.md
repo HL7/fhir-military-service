@@ -45,9 +45,8 @@ supported profiles, by declaring the profile in
 `CapabilityStatement.rest.resource.supportedProfile`. The CapabilityStatement
 SHALL be returned in response to a `GET [base]/metadata` request.
 
-ALL Military Service History participants MUST at minimum support the [MilitaryServiceEpisode
-
-] , [DeploymentEpisode] profiles. Ideally, the [MilitaryOccupation] will also be
+ALL Military Service History participants MUST at minimum support the [MilitaryServiceEpisode], 
+[DeploymentEpisode] profiles. Ideally, the [MilitaryOccupation] will also be
 included to specify what military occupation or occupations were performed
 during military service.
 
@@ -104,7 +103,7 @@ This implementation specifies a specialization of the generic US core
 implementation guide and the capabilities:
 
 {% include markdown-link-references.md %} [FHIR US Core Capability Statement -
-Server]:
+[Server]:
 https://www.hl7.org/fhir/us/core/CapabilityStatement-us-core-server.html [FHIR
 US Core Capability Statement -
 Client]:https://www.hl7.org/fhir/us/core/CapabilityStatement-us-core-client.html

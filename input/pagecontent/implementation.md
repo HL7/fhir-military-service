@@ -1039,7 +1039,7 @@ identity criteria match a Veteran record. </span></p>
 Service History  </span></a></h5>
 
 <p class=MsoNormal><span style='font-size:10.0pt;font-family:"Verdana",sans-serif;
-color:black'>This use case is part of in the proposed verification API based on
+color:black'>This use case is part of the proposed verification API based on
 FHIR.  If this search operation returns one or more <b>Observation </b>resources
 that conform </span><a href="#BKM_1EE5C72B_FAB7_48FE_81D2_FE7E3F24BBE0"><span
 style='font-size:10.0pt;font-family:"Verdana",sans-serif'>Military Service
@@ -1200,7 +1200,7 @@ This profile is intended to represent employment history for International use
 and it may be localized by HL7, IHE, and other profile developers.</span></p>
 
 <p class=MsoNormal><span style='font-size:10.0pt;font-family:"Verdana",sans-serif;
-color:black'>The Employment Episode profile of is the base profile for </span><a
+color:black'>The Employment Episode profile is the base profile for </span><a
 href="#BKM_1EE5C72B_FAB7_48FE_81D2_FE7E3F24BBE0"><span style='font-size:10.0pt;
 font-family:"Verdana",sans-serif'>Military Service Episode profile</span></a><span
 style='font-size:10.0pt;font-family:"Verdana",sans-serif;color:black'> and </span><a
@@ -1782,7 +1782,7 @@ for Occupational Safety and Health (NIOSH). </span></p>
 
 <p class=MsoNormal><span style='font-size:10.0pt;font-family:"Verdana",sans-serif;
 color:black'>A service history episode may reference zero or more Combat
-episodes. This profile is based on the default FHIR Observation profile and The
+episodes. This profile is based on the default FHIR Observation profile and the
 base profile is a newly defined </span><a
 href="#BKM_338246A9_68AC_41FA_BCF2_160954A8D9F2"><span style='font-size:10.0pt;
 font-family:"Verdana",sans-serif'>Employment </span></a><a
@@ -1791,8 +1791,8 @@ font-family:"Verdana",sans-serif'>Episode</span></a><span style='font-size:
 10.0pt;font-family:"Verdana",sans-serif;color:black'> profile. This profile is
 similar  <b>ODH Past or Present Job</b> profile (
 http://hl7.org/fhir/us/odh/StructureDefinition-odh-PastOrPresentJob.html). The
-major distinction from the ODH Is that Military Service History  Episode does
-not require any information the job performed by the Veteran during their
+major distinction from the ODH is that Military Service History  Episode does
+not require any information regarding the job performed by the Veteran during their
 service. </span></p>
 
 <p class=MsoNormal><span style='font-size:10.0pt;font-family:"Verdana",sans-serif;
@@ -2548,7 +2548,7 @@ color:black'>e and adds new components:</span></p>
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0in 3.0pt 0in 3.0pt;height:39.85pt'>
   <p class=MsoNormal><span style='font-size:8.0pt;font-family:"Verdana",sans-serif;
-  color:black'>&quot;social-history&quot; - fixed value fort this profile. </span></p>
+  color:black'>&quot;social-history&quot; - fixed value for this profile. </span></p>
   <p class=MsoNormal><span style='font-size:8.0pt;color:black'>&nbsp;</span></p>
   <p class=MsoNormal><b><i><span style='font-size:8.0pt;font-family:"Times New Roman",serif;
   color:black'> </span></i></b></p>
@@ -3690,7 +3690,7 @@ omitted if the service episode is the current episode.  </span></p>
 <h4><span style='color:#0F0F0F'>MilitaryBranchCode </span></h4>
 
 <p class=MsoNormal><span style='font-size:10.0pt;font-family:"Verdana",sans-serif;
-color:black'>&quot;The military branch associated with service, National guard,
+color:black'>&quot;The military branch associated with service, National Guard,
 and Reserve.&quot; </span></p>
 
 <p class=MsoNormal><span style='font-size:10.0pt;font-family:"Verdana",sans-serif;
@@ -4171,7 +4171,7 @@ color:black'>Scenario #1: Veteran Confirmation and Verification</span></p>
 <p class=MsoNormal><span style='font-size:10.0pt;font-family:"Verdana",sans-serif;
 color:black'>A Veteran is receiving treatment in the community and invokes the
 &quot;$veteranStatus&quot; operation using the Veteran's demographics (e.g.
-fist, last, dob, ssn). If the Veteran is verified then the client application
+first name, last name, dob, ssn). If the Veteran is verified then the client application
 proceed to Step 2.</span></p>
 
 <p class=MsoNormal><span style='font-size:10.0pt;font-family:"Verdana",sans-serif;

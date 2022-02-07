@@ -212,7 +212,7 @@ Description: "Pay Grade Code Value Set - is a subset of the OHD Supervisory Role
 ValueSet:    SeparationReasonVS
 Id: military-service-separation-reason-vs
 Title: "Separation Reason Value Set"
-Description: "Separation Reason Value Set contains concepts that are managed as a local extenions, subject to sumission to SNOMED CT."
+Description: "Separation Reason Value Set contains concepts that are managed as a local extensions, subject to submission to SNOMED CT."
 *  SOLOR#001 "WEIGHT CONTROL FAILURE"
 *  SOLOR#002 "FRAUDULENT ENTRY INTO MILITARY SERVICE"
 *  SOLOR#003 "PARENTHOOD OR CUSTODY OF MINOR CHILDREN"
@@ -330,7 +330,7 @@ Description: "Separation Reason Value Set contains concepts that are managed as 
 ValueSet: DischargeStatusVS
 Id: military-service-discharge-status-vs
 Title: "Discharge Status Value Set"
-Description: "Discharge Status Value Set - this valuse set identifies gaps in SNOMED CT. The only concept currenty supported is that of 'dishornorable' discharge."
+Description: "Discharge Status Value Set - this value set identifies gaps in SNOMED CT. The only concept currently supported is that of 'dishonorable' discharge."
 * SOLOR#79A512F77CFC4E63B9969930FC8787DB "Honorable"
 * SOLOR#B5BA882B31574AB0BF82DFE43765F264 "General"
 * SOLOR#59B40AF3E8B44B0587743B08290C7AD1 "Bad Conduct"
@@ -354,7 +354,7 @@ Description: "Example combat mission code; this is only an example data element 
 ValueSet: DeploymentEpisodeMissionVS
 Id: military-service-deployment-episode-mission-vs
 Title: "Deployment Episode Type Value Set"
-Description: "Recommended deployment episeod type code - only the root concept of 'Deployment Episode' is needed for typical implementations."
+Description: "Recommended deployment episode type code - only the root concept of 'Deployment Episode' is needed for typical implementations."
 * SOLOR#f6bb8fdc-89b0-4c0b-8d81-d3916f182c2f "Deployment  Episode" 
 * SOLOR#e06a57f8-329c-4d74-af88-47c765f0b83a "Training Deployment Episode" 
 * SOLOR#77eb3c61-f5c3-425c-848a-6b180b5b0528 "Humanitarian Deployment Episode" 
