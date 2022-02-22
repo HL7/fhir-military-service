@@ -41,7 +41,7 @@ This profile is marked as 'constrainable' because it's intended to be reused to 
 * component[odh-Industry].code =  LNC#86188-0 "History of Occupation industry"
 * component[odh-Industry].value[x] only CodeableConcept   
 * component[odh-Industry].value[x] 1..1
-* component[odh-Industry].value[x] from : https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.7187 (preferred) //"Industry CDC Census 2010 Value Set: Industry describes an economic/business sector comprised of businesses/ enterprises concerned with the output of a specified category of products or services (e.g., the construction industry or the agriculture industry). This industry code system includes 2007 U.S. Census Bureau industry codes and three additional codes developed by CDC for unpaid workers. The 2010 Census industry categories are based on the 2007 North American Industry Classification System (NAICS)."
+* component[odh-Industry].value[x] from  https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.7187 (preferred) //"Industry CDC Census 2010 Value Set: Industry describes an economic/business sector comprised of businesses/ enterprises concerned with the output of a specified category of products or services (e.g., the construction industry or the agriculture industry). This industry code system includes 2007 U.S. Census Bureau industry codes and three additional codes developed by CDC for unpaid workers. The 2010 Census industry categories are based on the 2007 North American Industry Classification System (NAICS)."
  
 * component[odh-SupervisoryLevel].code =  LNC#87707-6 "Supervisory level or pay grade"
 * component[odh-SupervisoryLevel].value[x] only CodeableConcept
