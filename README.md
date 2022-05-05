@@ -9,7 +9,7 @@ http://build.fhir.org/ig/HL7/fhir-military-service/index.html
 
 ## Installing and compiling the project with SUSHI
 
-Military Service was developed using [FHIR Shorthand (FSH)](http://build.fhir.org/ig/HL7/fhir-shorthand/), a domain-specific language (DSL) for defining the content of FHIR Implementation Guides (IG): profiles, value set bindings, extensions, and custom operatoins.
+Military Service was developed using [FHIR Shorthand (FSH)](http://build.fhir.org/ig/HL7/fhir-shorthand/), a domain-specific language (DSL) for defining the content of FHIR Implementation Guides (IG): profiles, value set bindings, extensions, and custom operations.
 
 After you check out the "fhir-military-service" project from Github, install SUSHI (the FSH compiler), [as instructed in FSH school](https://fshschool.org/quickstart/). 
 
