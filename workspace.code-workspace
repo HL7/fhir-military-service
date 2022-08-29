@@ -1,0 +1,23 @@
+{
+	"folders": [
+		{
+			"path": "input/fsh"
+		},
+		{
+			"path": "input/pagecontent"
+		},
+		{
+			"path": "output"
+		},
+		{
+			"path": "../fhir-mCODE-ig"
+		},
+		{
+			"path": "input/uml"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {}
+}

@@ -24,6 +24,10 @@ releaseLabel: STU1 Ballot
 pages:
   index.md:
     title: Home
+  veteran.md:
+    title: Veteran
+  militaryhistory.md:
+    title: Military History
   conformance-general.md:
     title: Conformance Expectations
   conformance-profiles.md:
@@ -36,6 +40,9 @@ pages:
     title: Change log
 menu:
   Home: index.html
+  Content by Group:
+     Veteran: veteran.html
+     Military History: militaryhistory.html
   Conformance:
     General Expectations: conformance-general.html
     Profile Conformance: conformance-profiles.html

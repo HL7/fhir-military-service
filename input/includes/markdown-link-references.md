@@ -4,11 +4,14 @@
     padding-left: 25px !important;
   }
 </style> 
-[Military Service SOLOR-Extension]: CodeSystem-military-service-solor-extension.html
-[ODH Supervisory Level Value Set]: https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.7613
-[ODH Occupation Value Set]: https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.7186
-[ODH Industry Value Set]: https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.7187
-[Military Service Branch Value Set]: ValueSet-military-service-branch-vs.html
+[patientmatch]:https://www.hl7.org/fhir/operation-patient-match.html
+[USVeteranStatus]:StructureDefinition-military-service-veteran-status.html
+[USVeteran]: StructureDefinition-usveteran-definitions.html 
+
+[ODHSupervisoryLevelValueSet]: https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.7613
+[ODHOccupationValueSet]: https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.7186
+[ODHIndustryValueSet]: https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.7187
+[MilitaryServiceBranchValueSet]: ValueSet-military-service-branch-vs.html
 [Pay Grade Value Set]: ValueSet-military-service-paygrade-vs.html
 [Separation Reason Value Set]: ValueSet-military-service-separation-reason-vs.html
 [Discharge Status Value Set]: ValueSet-military-service-discharge-status-vs.html

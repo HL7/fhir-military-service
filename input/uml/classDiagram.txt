@@ -1,0 +1,11 @@
+@startuml
+class MilitaryServiceEpisode
+class DeploymentHistoryEpisode
+class MilitaryOccupation
+class ODHPastOrPresentJob
+enum DischageStatusCodeVS
+DeploymentHistoryEpisode   <-o   MilitaryServiceEpisode : hasMember
+MilitaryOccupation   <-o   MilitaryServiceEpisode : hasMember
+ODHPastOrPresentJob <|-- MilitaryOccupation
+MilitaryServiceEpisode -- DischageStatusCodeVS
+@enduml
