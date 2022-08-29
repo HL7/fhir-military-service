@@ -9,7 +9,7 @@ Description: "US Veteran whose veteran status was confirmed or is about to be co
 Extension:  USVeteranStatus
 Id: military-service-veteran-status
 Title: "us-veteran-status"
-Description: "us-veteran-status is a boolean extension used to specify whether a patient was confirmed or verified to have Veteran status."
+Description: "us-veteran-status is a boolean extension used to specify whether a patient was confirmed or verified to have Veteran status. Veteran status is not limited to Combat Status but reflects the status of yes/no they had indeed served in a military organization"
 * value[x] only boolean
 * valueBoolean 1..1 MS
 
