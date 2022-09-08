@@ -12,7 +12,7 @@ Description: "Phillip Scott: Veteran's patient record"
 * name[0].family = "Philip"	
 * name[0].given[0] = "Scott"	
 * name[0].given[1] = "Example"	
- * gender = #male	
+* gender = #male	
 * active = true
 * birthDate = "1954-01-22"
 * extension[USVeteranStatus].valueBoolean = true
@@ -106,7 +106,7 @@ Description: "Sam Share: Veteran's patient record"
 * name[0].suffix[0] = "Ssgt"
 * name[0].period.start = "2016-12-06"
 * name[0].period.end = "2020-07-22"
- * gender = #female	
+* gender = #female	
 * active = true
 * birthDate = "1992-02-20"
 * extension[USVeteranStatus].valueBoolean = true

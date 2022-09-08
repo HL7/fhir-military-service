@@ -16,16 +16,7 @@ Observation component and its allowed values.
 In the future, the [Mission Code](#mission-code) may also need a SNOMED CT
 extension if the VA API requires it.
 
-For a complete set of terminology extension, refer to the Logica Solor page
-intended to address the concept gaps:
-https://logica.atlassian.net/wiki/spaces/SOLOR/pages/865271876/Military+Service+History+and+Status
-
-The following diagram summarizes the terminology requirements for this
-implementation guide.This analysis is further refined as a Logica Health Solor
-activity:
-
-https://logica.atlassian.net/wiki/spaces/SOLOR/pages/865271876/Military+Service+History+and+Status
-
+ 
 <img src="Terminology Requirements.png" alt="Terminology Requirements" width="100%" />
 
 *Figure 3: Terminology Requirements*
@@ -53,20 +44,7 @@ the UT project.
 
 SNOMED CT will be used to fill any terminology gaps that are not already
 addressed by FDA code systems in the US.
-
-#### SOLOR Military Service Extension
-
-A code system representing the SOLOR extension for Military Service History and
-Status in Logica Health.
-
-The extension for this IG addresses the following gaps:
-https://logica.atlassian.net/wiki/spaces/SOLOR/pages/865271876/Military+Service+History+and+Status
-
-**The proposed canonical URL
-is:https://www.logicahealth.org/solutions/solor/military-service**
-
-Reference issue: " https://jira.hl7.org/browse/FHIR-27926?filter=-2
-
+ 
 #### Industry NAICS Detail (ODH)
 
 https://phinvads.cdc.gov/vads/ViewValueSet.action?id=5718C508-111B-4737-A48C-FDCFD301C0D
@@ -163,9 +141,4 @@ Supervisory Level or Pay Grade](https://phinvads.cdc.gov/vads/ViewValueSet.actio
 "Additional description for separation reason beyond discharge status value."
 
 **Note:** This may need to be specified as a code value rather than a text
-value.
-
-Separation reason codes. These codes will be addressed as gaps/change requests
-in SNOMED CT using the Solor Project:
-https://logica.atlassian.net/wiki/spaces/SOLOR/pages/865271876/Military+Service+History+and+Status
-
+value. 

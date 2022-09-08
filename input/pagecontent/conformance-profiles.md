@@ -4,12 +4,7 @@ Most MSH profiles are based on US Core profiles defined in the [US Core Implemen
 example, the [US Veteran profile](StructureDefinition-usveteran.html) is based on the [US Core Patient](https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-patient.html)
 profile. Because of the way profiles work in FHIR, any resource that validates against an MSH profile that is based a US Core profile will automatically be in
 compliance with the US Core profile and the associated US Core Data for Interperability (USCDI) data element required by [US regulation](https://www.healthit.gov/curesrule/).
-
--   [Employment History Episode](StructureDefinition-odh-EmploymentHistoryEpisode.html) is an abstract, base profile for that illstrates the basic structure of a an employment episode.
-    It may be considered the base profile for [ODH PastOrPresentJob](http://hl7.org/fhir/us/odh/StructureDefinition-odh-PastOrPresentJob.html) and the 
-    [Military Service Episode](StructureDefinition-military-service-episode.html) profile defined in this implementation
-    guide.
-
+ 
 -   [Military Service Episode](StructureDefinition-military-service-episode.html) profile can be used to create Observatoin resources that describe a Veteran's military service history; it includes references to [Deployment Episode](StructureDefinition-deploymentepisode.html)  and [Military Occupation](StructureDefinition-military-service-Occupation.html).
 
 -   [Military Occupation](StructureDefinition-military-service-Occupation.html)is similar to [ODH
