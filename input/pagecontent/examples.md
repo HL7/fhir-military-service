@@ -40,14 +40,19 @@ Age 30
 
 
 
-### [USVeteran](StructureDefinition-usveteran-definitions.html) ([USCorePatient](http://hl7.org/fhir/R4/patient.html))
-* [`sam-share-ssgt-veteran`](Patient-sam-share-ssgt-veteran.html) ([Sam Share Veteran])
+### [USVeteran](StructureDefinition-usveteran-definitions.html)  
+* [`Phillip Scott US Veteran's patient record`](Patient-philip-scott-example-veteran.html) 
+* [`Hugo Cross US Veteran's patient record`](Patient-hugo-cross-example-veteran.html)
+* [`Crystal Huffman US Veteran's patient record`](Patient-huffman-crystal-example-veteran.html)
 
-### [MilitaryServiceEpisode](StructureDefinition-mcode-cancer-disease-status.html) ([Observation](http://hl7.org/fhir/R4/observation.html))
-* [`MilitaryServiceEpisode`](Observation-MilitaryServiceEpisode1.html) ([Military Service Episode])
 
-### [DeploymentHistoryEpisode](StructureDefinition-mcode-cancer-disease-status.html) ([Observation](http://hl7.org/fhir/R4/observation.html))
-* [`DeploymentEpisode1`](Observation-DeploymentEpisode1.html) ([Deployment Episode - 1])
 
-### [MilitaryOccupation](StructureDefinition-mcode-cancer-disease-status.html) ([ODHPastOrPresentJob](http://hl7.org/fhir/R4/observation.html))
-* [`DeploymentEpisode2`](Observation-DeploymentEpisode2.html) ([Deployment Episode - 2])
+### [Military Service Episode](StructureDefinition-military-service-episode.html)  
+* [`Phillip Scott Military Service Episode`](Observation-philip-scott-example-military-service-episode.html) 
+
+### [Deployment History Episode](StructureDefinition-deploymenthistoryepisode.html) 
+* [`Phillip Scott Deployment History Episode`](Observation-philip-scott-example-deployment-history-episode.html) 
+
+### [Military Occupation](StructureDefinition-military-service-Occupation.html)  
+* [`Phillip Scott Military Occupation`](Observation-philip-scott-example-military-occupation.html ) 
+

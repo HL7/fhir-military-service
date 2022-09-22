@@ -15,7 +15,7 @@ license: CC0-1.0
 fhirVersion: 4.0.1
 dependencies:
   hl7.fhir.us.core: 3.1.1
-  hl7.fhir.us.odh: 1.0.0
+  hl7.fhir.us.odh: 1.2.0
   hl7.terminology: 2.1.0
 parameters:
   show-inherited-invariants: true
@@ -51,3 +51,6 @@ menu:
   All Artifacts: artifacts.html
   Change Log: change_log.html
   History: http://hl7.org/fhir/us/military-service/history.html
+
+
+  # for ODH/PHINVADS value sets, specify dependencies: http://fhir.org/packages/us.cdc.phinvads/ImplementationGuide/us.cdc.phinvads version 0.12.0

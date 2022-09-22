@@ -14,7 +14,7 @@ The observation resource that conforms to this specification is referenced by Mi
 * component[msh-SupervisoryLevel].code =  LNC#87707-6 "Supervisory level or pay grade"
 * component[msh-SupervisoryLevel].value[x] only CodeableConcept
 * component[msh-SupervisoryLevel].value[x] 1..1
-* component[msh-SupervisoryLevel].value[x] from  https://phinvads.cdc.gov/vads/ViewValueSet.action?id=B35E2ABE-C20F-EA11-8183-005056ABE2F0 (preferred) 
+* component[msh-SupervisoryLevel].value[x] from https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.7613  (preferred) 
 
 * subject 1..1
 * valueCodeableConcept 1..1

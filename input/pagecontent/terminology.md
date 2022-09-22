@@ -13,7 +13,7 @@ Other terminology extension and harmonization targets are:
 Another gap is "separation reason" that requires a coded concept for its
 Observation component and its allowed values.
 
-In the future, the [Mission Code](#mission-code) may also need a SNOMED CT
+In the future, the [Combat Episode Mission Value Set](ValueSet-military-service-combat-episode-mission-vs.html) may also need a SNOMED CT
 extension if the VA API requires it.
 
  <img src="Terminology Requirements.png" alt="Terminology Requirements" width="100%" />

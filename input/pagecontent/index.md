@@ -71,18 +71,18 @@ by using demographic information submitted as a query (search operation) to a
 FHIR server that supports **Observation** resource - - using the **Patient**
 endpoint to determine whether a person is a verified veteran. Additional
 information is provided using the Search Service History criteria using the
-profiles described in the [Information Requirements](#information-and-semantics-requirements) section (see [Military Service Episode](#military-service-episode)).
+profiles described in the [Information Requirements](#information-and-semantics-requirements) section (see [Military Service Episode](StructureDefinition-military-service-episode.html)).
 
 ##### Search Service History
 
 This use case is part of the proposed verification API based on FHIR. If this
 search operation returns one or more **Observation** resources that conform
-[Military Service Episode](#military-service-episode) to the proposed profile,
+[Military Service Episode]((StructureDefinition-military-service-episode.html) to the proposed profile,
 the Veteran's status confirmed. If the search operation does not find any
 matching Observation resources, the Veteran's service history could not be confirmed.
 
 The presence of one or more Observations that conform to the [Deployment
-Episode](#deployment-episode) profile proposed here indicates that Veteran was deployed.
+Episode](StructureDefinition-deploymenthistoryepisode.html) profile proposed here indicates that Veteran was deployed.
 
 #### Deferred Requirements
 

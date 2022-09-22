@@ -5,7 +5,7 @@ example, the [US Veteran profile](StructureDefinition-usveteran.html) is based o
 profile. Because of the way profiles work in FHIR, any resource that validates against an MSH profile that is based a US Core profile will automatically be in
 compliance with the US Core profile and the associated US Core Data for Interperability (USCDI) data element required by [US regulation](https://www.healthit.gov/curesrule/).
  
--   [Military Service Episode](StructureDefinition-military-service-episode.html) profile can be used to create Observatoin resources that describe a Veteran's military service history; it includes references to [Deployment Episode](StructureDefinition-deploymentepisode.html)  and [Military Occupation](StructureDefinition-military-service-Occupation.html).
+-   [Military Service Episode](StructureDefinition-military-service-episode.html) profile can be used to create Observatoin resources that describe a Veteran's military service history; it includes references to [Deployment Episode](StructureDefinition-deploymenthistoryepisode.html)  and [Military Occupation](StructureDefinition-military-service-Occupation.html).
 
 -   [Military Occupation](StructureDefinition-military-service-Occupation.html)is similar to [ODH
     PastOrPresentJob](http://hl7.org/fhir/us/odh/StructureDefinition-odh-PastOrPresentJob.html). It is referenced by [Military Service
@@ -14,17 +14,13 @@ compliance with the US Core profile and the associated US Core Data for Interper
 Where US Core does not provide an appropriate base profile, this implementation profiles FHIR
 resources directly as described below:
 
-| Profile                                                | Based on US Core? | Immediate Parent Profile |
-|--------------------------------------------------------|-------------------|--------------------------|
-| [Employment History Episode](StructureDefinition-odh-EmploymentHistoryEpisode.html) | no                | Observation              |
-| [Deployment Episode](StructureDefinition-deploymentepisode.html)                | no                |  [Employment History Episode](StructureDefinition-odh-EmploymentHistoryEpisode.html)                 |          |
-| [Military Occupation](StructureDefinition-military-service-Occupation.html)          |no    |  [Employment History Episode](StructureDefinition-odh-EmploymentHistoryEpisode.html)                 |          |
-| [Military Service Episode](StructureDefinition-military-service-episode.html)    | no                | Observation (See "Note") | |
-| [US Veteran](StructureDefinition-usveteran.html)                                | yes                | [US Patient](https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-patient.html)              |
+| Profile                                                | Based on US Core? |
+|--------------------------------------------------------|-------------------|
+| [Deployment History Episode](StructureDefinition-deploymenthistoryepisode.html) |No|
+| [Military Occupation](StructureDefinition-military-service-Occupation.html)     |No|
+| [Military Service Episode](StructureDefinition-military-service-episode.html)   |No|
+| [US Veteran](StructureDefinition-usveteran.html)                                |Yes|
 {: .grid }
-
-**Note:** Due to limitations in the reuse of profiles, even though a "Military Service Episode" is logically a type of 
-"Employment History Episode" it was not possible to specify it as a parent profile.
 
 ### Conformance to MSH Profiles
 
