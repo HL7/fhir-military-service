@@ -3,14 +3,14 @@ canonical: http://hl7.org/fhir/us/military-service
 version: 0.2.0
 name: military-service
 title: "HL7 FHIR Implementation Guide: Military Service History and Status
-  Release 1 - US Realm | STU1 Ballot"
+  Release 1 - US Realm | STU1"
 status: active
 publisher:
    name: Cross Group Projects WG
    url: http://www.hl7.org/Special/committees/cgp
    email: cgp@lists.hl7.org
 jurisdiction: urn:iso:std:iso:3166#US "United States of America"
-description: Military Service History and Status is an implementation guide for veteran status and history verification and confirmation.
+description: Military Service History and Status is an implementation guide for military service history and veteran status verification/confirmation.
 license: CC0-1.0
 fhirVersion: 4.0.1
 dependencies:
@@ -20,7 +20,7 @@ dependencies:
 parameters:
   show-inherited-invariants: true
 copyrightYear: 2020+
-releaseLabel: STU1 Ballot
+releaseLabel: STU1
 pages:
   index.md:
     title: Home
