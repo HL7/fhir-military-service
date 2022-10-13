@@ -18,10 +18,21 @@
           "desc": "First public ballot",
           "path": "http://hl7.org/fhir/us/military-service/2021Sep",
 	        "date": "2021-08-11",
-          "status": "R1",
+          "status": "ballot",
 	        "sequence": "STU 1",
           "fhirversion": "4.0.1"
-    }
+    },
+    {
+      "version": "1.0.0",
+      "desc": "STU 1 ",
+      "path": "http://hl7.org/fhir/us/military-service/STU1",
+      "date": "2022-10-13",
+      "status": "trial-use",
+      "sequence": "STU 1",
+      "fhirversion": "4.0.1",
+      "current": true
+
+},
   ],
   "category": "Clinical Records"
 }
