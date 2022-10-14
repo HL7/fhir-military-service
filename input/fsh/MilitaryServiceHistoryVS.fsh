@@ -160,8 +160,8 @@ Description: "Military Service History and Status Code System"
 ValueSet:    MilitaryBranchVS
 Id: military-service-branch-vs
 Title: "Military Branch Value Set"
-Description: "Military Branch Value Set - is a subset of the ODH Occupation value set." 
-Experimental: false
+Description: "Military Branch Value Set - is a subset of the ODH Occupation value set."
+* ^experimental = false
 * ODH#928110.000255	"Air Force [National Security ]"
 * ODH#928110.000275	"Air traffic control, military [National Security ]"
 * ODH#928110.000809	"Armed forces [National Security ]"
@@ -213,7 +213,7 @@ ValueSet:    SeparationReasonVS
 Id: military-service-separation-reason-vs
 Title: "Separation Reason Value Set"
 Description: "Separation Reason Value Set contains concepts that are managed as a local extensions, subject to submission to SNOMED CT."
-Experimental: false
+* ^experimental = false
 *  MSHCS#001 "WEIGHT CONTROL FAILURE"
 *  MSHCS#002 "FRAUDULENT ENTRY INTO MILITARY SERVICE"
 *  MSHCS#003 "PARENTHOOD OR CUSTODY OF MINOR CHILDREN"
@@ -332,7 +332,7 @@ ValueSet: DischargeStatusVS
 Id: military-service-discharge-status-vs
 Title: "Discharge Status Value Set"
 Description: "Discharge Status Value Set - this value set identifies gaps in SNOMED CT. The only concept currently supported is that of 'dishonorable' discharge."
-Experimental: false
+* ^experimental = false
 * MSHCS#79A512F77CFC4E63B9969930FC8787DB "Honorable"
 * MSHCS#B5BA882B31574AB0BF82DFE43765F264 "General"
 * MSHCS#59B40AF3E8B44B0587743B08290C7AD1 "Bad Conduct"
@@ -348,7 +348,7 @@ ValueSet: DeploymentEpisodeMissionVS
 Id: military-service-combat-episode-mission-vs
 Title: "Combat Episode Mission Value Set"
 Description: "Example combat mission code; this is only an example data element that may be associated with a Deployment Episode, if needed."
-Experimental: false
+* ^experimental = false
 * MSHCS#CD1CAD19F5494F1981211F8634DD6AB1 "ANTIGUERRILLA OPERATIONS"
 * MSHCS#469552D4E8AA4BBBBF075190F7ED430C "COMBAT PATROL"
 * MSHCS#750988FBBD6148DCB85C062DEFC871E2 "Individual Augmentee"
@@ -358,8 +358,8 @@ ValueSet: DeploymentEpisodeCategoryVS
 Id: military-service-deployment-episode-mission-vs
 Title: "Deployment Episode Type Value Set"
 Description: "Recommended deployment episode type code - only the root concept of 'Deployment Episode' is needed for typical implementations."
-Experimental: false
-* MSHCS#f6bb8fdc-89b0-4c0b-8d81-d3916f182c2f "Deployment  Episode" 
+* ^experimental = false
+* MSHCS#f6bb8fdc-89b0-4c0b-8d81-d3916f182c2f "Deployment Episode" 
 * MSHCS#e06a57f8-329c-4d74-af88-47c765f0b83a "Training Deployment Episode" 
 * MSHCS#77eb3c61-f5c3-425c-848a-6b180b5b0528 "Humanitarian Deployment Episode" 
 * MSHCS#82bf75df-60b7-4505-ba9e-8d0171ebb6c3 "Combat Deployment Episode" 
@@ -368,7 +368,7 @@ ValueSet:    MilitaryOccupationVS
 Id: military-service-military-occupation-vs
 Title: "Military Occupation Value Set"
 Description: "Military Occupation Value Set" 
-Experimental: false
+* ^experimental = false
 *  ODH#55-1011.00.000736    "Air Battle Manager [Air Crew Officers]"
 *  ODH#55-1011.00.000951    "Airdrop Systems Technician [Air Crew Officers]"
 *  ODH#55-1011.00.002270    "Astronaut, Mission Specialist [Air Crew Officers]"
