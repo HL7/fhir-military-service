@@ -12,6 +12,7 @@ CodeSystem: MSHCS
 Id: military-service-code-system
 Title: "Military Service History and Status Code System"
 Description: "Military Service History and Status Code System"
+* ^experimental = false
 * #79A512F77CFC4E63B9969930FC8787DB "Honorable"
 * #3209820D5C9F4F4E855C5783E8F49228 "Combat Episode"
 * #175ECB0F9DBC41708BC7ABD3468E7F53 "Military occupation"
