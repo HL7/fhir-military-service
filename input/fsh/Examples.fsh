@@ -152,14 +152,14 @@ Description: "Military Service Episode for Veteran Example, Philip Scott"
 
 Instance: philip-scott-example-deployment-history-episode
 InstanceOf: DeploymentHistoryEpisode
-Description: "Deployment to Viet Nam"	
+Description: "Deployment to Vietnam"	
 * id = "philip-scott-example-deployment-history-episode"	
 * status = #final "final"
 * subject = Reference(philip-scott-example-veteran)
-* effectivePeriod.start = "1971-07-01"
-* effectivePeriod.end = "1972-07-01"
+* effectivePeriod.start = "1991-07-01"
+* effectivePeriod.end = "1993-07-01"
 * component[military-service-DeploymentEpisodeCountryCode].valueCodeableConcept = urn:iso:std:iso:3166#VNM
-* component[military-service-DeploymentEpisodeMissionCode].valueCodeableConcept = MSHCS#46a15b13-b5c1-4ae8-acde-48c31f30175a "Viet Nam War"
+* component[military-service-DeploymentEpisodeMissionCode].valueCodeableConcept = MSHCS#82bf75df-60b7-4505-ba9e-8d0171ebb6c3 "Combat Deployment Episode" 
 
 
 Instance: philip-scott-example-military-occupation

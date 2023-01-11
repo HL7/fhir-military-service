@@ -1,5 +1,4 @@
 Alias:   LNC = http://loinc.org
-Alias:   SCT = http://snomed.info/sct
 Alias:   UCUM = http://unitsofmeasure.org
 Alias:   DiagnosticService = http://terminology.hl7.org/CodeSystem/v2-0074
 Alias:   OmbRaceCat = urn:oid:2.16.840.1.113883.6.238
@@ -12,11 +11,12 @@ Id: military-service-code-system
 Title: "Military Service History and Status Code System"
 Description: "Military Service History and Status Code System"
 * ^experimental = false
+* ^caseSensitive = false
 * #79A512F77CFC4E63B9969930FC8787DB "Honorable"
-* #3209820D5C9F4F4E855C5783E8F49228 "Combat Episode"
+* #3209820D5C9F4F4E855C5783E8F49228 "Deployment Episode"
 * #175ECB0F9DBC41708BC7ABD3468E7F53 "Military occupation"
-* #7E33243654BB42F5BF3F3A59E0E6E6BD "Combat Episode Country Code"
-* #BF3432CC716B4DC7AA0DF43C176F4F05 "Combat Episode Mission Code"
+* #7E33243654BB42F5BF3F3A59E0E6E6BD "Deployment Episode Country Code"
+* #BF3432CC716B4DC7AA0DF43C176F4F05 "Deployment Episode Mission Code"
 * #41C89BB67C9C48BFB718F57FAA6F3266 "Military Occumpation"
 * #9B7095A70B024CD789A36E48A3936592 "Discharge Status"
 * #9CEAD6537D6A4F198549F70598B8F8BF "Separation Reason"
@@ -149,7 +149,7 @@ Description: "Military Service History and Status Code System"
 * #066ccc24-04d1-4c58-a2cf-abe2e722d1a3 "Separation Reason" 
 * #836df973-002b-4bb6-9eca-83626af0c05c "Discharge Status" 
 * #4ec176a2-9afb-4b52-a011-d9a25c360d95 "Military Occupation" 
-* #f6bb8fdc-89b0-4c0b-8d81-d3916f182c2f "Deployment  Episode" 
+* #f6bb8fdc-89b0-4c0b-8d81-d3916f182c2f "Deployment Episode" 
 * #e06a57f8-329c-4d74-af88-47c765f0b83a "Training Deployment Episode" 
 * #77eb3c61-f5c3-425c-848a-6b180b5b0528 "Humanitarian Deployment Episode" 
 * #82bf75df-60b7-4505-ba9e-8d0171ebb6c3 "Combat Deployment Episode" 

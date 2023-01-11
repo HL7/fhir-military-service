@@ -6,7 +6,7 @@ Description:   "Deployment History Episode describes a completed deployment.  Th
 * category and status and code and subject and effectivePeriod and component MS
 * category from DeploymentEpisodeCategoryVS (preferred)
 * code 1..1
-* code  = MSHCS#f6bb8fdc-89b0-4c0b-8d81-d3916f182c2f "Deployment History Episode"
+* code  = MSHCS#f6bb8fdc-89b0-4c0b-8d81-d3916f182c2f "Deployment Episode"
 
 * subject only Reference(Patient)
 * subject 1..1
@@ -42,7 +42,7 @@ Description:   "Deployment History Episode describes a completed deployment.  Th
                      odh-Industry 0..1 and 
 					 odh-SupervisoryLevel 0..1  
 
-* component[odh-Industry].code =  LNC#11341-5 "History of Occupation industry"
+* component[odh-Industry].code =  LNC#11341-5 "History of Occupation"
 * component[odh-Industry].value[x] only CodeableConcept   
 * component[odh-Industry].value[x] 1..1
 * component[odh-Industry].value[x] from  https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.7187 (preferred) //"Industry CDC Census 2010 Value Set: Industry describes an economic/business sector comprised of businesses/ enterprises concerned with the output of a specified category of products or services (e.g., the construction industry or the agriculture industry). This industry code system includes 2007 U.S. Census Bureau industry codes and three additional codes developed by CDC for unpaid workers. The 2010 Census industry categories are based on the 2007 North American Industry Classification System (NAICS)."

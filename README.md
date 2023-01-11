@@ -19,18 +19,16 @@ Use the following command:
 `$ sushi .
 
 ## Running the IG Publisher
+The FHIR IG Publisher maintained by HL7 changes very frequently and the errors and warnings will change without notice.
+Therefore, it's recommended to update the IG Pubslisher using the "_updatePublisher.bat" script. 
+The tool is over 100MB in size and it will take several minutes to update. 
 
-Next, change directories to ./build. 
+Windows:   `$ _genonce.bat`
 
-Now run:
 
-Windows:   `$ _genonce`
+* This will run the HL7 IG Publisher, which will take several minutes to complete. After the publisher is finished, open the file _/build/output/index.html_ to see the resulting IG.
 
-Mac:   `$ ./_genonce.sh`
-
-This will run the HL7 IG Publisher, which will take several minutes to complete. After the publisher is finished, open the file _/build/output/index.html_ to see the resulting IG.
-
-To get a clean build, you may delete the _./build/input/resources_ and/or the _./build/output_ directories. However, DO NOT delete the entire _./build_ directory!
+* To get a clean build, you may delete the _./build/input/resources_ and/or the _./build/output_ directories. However, DO NOT delete the entire _./build_ directory!
 
 
 # Further Customization of the IG

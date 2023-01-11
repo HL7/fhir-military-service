@@ -57,7 +57,7 @@ Description:   "Military Service Episode describes a patient/veterans overall ex
 					 military-service-SeparationReason 0..1  
 
 
-* component[military-service-Industry].code =  LNC#11341-5 "History of Occupation industry"
+* component[military-service-Industry].code =  LNC#11341-5 "History of Occupation"
 * component[military-service-Industry].value[x] only CodeableConcept   
 * component[military-service-Industry].value[x] 1..1
 * component[military-service-Industry].valueCodeableConcept from MilitaryBranchVS  (extensible)

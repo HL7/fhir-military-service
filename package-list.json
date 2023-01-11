@@ -20,6 +20,15 @@
         "sequence": "STU 1",
         "fhirversion": "4.0.1",
         "date": "2021-08-13"
+      },
+      {
+        "version": "1.0.0",
+        "desc": "Publication",
+        "path": "http://hl7.org/fhir/us/military-service",
+        "status": "trial-use",
+        "sequence": "STU 1",
+        "fhirversion": "4.0.1",
+        "date": "2022-01-11"
       }
     ]
   }
