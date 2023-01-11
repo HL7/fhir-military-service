@@ -3,6 +3,7 @@
 # SUPPRESS US CORE OBSERVATION MESSAGES.  Motion to approve variance in CGP call 12-03-2020 - Eric Haas/Floyd Eisenberg: 8-0-0:  https://jira.hl7.org/browse/FHIR-29782
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/military-service/StructureDefinition/military-service-Occupation').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
 == C:\Users\Ioana\Documents\GitHub\fhir-military-service\fsh-generated\resources\StructureDefinition-military-service-episode.json ==
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/military-service/StructureDefinition/deploymenthistoryepisode').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
 
 # Phinvads Code Systems and Value Sets that are referenced in the guide but not available in tx.fhir.org
 # urn:oid:2.16.840.1.114222.4.5.327
