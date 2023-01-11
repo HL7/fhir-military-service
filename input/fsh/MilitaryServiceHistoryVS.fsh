@@ -4,8 +4,7 @@ Alias:   UCUM = http://unitsofmeasure.org
 Alias:   DiagnosticService = http://terminology.hl7.org/CodeSystem/v2-0074
 Alias:   OmbRaceCat = urn:oid:2.16.840.1.113883.6.238
 Alias:   ISO = urn:iso:std:iso:3166
-Alias:   ODH = https://phinvads.cdc.gov/vads/ViewCodeSystem.action?id=2.16.840.1.114222.4.5.327
-             
+Alias:   ODH = urn:oid:2.16.840.1.114222.4.5.327
 
  
 CodeSystem: MSHCS
