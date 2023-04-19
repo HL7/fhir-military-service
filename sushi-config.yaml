@@ -1,7 +1,7 @@
 id: hl7.fhir.us.military-service
 canonical: http://hl7.org/fhir/us/military-service
 version: 1.0.0
-name: military-service
+name: Military-Service
 title: "HL7 FHIR Implementation Guide: Military Service History and Status
   Release 1 - US Realm | STU1"
 status: active
@@ -14,9 +14,9 @@ description: Military Service History and Status is an implementation guide for 
 license: CC0-1.0
 fhirVersion: 4.0.1
 dependencies:
-  hl7.fhir.us.core: 3.1.1
+  hl7.fhir.us.core: 5.0.1
   hl7.fhir.us.odh: 1.2.0
-  hl7.terminology: 2.1.0
+  hl7.terminology: 5.1.0
 parameters:
   show-inherited-invariants: true
 copyrightYear: 2020+
@@ -38,6 +38,8 @@ pages:
     title:  Examples
   change_log.md:
     title: Change log
+  downloads.md:
+    title: Downloads
 menu:
   Home: index.html
   Content by Group:
@@ -47,10 +49,8 @@ menu:
     General Expectations: conformance-general.html
     Profile Conformance: conformance-profiles.html
   Terminology: terminology.html
-  Example: examples.html
+  Examples: examples.html
   All Artifacts: artifacts.html
+  Downloads: downloads.html
   Change Log: change_log.html
   History: http://hl7.org/fhir/us/military-service/history.html
-
-
-  # for ODH/PHINVADS value sets, specify dependencies: http://fhir.org/packages/us.cdc.phinvads/ImplementationGuide/us.cdc.phinvads version 0.12.0

@@ -50,7 +50,7 @@ Age 30
 ### [Military Service Episode](StructureDefinition-military-service-episode.html)  
 * [`Phillip Scott Military Service Episode`](Observation-philip-scott-example-military-service-episode.html) 
 
-### [Deployment History Episode](StructureDefinition-deploymenthistoryepisode.html) 
+### [Deployment History Episode](StructureDefinition-deployment-history-episode.html) 
 * [`Phillip Scott Deployment History Episode`](Observation-philip-scott-example-deployment-history-episode.html) 
 
 ### [Military Occupation](StructureDefinition-military-service-Occupation.html)  

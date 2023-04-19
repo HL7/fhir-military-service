@@ -1,9 +1,6 @@
                                                                  
 ### Background
-This implementation guide design document is intended to create a set of profiles and extensions to support Military Service History and Status reporting
-consistent with US regulatory requirements (i.e. Title 38 Veteran Benefits) and extensible to other realms/jurisdictions (e.g. Canadian Forces).
-It harmonizes the requirements of the U.S. Department of Veterans Affairs (VA) and the Centers for Disease Control and Prevention (CDC) to record this
-information more easily in support of administrative and clinical workflows and the work and social history of patients who are also Veterans.
+This implementation guide contains profiles and extensions to support Military Service History and Status application programming interfaces (APIs) consistent with US regulatory requirements (i.e. Title 38 Veteran Benefits) and extensible to other realms/jurisdictions (e.g. Canadian Forces).It harmonizes the requirements of the U.S. Department of Veterans Affairs (VA) and the Centers for Disease Control and Prevention (CDC) to record this information support of administrative and clinical workflows (e.g. exchange with community providers) and the work and social history of patients who are also Veterans.
 
 ### Use Case Analysis
 
@@ -82,7 +79,7 @@ the Veteran's status confirmed. If the search operation does not find any
 matching Observation resources, the Veteran's service history could not be confirmed.
 
 The presence of one or more Observations that conform to the [Deployment
-Episode](StructureDefinition-deploymenthistoryepisode.html) profile proposed here indicates that Veteran was deployed.
+Episode](StructureDefinition-deployment-history-episode.html) profile proposed here indicates that Veteran was deployed.
 
 #### Deferred Requirements
 

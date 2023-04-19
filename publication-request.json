@@ -1,0 +1,14 @@
+{
+    "package-id" : "hl7.fhir.us.military-service",
+    "version" : "1.0.0",
+    "path" : "http://hl7.org/fhir/us/military-service/STU1",
+    "mode" : "working",
+    "status" : "trial-use",
+    "sequence" : "STU 1.0",
+    "desc" : "HL7 FHIR Implementation Guide for Military Service History and Status",
+    "first" : true,
+    "title" : "HL7 FHIR Implementation Guide for Military Service History and Status",
+    "ci-build" : "http://build.fhir.org/ig/HL7/fhir-military-service",
+    "category" : "Clinical Records",
+    "introduction": "This implementation guide contains profiles and extensions to support Military Service History and Status sharing.     It harmonizes the requirements of the U.S. Department of Veterans Affairs (VA) and the Centers for Disease Control and Prevention (CDC) to manage Military Service History and Status support of administrative and clinical workflows and the work and social history of patients who are also Veterans."
+}

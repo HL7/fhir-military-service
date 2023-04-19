@@ -2,7 +2,8 @@ Profile: USVeteran
 Parent: USCorePatient
 Id: usveteran
 Title: "US Veteran"
-Description: "US Veteran whose veteran status was confirmed or is about to be confirmed. This profile extends US Core Patient profile and includes a ['US Veteran Status'] (usveteranstatus) extension to hold additional coded or boolean information about the veteran status. This version of the profile specifies a boolean value but it's conceivable that pilot implementaiton may decide to support more that one status to match the veteran verification state machine."
+Description: "US Veteran profile extends US Core Patient profile. It's intended to be used when the patient is Veteran was confirmed by the VA. 
+This profile includes a ['US Veteran Status'] (usveteranstatus) extension to hold status information as a boolean (i.e. 'true' indicates that the patient's veteran status was confirmed)."
 * extension contains
     USVeteranStatus named USVeteranStatus 0..1 MS
 

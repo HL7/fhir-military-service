@@ -26,14 +26,13 @@ Description:   "Military Service Episode describes a patient/veterans overall ex
 * referenceRange 0..0
 * derivedFrom 0..0
 * code = LNC#87511-2 
-* subject 1..1 MS
+* subject 1..1
 * subject only Reference(USVeteran)
 * effective[x] only Period
 * effectivePeriod 1..1 MS
 * effectivePeriod.start 1..1 MS
 * effectivePeriod.end 0..1 MS 
 * category.coding = http://terminology.hl7.org/CodeSystem/observation-category#social-history
-
 
 * hasMember ^slicing.discriminator.type = #profile // #pattern
 * hasMember ^slicing.discriminator.path =  "$this.resolve()" // "$this.resolve().code"
@@ -52,15 +51,14 @@ Description:   "Military Service Episode describes a patient/veterans overall ex
 * component ^slicing.rules = #open
 * component ^slicing.description = "Slice based on the component.code pattern"
 
-* component contains military-service-Industry 1..1 and
+* component contains military-service-Military-Branch 1..1 and
 					 military-service-DischargeStatus 0..1 and
 					 military-service-SeparationReason 0..1  
 
-
-* component[military-service-Industry].code =  LNC#11341-5 "History of Occupation"
-* component[military-service-Industry].value[x] only CodeableConcept   
-* component[military-service-Industry].value[x] 1..1
-* component[military-service-Industry].valueCodeableConcept from MilitaryBranchVS  (extensible)
+* component[military-service-Military-Branch].code = LNC#85104-8 "Compensation and sector employment type"
+* component[military-service-Military-Branch].value[x] only CodeableConcept   
+* component[military-service-Military-Branch].value[x] 1..1 MS
+* component[military-service-Military-Branch].valueCodeableConcept from MilitaryBranchVS  (extensible)
 
 
 * component[military-service-DischargeStatus].code =  MSHCS#9B7095A70B024CD789A36E48A3936592 "Discharge Status"
@@ -71,11 +69,5 @@ Description:   "Military Service Episode describes a patient/veterans overall ex
 
 * component[military-service-SeparationReason].code =  MSHCS#9CEAD6537D6A4F198549F70598B8F8BF "Separation Reason"
 * component[military-service-SeparationReason].value[x] only CodeableConcept   
-* component[military-service-SeparationReason].valueCodeableConcept 1..1 MS
+* component[military-service-SeparationReason].valueCodeableConcept 0..1 MS
 * component[military-service-SeparationReason].valueCodeableConcept from  SeparationReasonVS  (extensible)
-
-
-
-
-
-

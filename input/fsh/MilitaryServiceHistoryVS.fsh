@@ -3,7 +3,7 @@ Alias:   UCUM = http://unitsofmeasure.org
 Alias:   DiagnosticService = http://terminology.hl7.org/CodeSystem/v2-0074
 Alias:   OmbRaceCat = urn:oid:2.16.840.1.113883.6.238
 Alias:   ISO = urn:iso:std:iso:3166
-Alias:   ODH = urn:oid:2.16.840.1.114222.4.5.327
+Alias:   ODH = http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH
 
  
 CodeSystem: MSHCS
@@ -155,6 +155,33 @@ Description: "Military Service History and Status Code System"
 * #82bf75df-60b7-4505-ba9e-8d0171ebb6c3 "Combat Deployment Episode" 
 * #b18ae858-d1dd-4edb-89f2-b9835f2eba1e "Deployment Country" 
 * #46a15b13-b5c1-4ae8-acde-48c31f30175a "Enduring Freedom"
+* #C-0	"Civilian Non Supervisor"
+* #C-3	"First Line Supervisor"
+* #C-6	"Manager"
+* #E-1	"US Military Enlisted paygrade E-1"
+* #E-2	"US Military Enlisted paygrade E-2"
+* #E-3	"US Military Enlisted paygrade E-3"
+* #E-4	"US Military Enlisted paygrade E-4"
+* #E-5	"US Military Enlisted paygrade E-5"
+* #E-6	"US Military Enlisted paygrade E-6"
+* #E-7	"US Military Enlisted paygrade E-7"
+* #E-8	"US Military Enlisted paygrade E-8"
+* #E-9	"US Military Enlisted paygrade E-9"
+* #O-1	"US Military Commissioned Officer paygrade O-1"
+* #O-10	"US Military Commissioned Officer paygrade O-10"
+* #O-2	"US Military Commissioned Officer paygrade O-2"
+* #O-3	"US Military Commissioned Officer paygrade  O-3"
+* #O-4	"US Military Commissioned Officer paygrade O-4"
+* #O-5	"US Military Commissioned Officer paygrade O-5"
+* #O-6	"US Military Commissioned Officer paygrade O-6"
+* #O-7	"US Military Commissioned Officer paygrade O-7"
+* #O-8	"US Military Commissioned Officer paygrade O-8"
+* #O-9	"US Military Commissioned Officer paygrade O-9"
+* #W-1	"Warrant Officer paygrade W-1"
+* #W-2	"Warrant Officer paygrade W-2"
+* #W-3	"Warrant Officer paygrade W-3"
+* #W-4	"Warrant Officer paygrade W-4"
+* #W-5	"Warrant Officer paygrade W-5"
 
 
 ValueSet:    MilitaryBranchVS
@@ -176,37 +203,38 @@ Description: "Military Branch Value Set - is a subset of the ODH Occupation valu
 * ODH#928110.011438	"Navy [National Security ]"
 
 
-// ValueSet:    PayGradeVS
-// Id: military-service-paygrade-vs
-// Title: "Pay Grade Code Value Set"
-// Description: "Pay Grade Code Value Set - is a subset of the OHD Supervisory Role value set. Its scope is limited to military pay grade codes."
-// * ODH#C-0	"Civilian Non Supervisor"
-// * ODH#C-3	"First Line Supervisor"
-// * ODH#C-6	"Manager"
-// * ODH#E-1	"US Military Enlisted paygrade E-1"
-// * ODH#E-2	"US Military Enlisted paygrade E-2"
-// * ODH#E-3	"US Military Enlisted paygrade E-3"
-// * ODH#E-4	"US Military Enlisted paygrade E-4"
-// * ODH#E-5	"US Military Enlisted paygrade E-5"
-// * ODH#E-6	"US Military Enlisted paygrade E-6"
-// * ODH#E-7	"US Military Enlisted paygrade E-7"
-// * ODH#E-8	"US Military Enlisted paygrade E-8"
-// * ODH#E-9	"US Military Enlisted paygrade E-9"
-// * ODH#O-1	"US Military Commissioned Officer paygrade O-1"
-// * ODH#O-10	"US Military Commissioned Officer paygrade O-10"
-// * ODH#O-2	"US Military Commissioned Officer paygrade O-2"
-// * ODH#O-3	"US Military Commissioned Officer paygrade  O-3"
-// * ODH#O-4	"US Military Commissioned Officer paygrade O-4"
-// * ODH#O-5	"US Military Commissioned Officer paygrade O-5"
-// * ODH#O-6	"US Military Commissioned Officer paygrade O-6"
-// * ODH#O-7	"US Military Commissioned Officer paygrade O-7"
-// * ODH#O-8	"US Military Commissioned Officer paygrade O-8"
-// * ODH#O-9	"US Military Commissioned Officer paygrade O-9"
-// * ODH#W-1	"Warrant Officer paygrade W-1"
-// * ODH#W-2	"Warrant Officer paygrade W-2"
-// * ODH#W-3	"Warrant Officer paygrade W-3"
-// * ODH#W-4	"Warrant Officer paygrade W-4"
-// * ODH#W-5	"Warrant Officer paygrade W-5"
+ValueSet:    PayGradeVS
+Id: military-service-paygrade-vs
+Title: "Pay Grade Code Value Set"
+Description: "Pay Grade Code Value Set - is a subset of the OHD Supervisory Role value set. Its scope is limited to military pay grade codes."
+* ^experimental = false
+* MSHCS#C-0	"Civilian Non Supervisor"
+* MSHCS#C-3	"First Line Supervisor"
+* MSHCS#C-6	"Manager"
+* MSHCS#E-1	"US Military Enlisted paygrade E-1"
+* MSHCS#E-2	"US Military Enlisted paygrade E-2"
+* MSHCS#E-3	"US Military Enlisted paygrade E-3"
+* MSHCS#E-4	"US Military Enlisted paygrade E-4"
+* MSHCS#E-5	"US Military Enlisted paygrade E-5"
+* MSHCS#E-6	"US Military Enlisted paygrade E-6"
+* MSHCS#E-7	"US Military Enlisted paygrade E-7"
+* MSHCS#E-8	"US Military Enlisted paygrade E-8"
+* MSHCS#E-9	"US Military Enlisted paygrade E-9"
+* MSHCS#O-1	"US Military Commissioned Officer paygrade O-1"
+* MSHCS#O-10	"US Military Commissioned Officer paygrade O-10"
+* MSHCS#O-2	"US Military Commissioned Officer paygrade O-2"
+* MSHCS#O-3	"US Military Commissioned Officer paygrade  O-3"
+* MSHCS#O-4	"US Military Commissioned Officer paygrade O-4"
+* MSHCS#O-5	"US Military Commissioned Officer paygrade O-5"
+* MSHCS#O-6	"US Military Commissioned Officer paygrade O-6"
+* MSHCS#O-7	"US Military Commissioned Officer paygrade O-7"
+* MSHCS#O-8	"US Military Commissioned Officer paygrade O-8"
+* MSHCS#O-9	"US Military Commissioned Officer paygrade O-9"
+* MSHCS#W-1	"Warrant Officer paygrade W-1"
+* MSHCS#W-2	"Warrant Officer paygrade W-2"
+* MSHCS#W-3	"Warrant Officer paygrade W-3"
+* MSHCS#W-4	"Warrant Officer paygrade W-4"
+* MSHCS#W-5	"Warrant Officer paygrade W-5"
 
 
 ValueSet:    SeparationReasonVS

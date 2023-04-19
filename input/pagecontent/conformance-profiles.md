@@ -5,7 +5,7 @@ example, the [US Veteran profile](StructureDefinition-usveteran.html) is based o
 profile. Because of the way profiles work in FHIR, any resource that validates against an MSH profile that is based a US Core profile will automatically be in
 compliance with the US Core profile and the associated US Core Data for Interperability (USCDI) data element required by [US regulation](https://www.healthit.gov/curesrule/).
  
--   [Military Service Episode](StructureDefinition-military-service-episode.html) profile can be used to create Observatoin resources that describe a Veteran's military service history; it includes references to [Deployment Episode](StructureDefinition-deploymenthistoryepisode.html)  and [Military Occupation](StructureDefinition-military-service-Occupation.html).
+-   [Military Service Episode](StructureDefinition-military-service-episode.html) profile can be used to create Observatoin resources that describe a Veteran's military service history; it includes references to [Deployment Episode](StructureDefinition-deployment-history-episode.html)  and [Military Occupation](StructureDefinition-military-service-Occupation.html).
 
 -   [Military Occupation](StructureDefinition-military-service-Occupation.html)is similar to [ODH
     PastOrPresentJob](http://hl7.org/fhir/us/odh/StructureDefinition-odh-PastOrPresentJob.html). It is referenced by [Military Service
@@ -16,7 +16,7 @@ resources directly as described below:
 
 | Profile                                                | Based on US Core? |
 |--------------------------------------------------------|-------------------|
-| [Deployment History Episode](StructureDefinition-deploymenthistoryepisode.html) |No|
+| [Deployment History Episode](StructureDefinition-deployment-history-episode.html) |No|
 | [Military Occupation](StructureDefinition-military-service-Occupation.html)     |No|
 | [Military Service Episode](StructureDefinition-military-service-episode.html)   |No|
 | [US Veteran](StructureDefinition-usveteran.html)                                |Yes|

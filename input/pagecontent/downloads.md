@@ -13,3 +13,17 @@
 -   [XML Examples (zip)](examples.ttl.zip)
 
 -   [Turtle Definitions](definitions.ttl.zip)
+#### Dependency Table
+
+{% include dependency-table.xhtml %}
+
+#### Globals Table
+
+{% include globals-table.xhtml %}
+
+#### IP Statements
+
+{% include ip-statements.xhtml %}
+
+#### Cross Version Analysis ####
+{% include cross-version-analysis.xhtml %}
