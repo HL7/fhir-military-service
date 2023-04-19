@@ -1,6 +1,7 @@
                                                                  
 ### Background
-This implementation guide contains profiles and extensions to support Military Service History and Status application programming interfaces (APIs) consistent with US regulatory requirements (i.e. Title 38 Veteran Benefits) and extensible to other realms/jurisdictions (e.g. Canadian Forces).It harmonizes the requirements of the U.S. Department of Veterans Affairs (VA) and the Centers for Disease Control and Prevention (CDC) to record this information support of administrative and clinical workflows (e.g. exchange with community providers) and the work and social history of patients who are also Veterans.
+This implementation guide contains profiles and extensions to share Military Service History and Status using FHIR-based application programming interfaces (APIs) consistent with US regulatory requirements (i.e. Title 38 Veteran Benefits). This is a US-realm specificatoin but it is extensible to other realms/jurisdictions (e.g. Canadian Forces).
+It harmonizes the requirements of the U.S. Department of Veterans Affairs (VA) and the Centers for Disease Control and Prevention (CDC) to record this information support of administrative and clinical workflows (e.g. exchange with community providers) and the work and social history of patients who are also Veterans.
 
 ### Use Case Analysis
 
@@ -9,7 +10,7 @@ exchange information about Military Service History and Status. All requirements
 are analyzed as use cases involving actors/participants and system interactions.
 
 *Note:* Certain requirements were discussed, deemed to be out-of-scope, and
-deferred (see **Deferred Requirements**).
+deferred (see [Deferred Requirements](#deferred-requirements)).
 
 Figure 1 is a summary of scenarios (use cases) representing the requirements for
 recording self-reported military and combat history. It also illustrates how
@@ -121,52 +122,51 @@ reasoning and context for future projects.
 
 This implementation guide builds upon existing FHIR implementation guidance and
 best practices:
--  [US Core Implementation Guide (v3.1.1)](http://hl7.org/fhir/us/core/index.html) (reusing US Core Patient profile)
--  [Occupational Data for Health (ODH) 1.0](http://hl7.org/fhir/us/odh/index.html) (reusing best practices, *PastOrPresentJob* profile)
+-  [US Core Implementation Guide (v 5.0.1)](http://hl7.org/fhir/us/core/index.html) (reusing US Core Patient profile)
+-  [Occupational Data for Health (ODH)](http://hl7.org/fhir/us/odh/index.html) (reusing best practices, *PastOrPresentJob* profile)
 
 The project team would like to thank our leadership and colleagues for their
 support in the development of Application Programming Interface (API)
 implementation guide:
 
 **Department of Veterans Affairs:**
-- Steven Brown, MD, Director, CIDMO Knowledge Based Systems (KBS)
-- Christopher Shawn, Director of Stndards  & Interoperability, KBS
-- Javon Hyland, Deputy Program Manager, KBS Standards & Interoperability
+- Steven Brown, MD, Director, CIDMO Knowledge-Based Systems (KBS)
+- Christopher Shawn, Director  KBS Standards  & Interoperability(S&I)
+- Javon Hyland, Deputy Program Manager, KBS S&I
 - Catherine Hoang, Associate Director, KBS Terminology Services
-- Keith Campbell MD, Director, KBS Informatics Architecture
+- Ioana Singureanu MsCS, FHL7, Technical Lead KBS S&I
+- Rhonna Clark, Deputy Technical Lead KBS S&I
+- Matt Greene, Strategy Lead KBS S&I
 
-**Work Group Co-chairs:**                                                                          
+**Cross-Group Project (CGP) Work Group Co-chairs:**                                                                          
 - Floyd Eisenberg MD                                                                                
 - Jean Duteau  
 
 **Project team:** 
-- Ioana Singureanu MsCS, FHL7, Project Facilitatorm BookZurman                                    
-- Sean Muir, FHIR Implementation Guide Developer/Publisher, BookZurman                                       
+- Ioana Singureanu MsCS, FHL7, Project Facilitator                                
+- Sean Muir, FHIR Implementation Guide Developer, BookZurman                                       
 - Jayme Welty, Project Manager, BookZurman                                                               
 - Mark Janczewski, MD, MPH, BookZurman
-  
+
+**ALTARUM**
+- Craig Newman PhD, Contributor
+
 **VA Developer API (Lighthouse Project):**
-- Andrew Fichter                                                                                  
-- Shawnee Petrosky                                                                                  
-- Derek Brown                     
+- Andrew Fichter, Requirements Contributor                                                                                  
+- Shawnee Petrosky, Requirements Contributor                                                                                   
+- Derek Brown, Implementer                    
                                                                    
 **Defense Health Agency:**                                                                            
-- Nancy Orvis
-- Eric Strom
-- Allyson Rigel
+- Nancy Orvis, Contributor 
+- Eric Strom, Requirements Contributor 
+- Allyson Rigel, Terminology Contributor 
 
 **CDC NIOSH:**                                                      
-- Genny Luensman  
+- Genny Luensman, Subject Matter Expert  
                                                                                     
 **MITRE**:              
- - Dr. Mark A. Kramer
+ - Dr. Mark A. Kramer, FSH and SUSHI Advisor
  
- 
-**ESAC**
-- Peter Muir
- 
-**ALTARUM**
-- Craig Newman PhD
 
 {% include markdown-link-references.md %}
 
