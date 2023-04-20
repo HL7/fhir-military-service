@@ -41,9 +41,8 @@ The observation resource that conforms to this specification is referenced by Mi
 * component contains military-service-payGrade 0..1 MS
 * component[military-service-payGrade].code =  LNC#87707-6 "Job supervisory level or pay grade"
 * component[military-service-payGrade].value[x] only CodeableConcept
-* component[military-service-payGrade].value[x] 1..1 MS
+* component[military-service-payGrade].value[x] 0..1 MS
 * component[military-service-payGrade].value[x] from PayGradeVS  (required) 
-
-* valueCodeableConcept 1..1
+* valueCodeableConcept 1..1 MS
 * valueCodeableConcept from MilitaryOccupationVS 
 

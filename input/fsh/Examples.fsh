@@ -145,7 +145,7 @@ Description: "Military Service Episode for Veteran Example, Philip Scott"
 * effectivePeriod.start = "1971-04-01"
 * effectivePeriod.end = "1973-04-01"
 * hasMember[DeploymentHistoryEpisode] = Reference(philip-scott-example-deployment-history-episode)
-* component[military-service-Military-Branch].valueCodeableConcept = ODH#928110.010506	"Marine Corps [National Security ]"
+* component[military-service-Military-Branch].valueCodeableConcept = MSHCS#928110.010506	"Marine Corps [National Security ]"
 * component[military-service-DischargeStatus].valueCodeableConcept = MSHCS#79A512F77CFC4E63B9969930FC8787DB "Honorable"
 * component[military-service-SeparationReason].valueCodeableConcept = MSHCS#035 "COMPLETION OF REQUIRED ACTIVE SERVICE"
 
@@ -159,6 +159,7 @@ Description: "Deployment to Vietnam"
 * hasMember = Reference(philip-scott-example-military-occupation)
 * effectivePeriod.start = "1991-07-01"
 * effectivePeriod.end = "1993-07-01"
+* component[military-service-Military-Branch].valueCodeableConcept = MSHCS#928110.010506	"Marine Corps [National Security ]"
 * component[military-service-DeploymentEpisodeCountryCode].valueCodeableConcept = urn:iso:std:iso:3166#VNM
 * component[military-service-DeploymentEpisodeMissionCode].valueCodeableConcept = MSHCS#46a15b13-b5c1-4ae8-acde-48c31f30175a "Enduring Freedom"
  
@@ -171,9 +172,8 @@ Description: "Example Military Occupation"
 * subject = Reference(philip-scott-example-veteran)
 * effectivePeriod.start = "1971-07-01"
 * effectivePeriod.end = "1972-07-01"
-
-* component[military-service-payGrade].valueCodeableConcept = MSHCS#O-4 "US Military Commissioned Officer paygrade O-4"
-* valueCodeableConcept =  ODH#55-3019.00.025711 "Marine [Military Enlisted Tactical Operations and Air/Weapons Specialists and Crew Members, All Other]"
+//* component[military-service-payGrade].valueCodeableConcept = MSHCS#O-4 "US Military Commissioned Officer paygrade O-4"
+* valueCodeableConcept =  MSHCS#55-3019.00.025711 "Marine [Military Enlisted Tactical Operations and Air/Weapons Specialists and Crew Members, All Other]"
 
 
 

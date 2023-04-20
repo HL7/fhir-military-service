@@ -182,25 +182,30 @@ Description: "Military Service History and Status Code System"
 * #W-3	"Warrant Officer paygrade W-3"
 * #W-4	"Warrant Officer paygrade W-4"
 * #W-5	"Warrant Officer paygrade W-5"
-
+//from ODH
+* #55-3019.00.025711    "Marine [Military Enlisted Tactical Operations and Air/Weapons Specialists and Crew Members, All Other]"
+* #928110.010506	"Marine Corps [National Security ]"
 
 ValueSet:    MilitaryBranchVS
 Id: military-service-branch-vs
 Title: "Military Branch Value Set"
 Description: "Military Branch Value Set - is a subset of the ODH Occupation value set."
-* ^experimental = false
-* ODH#928110.000255	"Air Force [National Security ]"
+* ^experimental = true
+/* ODH#928110.000255	"Air Force [National Security ]"
 * ODH#928110.000275	"Air traffic control, military [National Security ]"
 * ODH#928110.000809	"Armed forces [National Security ]"
 * ODH#928110.000817	"Army [National Security ]"
 * ODH#928110.004459	"Courts, military [National Security ]"
-* ODH#928110.010506	"Marine Corps [National Security ]"
-* ODH#928110.010877	"Military bases and camps [National Security ]"
+*/
+* MSHCS#928110.010506	"Marine Corps [National Security ]"
+
+/* ODH#928110.010877	"Military bases and camps [National Security ]"
 * ODH#928110.010884	"Military police [National Security ]"
 * ODH#928110.010885	"Military reserve armories and bases [National Security ]"
 * ODH#928110.010887	"Military training schools (except academies) [National Security ]"
 * ODH#928110.011393	"National Guard [National Security ]"
 * ODH#928110.011438	"Navy [National Security ]"
+*/
 
 
 ValueSet:    PayGradeVS
@@ -241,7 +246,7 @@ ValueSet:    SeparationReasonVS
 Id: military-service-separation-reason-vs
 Title: "Separation Reason Value Set"
 Description: "Separation Reason Value Set contains concepts that are managed as a local extensions, subject to submission to SNOMED CT."
-* ^experimental = false
+* ^experimental = true
 *  MSHCS#001 "WEIGHT CONTROL FAILURE"
 *  MSHCS#002 "FRAUDULENT ENTRY INTO MILITARY SERVICE"
 *  MSHCS#003 "PARENTHOOD OR CUSTODY OF MINOR CHILDREN"
@@ -376,7 +381,7 @@ ValueSet: DeploymentEpisodeMissionVS
 Id: military-service-combat-episode-mission-vs
 Title: "Combat Episode Mission Value Set"
 Description: "Example combat mission code; this is only an example data element that may be associated with a Deployment Episode, if needed."
-* ^experimental = false
+* ^experimental = true
 * MSHCS#CD1CAD19F5494F1981211F8634DD6AB1 "ANTIGUERRILLA OPERATIONS"
 * MSHCS#469552D4E8AA4BBBBF075190F7ED430C "COMBAT PATROL"
 * MSHCS#750988FBBD6148DCB85C062DEFC871E2 "Individual Augmentee"
@@ -396,8 +401,8 @@ ValueSet:    MilitaryOccupationVS
 Id: military-service-military-occupation-vs
 Title: "Military Occupation Value Set"
 Description: "Military Occupation Value Set" 
-* ^experimental = false
-*  ODH#55-1011.00.000736    "Air Battle Manager [Air Crew Officers]"
+* ^experimental = true
+/*  ODH#55-1011.00.000736    "Air Battle Manager [Air Crew Officers]"
 *  ODH#55-1011.00.000951    "Airdrop Systems Technician [Air Crew Officers]"
 *  ODH#55-1011.00.002270    "Astronaut, Mission Specialist [Air Crew Officers]"
 *  ODH#55-1011.00.016810    "Fixed-Wing Transport Aircraft Specialist [Air Crew Officers]"
@@ -1051,8 +1056,9 @@ Description: "Military Occupation Value Set"
 *  ODH#55-3019.00.022883    "Joint Chemical, Biological, Radiological, Nuclear Reconnaissance System Operator (JCBRNRS) LAV Operator [Military Enlisted Tactical Operations and Air/Weapons Specialists and Crew Members, All Other]"
 *  ODH#55-3019.00.023477    "Landing Support Specialist [Military Enlisted Tactical Operations and Air/Weapons Specialists and Crew Members, All Other]"
 *  ODH#55-3019.00.024218    "Light Air Defense Artillery Crewmember [Military Enlisted Tactical Operations and Air/Weapons Specialists and Crew Members, All Other]"
-*  ODH#55-3019.00.025711    "Marine [Military Enlisted Tactical Operations and Air/Weapons Specialists and Crew Members, All Other]"
-*  ODH#55-3019.00.026613    "Mercenary [Military Enlisted Tactical Operations and Air/Weapons Specialists and Crew Members, All Other]"
+*/
+*  MSHCS#55-3019.00.025711    "Marine [Military Enlisted Tactical Operations and Air/Weapons Specialists and Crew Members, All Other]"
+/*  ODH#55-3019.00.026613    "Mercenary [Military Enlisted Tactical Operations and Air/Weapons Specialists and Crew Members, All Other]"
 *  ODH#55-3019.00.027025    "Military Source Operations Specialist (MSOS) [Military Enlisted Tactical Operations and Air/Weapons Specialists and Crew Members, All Other]"
 *  ODH#55-3019.00.027789    "Multi Sensor Operator [Military Enlisted Tactical Operations and Air/Weapons Specialists and Crew Members, All Other]"
 *  ODH#55-3019.00.027791    "Multi-Discipline Counter-Intelligence Operator/Analyst [Military Enlisted Tactical Operations and Air/Weapons Specialists and Crew Members, All Other]"
@@ -1094,3 +1100,4 @@ Description: "Military Occupation Value Set"
 *  ODH#55-3019.00.041511    "Target Aircraft Technician [Military Enlisted Tactical Operations and Air/Weapons Specialists and Crew Members, All Other]"
 *  ODH#55-3019.00.041705    "Technical Surveillance Countermeasures (TSCM) Specialist [Military Enlisted Tactical Operations and Air/Weapons Specialists and Crew Members, All Other]"
 *  ODH#55-3019.00.043803    "Unattended Ground Sensor Specialist [Military Enlisted Tactical Operations and Air/Weapons Specialists and Crew Members, All Other]"
+*/

@@ -2,57 +2,12 @@
 
 # SUPPRESS US CORE OBSERVATION MESSAGES.  Motion to approve variance in CGP call 12-03-2020 - Eric Haas/Floyd Eisenberg: 8-0-0:  https://jira.hl7.org/browse/FHIR-29782
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/military-service/StructureDefinition/deployment-history-episode').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
-== fsh-generated\resources\StructureDefinition-military-service-Occupation.json ==
-== fsh-generated\resources\StructureDefinition-military-service-episode.json ==
-== fsh-generated\resources\StructureDefinition-military-service-veteran-status.json ==
-== fsh-generated\resources\StructureDefinition-usveteran.json ==
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/military-service/StructureDefinition/military-service-Occupation').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
-== fsh-generated\resources\StructureDefinition-military-service-episode.json ==
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/military-service/StructureDefinition/military-service-episode').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
-== fsh-generated\resources\StructureDefinition-military-service-veteran-status.json ==
-== fsh-generated\resources\StructureDefinition-usveteran.json ==
-== fsh-generated\resources\ValueSet-military-service-branch-vs.json ==
 
-# Phinvads Code Systems and Value Sets that are referenced in the guide but not available in tx.fhir.org
-# http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH
 # urn:oid:2.16.840.1.113883.6.238
 
-# SUPPRESSED WARNINGS AND INFO MESSAGES:
-INFORMATION: Observation/philip-scott-example-military-service-episode: Observation.component[0].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH' is unknown so the code cannot be validated
-== fsh-generated\resources\Patient-huffman-crystal-example-veteran.json ==
-== fsh-generated\resources\Patient-hugo-cross-example-veteran.json ==
-== fsh-generated\resources\Patient-philip-scott-example-veteran.json ==
-== fsh-generated\resources\StructureDefinition-deployment-history-episode.json ==
+# SUPPRESSED WARNINGS AND INFO MESSAGES: 
 INFORMATION: StructureDefinition/deployment-history-episode: StructureDefinition.snapshot.element[16].pattern.ofType(Coding): The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)
-== fsh-generated\resources\StructureDefinition-military-service-Occupation.json ==
 INFORMATION: StructureDefinition/military-service-Occupation: StructureDefinition.snapshot.element[16].pattern.ofType(Coding): The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)
 INFORMATION: StructureDefinition/military-service-episode: StructureDefinition.snapshot.element[16].pattern.ofType(Coding): The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)
-WARNING: ValueSet.where(id = 'military-service-branch-vs'): Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH
-== fsh-generated\resources\ValueSet-military-service-combat-episode-mission-vs.json ==
-== fsh-generated\resources\ValueSet-military-service-deployment-episode-mission-vs.json ==
-== fsh-generated\resources\ValueSet-military-service-discharge-status-vs.json ==
-== fsh-generated\resources\ValueSet-military-service-military-occupation-vs.json ==
-WARNING: ValueSet/military-service-military-occupation-vs: ValueSet.compose[0].include[0]: Unknown System 'http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH' specified, so Concepts and Filters can't be checked (Details: Code System URI 'http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH' is unknown so the code cannot be validated)
-WARNING: ValueSet.where(id = 'military-service-military-occupation-vs'): Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH
-== fsh-generated\resources\ValueSet-military-service-paygrade-vs.json ==
-== fsh-generated\resources\ValueSet-military-service-separation-reason-vs.json ==
-WARNING: Observation/philip-scott-example-military-occupation: Observation.value.ofType(CodeableConcept): [Code System URI 'http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH' is unknown so the code cannot be validated]
-INFORMATION: Observation/philip-scott-example-military-occupation: Observation.value.ofType(CodeableConcept).coding[0]: Code System URI 'http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH' is unknown so the code cannot be validated
-== fsh-generated\resources\Observation-philip-scott-example-military-service-episode.json ==
-WARNING: Observation/philip-scott-example-military-service-episode: Observation.component[0].value.ofType(CodeableConcept): [Code System URI 'http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH' is unknown so the code cannot be validated]
-== fsh-generated\resources\Patient-huffman-crystal-example-veteran.json ==
-== fsh-generated\resources\Patient-hugo-cross-example-veteran.json ==
-== fsh-generated\resources\Patient-philip-scott-example-veteran.json ==
-== fsh-generated\resources\StructureDefinition-deployment-history-episode.json ==
-== fsh-generated\resources\StructureDefinition-military-service-Occupation.json ==
-== fsh-generated\resources\StructureDefinition-military-service-episode.json ==
-== fsh-generated\resources\StructureDefinition-military-service-veteran-status.json ==
-== fsh-generated\resources\StructureDefinition-usveteran.json ==
-== fsh-generated\resources\ValueSet-military-service-branch-vs.json ==
-WARNING: ValueSet/military-service-branch-vs: ValueSet.compose[0].include[0]: Unknown System 'http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH' specified, so Concepts and Filters can't be checked (Details: Local Error: Resolved system http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH (v2.0.1), but the definition is not complete. Server Error: The code system 'http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH' is not known (encountered paired with code = '928110.000255'); The code provided (http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH#928110.000255) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4))
-== fsh-generated\resources\ValueSet-military-service-combat-episode-mission-vs.json ==
-== fsh-generated\resources\ValueSet-military-service-deployment-episode-mission-vs.json ==
-== fsh-generated\resources\ValueSet-military-service-discharge-status-vs.json ==
-== fsh-generated\resources\ValueSet-military-service-military-occupation-vs.json ==
-== fsh-generated\resources\ValueSet-military-service-paygrade-vs.json ==
-== fsh-generated\resources\ValueSet-military-service-separation-reason-vs.json ==

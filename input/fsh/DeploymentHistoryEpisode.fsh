@@ -43,12 +43,12 @@ Description:   "Deployment History Episode describes a completed deployment."
 * component ^slicing.description = "Slice based on the component.code pattern"
 * component contains military-service-DeploymentEpisodeCountryCode 1..1 and 
                      military-service-DeploymentEpisodeMissionCode 0..1 and 
-                     odh-Industry 0..1 
+                     military-service-Military-Branch 1..1 
 
-* component[odh-Industry].code =  LNC#86188-0 "History of Occupation Industry"
-* component[odh-Industry].value[x] only CodeableConcept   
-* component[odh-Industry].value[x] 1..1
-* component[odh-Industry].value[x] from  MilitaryBranchVS (required) //" Subset of Industry CDC Census 2018 Value Set: Industry describes an economic/business sector comprised of businesses/ enterprises concerned with the output of a specified category of products or services (e.g., the construction industry or the agriculture industry). This industry code system includes 2007 U.S. Census Bureau industry codes and three additional codes developed by CDC for unpaid workers. The 2010 Census industry categories are based on the 2007 North American Industry Classification System (NAICS)."
+* component[military-service-Military-Branch].code =  LNC#86188-0 "History of Occupation Industry"
+* component[military-service-Military-Branch].value[x] only CodeableConcept   
+* component[military-service-Military-Branch].value[x] 1..1
+* component[military-service-Military-Branch].value[x] from  MilitaryBranchVS (required) //" Subset of Industry CDC Census 2018 Value Set: Industry describes an economic/business sector comprised of businesses/ enterprises concerned with the output of a specified category of products or services (e.g., the construction industry or the agriculture industry). This industry code system includes 2007 U.S. Census Bureau industry codes and three additional codes developed by CDC for unpaid workers. The 2010 Census industry categories are based on the 2007 North American Industry Classification System (NAICS)."
  
 //* value[x] only CodeableConcept //Occupation Code associated withe 
 //* value[x] from MilitaryOccupationVS (required) //"Subset of Occupation CDC Census 2018 Value SEt: Occupation describes a set of activities or tasks that individuals are paid to perform or, if unpaid, define a person’s contribution to a household/family business/community. This code system includes 2010 U.S. Census Bureau occupation codes with modifications made by CDC for unpaid workers and military occupations. The 2010 Census occupation categories are based on the 2010 BLS Standard Occupational Classification (SOC) system. The PH_Industry_CDC_Census2010 code system should be used in conjunction with this occupation code system when coding both industry and occupation. For more information and instructions on using this coding system, see the instruction manual for CDC-Census I&O coding at: http://www.cdc.gov/niosh/topics/coding/"
