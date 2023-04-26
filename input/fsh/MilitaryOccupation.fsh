@@ -32,7 +32,11 @@ The observation resource that conforms to this specification is referenced by Mi
 * effectivePeriod.end 1..1 
 * effectivePeriod.end ^short = "End date of the completed deployment"
 * effectivePeriod ^short = "Period of the completed deployment"
-* category.coding = http://terminology.hl7.org/CodeSystem/observation-category#social-history
+* category ^slicing.discriminator.type = #pattern
+* category ^slicing.discriminator.path = "$this"
+* category ^slicing.rules = #open
+* category contains msoca 1..1
+* category[msoca] = http://terminology.hl7.org/CodeSystem/observation-category#social-history
 * note 0..1 
 * component ^slicing.discriminator.type = #pattern
 * component ^slicing.discriminator.path = "code"

@@ -32,7 +32,11 @@ Description:   "Military Service Episode describes a patient/veterans overall ex
 * effectivePeriod 1..1 MS
 * effectivePeriod.start 1..1 MS
 * effectivePeriod.end 0..1 MS 
-* category.coding = http://terminology.hl7.org/CodeSystem/observation-category#social-history
+* category ^slicing.discriminator.type = #pattern
+* category ^slicing.discriminator.path = "$this"
+* category ^slicing.rules = #open
+* category contains mseca 1..1
+* category[mseca] = http://terminology.hl7.org/CodeSystem/observation-category#social-history
 
 * hasMember ^slicing.discriminator.type = #profile // #pattern
 * hasMember ^slicing.discriminator.path =  "$this.resolve()" // "$this.resolve().code"
