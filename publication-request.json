@@ -2,8 +2,8 @@
     "package-id" : "hl7.fhir.us.military-service",
     "version" : "1.0.0",
     "path" : "http://hl7.org/fhir/us/military-service/STU1",
-    "mode" : "milestone",
-    "status" : "trial-use",
+    "mode" : "withdrawal",
+    "status" : "withdrawn",
     "sequence" : "STU1",
-    "desc" : "HL7 FHIR Implementation Guide for Military Service History and Status"
+    "desc" : "During the May 2025 Work Group Meeting, the Cross-Group Projects Work Group approved the withdrawal of the FHIR Implementation Guide for Military Service History and Status. Meeting minutes are available here: https://confluence.hl7.org/spaces/CGP/pages/325466759/Cross-Group+Projects+2025-05+WGM+Agenda+Minutes+Madrid"
 }
