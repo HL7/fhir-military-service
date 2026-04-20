@@ -6,8 +6,3 @@ WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/military-servic
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/military-service/StructureDefinition/military-service-episode').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
 
 # urn:oid:2.16.840.1.113883.6.238
-
-# SUPPRESSED WARNINGS AND INFO MESSAGES: 
-INFORMATION: StructureDefinition/deployment-history-episode: StructureDefinition.snapshot.element[16].pattern.ofType(Coding): The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)
-INFORMATION: StructureDefinition/military-service-Occupation: StructureDefinition.snapshot.element[16].pattern.ofType(Coding): The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)
-INFORMATION: StructureDefinition/military-service-episode: StructureDefinition.snapshot.element[16].pattern.ofType(Coding): The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)
